@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phish Chat Guard - Real-Time Phishing Detection</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow">
+                    <div class="card-header bg-primary text-white text-center">
+                        <h1>🛡️ Phish Chat Guard</h1>
+                        <p>AI-Powered Phishing Detection for Real-Time Communications</p>
+                    </div>
+                    <div class="card-body text-center">
+                        <h3>System Status: <span class="text-success">ACTIVE</span></h3>
+                        <p class="lead">The Phish Chat Guard detection engine is running and ready to analyze messages for phishing attempts.</p>
+                        
+                        <div class="row mt-4">
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5>API Endpoints</h5>
+                                        <p><code>POST /detect</code> - Analyze messages</p>
+                                        <p><code>GET /health</code> - System health</p>
+                                        <p><code>GET /stats</code> - Detection statistics</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5>Detection Features</h5>
+                                        <p>✅ Keyword Analysis</p>
+                                        <p>✅ URL Pattern Detection</p>
+                                        <p>✅ Behavioral Indicators</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Message Testing Interface -->
+                        <div class="mt-4">
+                            <h4>🔍 Test Message Detection</h4>
+                            <form id="messageForm" class="mt-3">
+                                <div class="mb-3">
+                                    <textarea class="form-control" id="messageInput" rows="3" 
+                                        placeholder="Enter a message to check if it's safe or phishing..." required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Analyze Message</button>
+                            </form>
+                            
+                            <!-- Results Display -->
+                            <div id="results" class="mt-3" style="display: none;">
+                                <div class="alert" id="resultAlert" role="alert">
+                                    <!-- Results will appear here -->
+                                </div>
+                            </div>
+                            
+                            <!-- Quick Test Examples -->
+                            <div class="mt-3">
+                                <h6>Quick Test Examples:</h6>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <button class="btn btn-outline-success btn-sm" onclick="testMessage('Hello, how are you today?')">
+                                        ✅ Safe Message
+                                    </button>
+                                    <button class="btn btn-outline-danger btn-sm" onclick="testMessage('URGENT! Your account will be suspended. Click here to verify your password NOW!')">
+                                        🚨 Phishing Example
+                                    </button>
+                                    <button class="btn btn-outline-warning btn-sm" onclick="testMessage('Congratulations! You have won $1000. Click to claim your prize.')">
+                                        ⚠️ Prize Scam
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <a href="/health" class="btn btn-success">Check Health</a>
+                            <a href="/stats" class="btn btn-info">View Stats</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Message form submission
+        document.getElementById('messageForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const messageInput = document.getElementById('messageInput');
+            const message = messageInput.value.trim();
+            
+            if (!message) {
+                alert('Please enter a message to analyze.');
+                return;
+            }
+            
+            // Show loading state
+            showResult('🔄 Analyzing message...', 'alert-info');
+            
+            try {
+                const response = await fetch('/detect', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ 
+                        message: message, 
+                        user: 'web-user' 
+                    })
+                });
+                
+                const result = await response.json();
+                
+                if (response.ok) {
+                    displayDetectionResult(result, message);
+                } else {
+                    showResult(`❌ Error: ${result.error || 'Unknown error'}`, 'alert-danger');
+                }
+            } catch (error) {
+                console.error('Detection error:', error);
+                showResult('❌ Connection error. Make sure the server is running.', 'alert-danger');
+            }
+        });
+        
+        // Quick test message function
+        function testMessage(message) {
+            document.getElementById('messageInput').value = message;
+            document.getElementById('messageForm').dispatchEvent(new Event('submit'));
+        }
+        
+        // Display detection results
+        function displayDetectionResult(result, message) {
+            let alertClass, icon, title, details;
+            
+            if (result.label === 'phishing') {
+                alertClass = 'alert-danger';
+                icon = '🚨';
+                title = 'PHISHING DETECTED!';
+                details = `
+                    <strong>Risk Score:</strong> ${(result.score * 100).toFixed(1)}%<br>
+                    ${result.reasons && result.reasons.length > 0 ? 
+                        `<strong>Reasons:</strong> ${result.reasons[0]}<br>` : ''}
+                    <small><strong>⚠️ WARNING:</strong> This message appears to be a phishing attempt. 
+                    Do not click any links or provide personal information.</small>
+                `;
+            } else {
+                alertClass = 'alert-success';
+                icon = '✅';
+                title = 'Message appears SAFE';
+                details = `
+                    <strong>Risk Score:</strong> ${(result.score * 100).toFixed(1)}%<br>
+                    <small>No phishing indicators detected in this message.</small>
+                `;
+            }
+            
+            const content = `
+                <div class="d-flex align-items-start">
+                    <div class="me-3" style="font-size: 2rem;">${icon}</div>
+                    <div>
+                        <h5 class="mb-2">${title}</h5>
+                        <p class="mb-2"><strong>Message:</strong> "${message}"</p>
+                        ${details}
+                    </div>
+                </div>
+            `;
+            
+            showResult(content, alertClass);
+        }
+        
+        // Show result in alert box
+        function showResult(content, alertClass) {
+            const resultDiv = document.getElementById('results');
+            const alertDiv = document.getElementById('resultAlert');
+            
+            alertDiv.className = `alert ${alertClass}`;
+            alertDiv.innerHTML = content;
+            resultDiv.style.display = 'block';
+            
+            // Scroll to results
+            resultDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+    </script>
+
+</body>
+</html>

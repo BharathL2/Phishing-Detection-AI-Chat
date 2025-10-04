@@ -1,0 +1,56 @@
+version: '3.8'
+
+services:
+  phish-chat-guard-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: phish-chat-guard-api
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mongo
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/
+      - FLASK_ENV=production
+    restart: unless-stopped
+    networks:
+      - phish-chat-guard-network
+
+  mongo:
+    image: mongo:6
+    container_name: phish-chat-guard-mongo
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_DATABASE=phish_chat_guard_db
+    volumes:
+      - mongo_data:/data/db
+      - ./mongo-init:/docker-entrypoint-initdb.d
+    networks:
+      - phish-chat-guard-network
+
+  mongo-express:
+    image: mongo-express:latest
+    container_name: phish-chat-guard-web-ui
+    restart: unless-stopped
+    ports:
+      - "8081:8081"
+    environment:
+      - ME_CONFIG_MONGODB_SERVER=mongo
+      - ME_CONFIG_MONGODB_PORT=27017
+      - ME_CONFIG_BASICAUTH_USERNAME=admin
+      - ME_CONFIG_BASICAUTH_PASSWORD=admin123
+    depends_on:
+      - mongo
+    networks:
+      - phish-chat-guard-network
+
+volumes:
+  mongo_data:
+    driver: local
+
+networks:
+  phish-chat-guard-network:
+    driver: bridge
