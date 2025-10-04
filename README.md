@@ -1,78 +1,4 @@
-# 🛡️ Phish Chat Guard
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=flat&logo=docker&logoColor=white)](https://www.docker.com/)
-[![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=flat&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
-[![Real-Time Protection](https://img.shields.io/badge/Real--Time-Protection-brightgreen.svg)](https://github.com/)
-[![Chat Security](https://img.shields.io/badge/Chat-Security-blue.svg)](https://github.com/)
-
-**Phish Chat Guard** is an advanced real-time phishing detection system specifically designed to protect chat applications and messaging platforms from malicious content. Using sophisticated pattern recognition, URL analysis, and behavioral detection algorithms, Phish Chat Guard provides instant protection against phishing attempts while maintaining seamless user experience with comprehensive analytics and monitoring capabilities.
-
-## ⭐ Key Features
-
-### 🔒 Advanced Protection
-- **Real-time Phishing Detection**: Instant analysis of chat messages using advanced algorithms
-- **Multi-layer Security**: Keyword analysis, URL pattern detection, and behavioral indicators
-- **Intelligent Threat Assessment**: Smart scoring system with configurable risk thresholds
-- **False Positive Reduction**: Sophisticated filtering to minimize legitimate message blocking
-
-### 📊 Analytics & Monitoring
-- **MongoDB Integration**: Comprehensive audit trails and analytics storage
-- **Live Dashboard**: Real-time statistics and threat monitoring
-- **Detailed Reporting**: Comprehensive phishing attempt logs with forensic data
-- **Performance Metrics**: API response times and system health monitoring
-
-### 🚀 Enterprise Ready
-- **REST API**: Production-ready endpoints with comprehensive documentation
-- **Scalable Architecture**: Microservice design for high availability and performance
-- **Docker Support**: Complete containerization with orchestration capabilities
-- **Health Monitoring**: Built-in health checks and status endpoints
-
-## 🛡️ Detection Capabilities
-
-### Keyword Analysis
-Detects suspicious keywords commonly used in phishing attempts:
-- **Authentication terms**: `login`, `verify`, `password`, `account`
-- **Urgency indicators**: `urgent`, `expire`, `suspended`, `confirm`
-- **Financial terms**: `bank`, `billing`, `payment`
-- **Prize/reward terms**: `winner`, `congratulations`, `prize`, `free`
-
-### URL Pattern Analysis
-- **IP-based URLs**: Detects direct IP addresses instead of domain names
-- **Suspicious subdomains**: Identifies URLs with excessive subdomain patterns
-- **Hyphenated domains**: Flags domains with hyphens (common in phishing)
-- **Malicious TLDs**: Watches for suspicious top-level domains
-
-### Behavioral Indicators
-- **Urgency tactics**: Multiple exclamation marks and excessive capitalization
-- **Contact information**: Phone numbers in suspicious contexts
-- **Social engineering**: Emotional manipulation and pressure tactics
-
-## 🏗️ Architecture Overview
-
-```
-┌─────────────────┐       ┌─────────────────┐
-│  Chat Application │       │   Web Dashboard   │
-│   (Your App)      │       │  (Admin Panel)   │
-└────────┬────────┘       └────────┬────────┘
-         │                          │
-         │ HTTP POST /detect        │ HTTP GET /stats
-         │                          │
-         │       ┌─────────────────────────────────┐
-         └───────┤    Phish Chat Guard API        │
-                 │   (Flask + Detection Engine)   │
-                 └─────────┬───────────────────────┘
-                           │
-                           │ Store Results
-                           │
-                 ┌─────────┴───────────────────────┐
-                 │      MongoDB Database           │
-                 │  (Messages + Analytics)         │
-                 └─────────────────────────────────┘
-```
-
-### 🔄 Data Flow
 # Phishing Detection – AI Chat
 
 An interactive chat-style phishing detection demo built with Flask. It analyzes messages in real-time and explains the decision with confidence and reasons. Includes a simple UI with a dark/light theme toggle and JSON APIs for programmatic use.
@@ -112,13 +38,44 @@ An interactive chat-style phishing detection demo built with Flask. It analyzes 
 ```
 
 Note: For classroom/demo use, run `microservices_demo.py`. It’s self-contained and doesn’t require Kafka or MongoDB.
+## 🏗️ Architecture Overview
 
+```
+┌─────────────────┐       ┌─────────────────┐
+│  Chat Application │       │   Web Dashboard   │
+│   (Your App)      │       │  (Admin Panel)   │
+└────────┬────────┘       └────────┬────────┘
+         │                          │
+         │ HTTP POST /detect        │ HTTP GET /stats
+         │                          │
+         │       ┌─────────────────────────────────┐
+         └───────┤   Phishing Detection – AI Chat │
+                 │   (Flask + Detection Engine)   │
+                 └─────────┬───────────────────────┘
+                           │
+                           │ Store Results
+                           │
+                 ┌─────────┴───────────────────────┐
+                 │      MongoDB Database           │
+                 │  (Messages + Analytics)         │
+                 └─────────────────────────────────┘
+```
+### 🔄 Data Flow
+- Web UI or client calls POST /detect with a message
+- Server analyzes text via the standalone ML detector
+- Results update in-memory stats and are returned as JSON
+- Optional legacy path (Docker/index.py) shows microservice architecture
 ## 🚀 Quick Start (Windows PowerShell)
 
 Run the standalone demo on port 5050:
 
 ```powershell
 # From the project folder
+# Ensure dependencies are installed (one-time):
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+
+# Run the server
 $env:PORT=5050; python src\microservices_demo.py
 ```
 
@@ -206,7 +163,10 @@ Invoke-RestMethod -Uri 'http://127.0.0.1:5050/detect' -Method POST -Headers $hea
 Invoke-RestMethod -Uri 'http://127.0.0.1:5050/stats' -Method GET | ConvertTo-Json -Depth 5
 
 # GET /health
-Invoke-RestMethod -Uri 'http://127.0.0.1:5050/health' -Method GET
+Invoke-RestMethod -Uri 'http://127.0.0.1:5050/health' -Method GET | ConvertTo-Json -Depth 5
+
+Tip: If you’re running the server and requesting from the same PowerShell terminal, the output can get
+interleaved with server logs. Open a new PowerShell window for API tests.
 ```
 
 ## 🐳 Run with Docker (optional)
@@ -228,6 +188,13 @@ Health check: http://127.0.0.1:5000/health
 
 - `PORT` (env var): HTTP port for the demo server (default 5050). Example: `$env:PORT=5060`.
 - `MONGO_URI`, `FLASK_ENV` (used by the Docker/index.py path for legacy components)
+
+Path note (Windows): This project folder name contains an en dash (–). When changing directories in
+PowerShell, use Set-Location with -LiteralPath to avoid encoding issues:
+
+```powershell
+Set-Location -LiteralPath 'C:\Users\<you>\Phishing Detection – AI Chat'
+```
 
 ## 🧑‍💻 Development
 
@@ -254,12 +221,16 @@ python -m unittest discover
 - “127.0.0.1 refused to connect”
         - Try another port: `$env:PORT=5060; python src\microservices_demo.py`
         - Stop stray processes: `Get-Process python -ErrorAction SilentlyContinue | Stop-Process -Force`
-        - Check port usage: `netstat -ano | findstr :5050`
+        - Check port usage: `netstat -ano | findstr LISTENING | findstr :5050`
         - Allow Python in Windows Firewall (Private networks)
 
 - “Module not found”
         - Ensure you run from the project folder so `src` is discoverable
         - Activate your venv and `pip install -e .`
+
+- “Invoke-WebRequest/Invoke-RestMethod fails while server is running”
+        - Open a second PowerShell window and re-run the request there
+        - Or use your browser at http://127.0.0.1:5050/health
 
 ## 📄 License
 
