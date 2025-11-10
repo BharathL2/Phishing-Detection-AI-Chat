@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Login — Phish Chat Guard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root { scroll-behavior: smooth; }
+    .gradient-header{
+      background: linear-gradient(90deg, #6c63ff, #8a6fd4);
+      color: #fff;
+      border-radius: .5rem;
+      padding: 1.25rem 1rem;
+      margin: 1rem auto;
+      max-width: 1000px;
+      position: relative;
+    }
+    .theme-toggle{ position:absolute; right:.75rem; top:.75rem }
+    body{ background: var(--bs-body-bg); }
+    .login-wrap{ max-width: 520px; margin: 32px auto; padding: 0 12px; }
+    .card{ max-width: 520px; margin: 0 auto; }
+    .phish-sample{ border-left:4px solid #dc3545; background:#fff5f5; padding:10px; border-radius:6px; color:#7a0b0b; margin-bottom:12px }
+    .phish-badge{ background:#dc3545; color:#fff; padding:4px 8px; border-radius:6px; font-weight:600 }
+  </style>
+</head>
+<body>
+  <header class="gradient-header">
+    <div class="d-flex align-items-center">
+      <h2 class="m-0">Phishing Detection – AI Chat</h2>
+    </div>
+    <button id="themeToggle" class="btn btn-sm btn-light theme-toggle">🌞 Light</button>
+  </header>
+
+  <main class="login-wrap">
+    <div class="card shadow">
+      <div class="card-body">
+        <h5 class="card-title">Sign in</h5>
+        <p class="text-muted">This is a demo login. Any email will work.</p>
+        <div class="phish-sample">
+          <div class="d-flex justify-content-between align-items-center">
+            <div><span class="phish-badge">PHISHING</span></div>
+            <small class="text-muted">Example alert</small>
+          </div>
+          <div class="mt-2">URGENT: Your account expires in 1 hour. Click <u>here</u> to verify your credentials.</div>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Email</label>
+          <input id="email" class="form-control" placeholder="you@example.com" autocomplete="email">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Name (optional)</label>
+          <input id="name" class="form-control" placeholder="Display name" autocomplete="name">
+        </div>
+        <button id="signin" class="btn btn-primary w-100">Sign in</button>
+        <hr>
+        <small class="text-muted">Demo note: This stores a small token in localStorage only on this browser.</small>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // Theme toggle (light/dark) with persistence
+    const THEME_KEY = 'aichat.theme';
+    function applyTheme(t){
+      document.documentElement.setAttribute('data-bs-theme', t);
+      localStorage.setItem(THEME_KEY, t);
+      const btn = document.getElementById('themeToggle');
+      if(btn){ btn.textContent = (t === 'dark') ? '🌙 Dark' : '🌞 Light'; btn.className = 'btn btn-sm ' + (t==='dark' ? 'btn-dark' : 'btn-light') + ' theme-toggle'; }
+      document.body.style.background = getComputedStyle(document.documentElement).getPropertyValue('--bs-body-bg');
+    }
+    (function(){ applyTheme(localStorage.getItem(THEME_KEY) || 'light'); })();
+    document.getElementById('themeToggle').addEventListener('click', ()=>{
+      const current = document.documentElement.getAttribute('data-bs-theme') || 'light';
+      applyTheme(current === 'light' ? 'dark' : 'light');
+    });
+
+    // If already signed in, go straight to index
+    (function(){
+      try { const u = JSON.parse(localStorage.getItem('aichat.user')||'null'); if(u && u.email){ window.location.href = 'index.html'; } } catch {}
+    })();
+
+    function signIn(){
+      const emailEl = document.getElementById('email');
+      const nameEl = document.getElementById('name');
+      const email = emailEl.value.trim();
+      const name = (nameEl.value || '').trim() || (email.includes('@') ? email.split('@')[0] : email);
+      if(!email){ alert('Please enter an email'); emailEl.focus(); return; }
+      const token = { email, name, created: Date.now() };
+      localStorage.setItem('aichat.user', JSON.stringify(token));
+      window.location.href = 'index.html';
+    }
+
+    document.getElementById('signin').addEventListener('click', signIn);
+    document.getElementById('email').addEventListener('keydown', (e)=>{ if(e.key === 'Enter'){ e.preventDefault(); signIn(); }});
+    document.getElementById('name').addEventListener('keydown', (e)=>{ if(e.key === 'Enter'){ e.preventDefault(); signIn(); }});
+  </script>
+</body>
+</html>

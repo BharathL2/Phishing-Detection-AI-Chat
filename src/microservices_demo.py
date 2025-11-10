@@ -97,6 +97,85 @@ class StandalonePhishingDetector:
 # Initialize standalone AI model
 ai_detector = StandalonePhishingDetector()
 
+# --- Multi-Algorithm Ensemble (Simulated) ---
+class MultiAlgorithmEnsemble:
+    """Simulate multiple ML algorithms' phishing predictions.
+    NOTE: This is a classroom/demo simulation (no real model training here).
+    Each algorithm derives its confidence from the base feature score with slight variation.
+    """
+    def __init__(self):
+        # Static (placeholder) accuracy values one might discuss in class
+        self.accuracy_reference = {
+            'Naive Bayes': 0.90,
+            'Linear Classifier': 0.93,
+            'KNN': 0.88,
+            'Random Forest': 0.95,
+            'Decision Tree': 0.89,
+            'KMeans (Cluster Dist)': 0.75,
+            'DBSCAN (Outlier Density)': 0.72,
+            'Linear Regression (Score)': 0.70,
+            'One-Class SVM': 0.85,
+            'Local Outlier Factor': 0.82
+        }
+        # Algorithm-specific base threshold for phishing classification
+        self.thresholds = {
+            'Naive Bayes': 0.50,
+            'Linear Classifier': 0.48,
+            'KNN': 0.52,
+            'Random Forest': 0.47,
+            'Decision Tree': 0.50,
+            'KMeans (Cluster Dist)': 0.55,
+            'DBSCAN (Outlier Density)': 0.58,
+            'Linear Regression (Score)': 0.60,
+            'One-Class SVM': 0.53,
+            'Local Outlier Factor': 0.54
+        }
+
+    def _base_probability(self, feature_score: int) -> float:
+        # Derive a pseudo probability from raw feature score (0..N)
+        # Scales quickly toward phishing for higher feature_score.
+        return min(0.15 + feature_score * 0.12, 0.99)
+
+    def predict_all(self, feature_score: int):
+        base_p = self._base_probability(feature_score)
+        algorithms_output = []
+        vote_phishing = 0
+
+        # Small deterministic variation factors so each algorithm differs slightly
+        variation_map = {
+            'Naive Bayes': 1.00,
+            'Linear Classifier': 1.05,
+            'KNN': 0.95,
+            'Random Forest': 1.08,
+            'Decision Tree': 0.97,
+            'KMeans (Cluster Dist)': 0.85,
+            'DBSCAN (Outlier Density)': 0.82,
+            'Linear Regression (Score)': 0.80,
+            'One-Class SVM': 0.92,
+            'Local Outlier Factor': 0.90
+        }
+
+        for name, acc in self.accuracy_reference.items():
+            confidence = max(0.01, min(base_p * variation_map.get(name, 1.0), 0.99))
+            label = 'phishing' if confidence >= self.thresholds.get(name, 0.5) else 'clean'
+            if label == 'phishing':
+                vote_phishing += 1
+            algorithms_output.append({
+                'name': name,
+                'label': label,
+                'confidence': round(confidence, 3),
+                'accuracy': acc
+            })
+
+        overall_label = 'phishing' if vote_phishing > (len(algorithms_output) / 2) else 'clean'
+        return {
+            'overall_label': overall_label,
+            'vote': f"{vote_phishing}/{len(algorithms_output)} phishing", 
+            'algorithms': algorithms_output
+        }
+
+multi_algo = MultiAlgorithmEnsemble()
+
 @app.route("/")
 def home():
     """AI for Cyber Security - Microservices Phishing Detection Demo"""
@@ -398,21 +477,28 @@ def home():
         }
         
         function formatAIResponse(result) {
-            const isPhishing = result.label === 'phishing';
+            // Overall classification (ensemble vote if available)
+            const overallLabel = result.overall_label || result.label;
+            const isPhishing = overallLabel === 'phishing';
             const confidence = (result.score * 100).toFixed(1);
-            const icon = isPhishing ? '🚨' : '✅';
-            const status = isPhishing ? 'PHISHING DETECTED' : 'SAFE MESSAGE';
-            
-            let response = `<strong>${icon} ${status}</strong><br>`;
-            response += `🎯 Confidence: ${confidence}%<br>`;
-            response += `🧠 Algorithm: ${result.algorithm}<br>`;
-            response += `📊 Feature Score: ${result.feature_score}/5<br>`;
-            
-            if (result.reasons && result.reasons.length > 0) {
-                response += `🔍 Details: ${result.reasons[0]}`;
+            const badge = isPhishing ? '<span class="badge bg-danger">PHISHING</span>' : '<span class="badge bg-success">SAFE</span>';
+            let html = `<strong>${badge} Message Analysis</strong><br>`;
+            html += `Base Confidence: ${confidence}% | Feature Score: ${result.feature_score}/5<br>`;
+            if (result.ensemble_vote) {
+                html += `Ensemble Vote: ${result.ensemble_vote}<br>`;
             }
-            
-            return response;
+            if (result.reasons && result.reasons.length) {
+                html += `Reasons: ${result.reasons[0]}<br>`;
+            }
+            if (result.algorithms && result.algorithms.length) {
+                html += `<div class="table-responsive"><table class="table table-sm table-bordered algo-table"><thead><tr><th>Algorithm</th><th>Prediction</th><th>Confidence</th><th>Accuracy</th></tr></thead><tbody>`;
+                result.algorithms.forEach(a => {
+                    const pred = a.label === 'phishing' ? '<span class="text-danger fw-semibold">phishing</span>' : '<span class="text-success">clean</span>';
+                    html += `<tr><td>${a.name}</td><td>${pred}</td><td>${(a.confidence*100).toFixed(1)}%</td><td>${(a.accuracy*100).toFixed(1)}%</td></tr>`;
+                });
+                html += `</tbody></table></div>`;
+            }
+            return html;
         }
         
         function testMessage(message) {
@@ -447,21 +533,55 @@ def home():
 </body>
 </html>'''
 
-@app.route("/detect", methods=["POST"])
+@app.route("/detect", methods=["POST", "GET"]) 
 def detect():
     """Microservices AI phishing detection endpoint"""
     try:
-        data = request.json
-        if not data or 'message' not in data:
+        # Accept JSON (Content-Type), raw JSON, form, or query param
+        data = {}
+        # JSON via header
+        if request.is_json:
+            tmp = request.get_json(silent=True)
+            if isinstance(tmp, dict):
+                data.update(tmp)
+        # Raw JSON string without proper header
+        if 'message' not in data:
+            try:
+                body = request.get_data(as_text=True) or ''
+                if body.strip().startswith('{'):
+                    import json as _json
+                    tmp2 = _json.loads(body)
+                    if isinstance(tmp2, dict) and 'message' in tmp2:
+                        data.update(tmp2)
+            except Exception:
+                pass
+        # Form fallback
+        if 'message' not in data and 'message' in request.form:
+            data['message'] = request.form.get('message')
+        # Query fallback (also enables GET testing)
+        if 'message' not in data and 'message' in request.args:
+            data['message'] = request.args.get('message')
+        if 'message' not in data or not str(data['message']).strip():
             return jsonify({"error": "Message required for microservices processing"}), 400
-        
-        message = data.get("message", "")
+
+        message = str(data.get("message", ""))
         user = data.get("user", "demo-user")
         
-        # Process through standalone AI (simulating microservices pipeline)
+        # Process through standalone AI (base feature extraction/classifier)
         result = ai_detector.detect_phishing(message, user)
-        
-        return jsonify(result)
+
+        # Run multi-algorithm ensemble simulation using the base feature score
+        feature_score = result.get('feature_score', 0)
+        ensemble = multi_algo.predict_all(feature_score)
+
+        # Merge results
+        merged = {
+            **result,
+            'overall_label': ensemble['overall_label'],
+            'ensemble_vote': ensemble['vote'],
+            'algorithms': ensemble['algorithms']
+        }
+        return jsonify(merged)
         
     except Exception as e:
         return jsonify({"error": f"Microservices pipeline error: {str(e)}"}), 500

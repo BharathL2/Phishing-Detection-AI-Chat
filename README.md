@@ -114,9 +114,88 @@ Response (example):
         "score": 0.92,
         "reasons": ["Detected phishing indicators: urgent, expires, verify"],
         "algorithm": "Naive Bayes Classifier",
-        "feature_score": 4
+        "feature_score": 4,
+        "overall_label": "phishing",
+        "ensemble_vote": "7/10 phishing",
+        "algorithms": [
+                { "name": "Naive Bayes", "label": "phishing", "confidence": 0.92, "accuracy": 0.90 },
+                { "name": "Linear Classifier", "label": "phishing", "confidence": 0.94, "accuracy": 0.93 },
+                { "name": "KNN", "label": "phishing", "confidence": 0.88, "accuracy": 0.88 },
+                { "name": "Random Forest", "label": "phishing", "confidence": 0.96, "accuracy": 0.95 },
+                { "name": "Decision Tree", "label": "clean", "confidence": 0.49, "accuracy": 0.89 }
+        ]
 }
 ```
+
+### 🧠 Multi-Algorithm Classroom Demo
+
+The `/detect` endpoint now returns an *ensemble* view simulating multiple algorithms often discussed in class:
+
+| Algorithm                  | What It Represents (Demo)                        | Accuracy* |
+|---------------------------|---------------------------------------------------|-----------|
+| Naive Bayes               | Keyword feature probability model                | 90%       |
+| Linear Classifier         | Logistic-style thresholding of feature score     | 93%       |
+| KNN                       | Neighbor agreement on risk score                 | 88%       |
+| Random Forest             | Multiple decision splits voting                  | 95%       |
+| Decision Tree             | Single interpretable branching path              | 89%       |
+| KMeans (Cluster Dist)     | Distance from “safe” cluster centroid            | 75%       |
+| DBSCAN (Outlier Density)  | Density-based anomaly flagging                   | 72%       |
+| Linear Regression (Score) | Continuous risk regression → threshold           | 70%       |
+| One-Class SVM             | Boundary separation for inlier/outlier           | 85%       |
+| Local Outlier Factor      | Local density comparison for anomaly             | 82%       |
+
+Returned fields:
+
+```json
+{
+        "overall_label": "phishing",          // majority vote outcome
+        "ensemble_vote": "7/10 phishing",     // voting breakdown
+        "algorithms": [                        // per-algorithm simulated results
+                { "name": "Random Forest", "label": "phishing", "confidence": 0.96, "accuracy": 0.95 }
+        ]
+}
+```
+
+*Accuracy values are illustrative classroom placeholders (no dataset training in this lightweight demo). Replace with real evaluation metrics if you integrate actual model training.
+
+Phishing results are presented with a red badge; safe results with green. Each algorithm row shows:
+
+- Prediction (phishing/clean)
+- Confidence (normalized from heuristic feature score)
+- Static reference accuracy (for discussion)
+
+To experiment programmatically, inspect the `algorithms` array in the JSON response.
+### 🧪 PowerShell & curl POST Examples
+
+PowerShell (Invoke-RestMethod):
+
+```powershell
+$headers = @{ 'Content-Type' = 'application/json' }
+$body = '{"message":"URGENT! Your account expires in 1 hour. Click here to verify immediately!"}'
+Invoke-RestMethod -Uri 'http://127.0.0.1:5050/detect' -Method POST -Headers $headers -Body $body | ConvertTo-Json -Depth 6
+```
+
+Windows curl.exe:
+
+```powershell
+curl.exe -H "Content-Type: application/json" -d "{\"message\":\"Hello team meeting moved to 3 PM tomorrow.\"}" http://127.0.0.1:5050/detect
+```
+
+GET with query (no body):
+
+```powershell
+Invoke-RestMethod -Uri "http://127.0.0.1:5050/detect?message=Test%20message" -Method GET | ConvertTo-Json -Depth 6
+```
+
+### 🌐 Enable GitHub Pages (docs/)
+
+1. Commit and push the latest `docs/` folder to `main`.
+2. In GitHub: Settings → Pages.
+3. Select Branch: `main` and Folder: `/docs` then Save.
+4. Wait ~2–5 minutes; site becomes available at: `https://<username>.github.io/<repository>/`.
+5. If calling your local Flask API from the hosted pages, use an HTTPS tunnel (e.g., `ngrok http 5050`) to avoid mixed content errors.
+
+Optional: Add a custom domain (CNAME) by creating `docs/CNAME` with your domain name.
 
 2) GET `/stats` – System statistics
 

@@ -9,6 +9,9 @@
     body{background:#f8f9fa}
     .container{max-width:1000px;margin-top:28px}
     .chat-box{height:300px;overflow:auto;background:#fff;padding:12px;border-radius:6px}
+    .badge-safe{background:#28a745}
+    .badge-unsafe{background:#dc3545}
+    .algo-table td,.algo-table th{padding:.25rem .5rem;font-size:.9rem}
   </style>
 </head>
 <body>
@@ -99,14 +102,37 @@
         const res = await fetch(base+'/detect', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({message}) });
         const j = await res.json();
         removeLastProcessing();
-        append('AI: '+(j.label || 'unknown') + ' (score: '+(j.score||0)+')');
-        if(j.reasons) append('Reasons: '+j.reasons.join('; '));
+        appendHTML(renderEnsemble(j));
         setTimeout(loadStats, 500);
       }catch(e){ removeLastProcessing(); append('Error: Could not connect to API at '+base); }
     }
 
     function append(text){ const p = document.createElement('div'); p.textContent = text; chat.appendChild(p); chat.scrollTop = chat.scrollHeight; }
+    function appendHTML(html){ const div=document.createElement('div'); div.innerHTML=html; chat.appendChild(div); chat.scrollTop = chat.scrollHeight; }
     function removeLastProcessing(){ const nodes = chat.childNodes; if(nodes.length>0) chat.removeChild(nodes[nodes.length-1]); }
+
+    function renderEnsemble(j){
+      const overall = j.overall_label || j.label;
+      const badge = overall === 'phishing' ? '<span class="badge text-white badge-unsafe">PHISHING</span>' : '<span class="badge text-white badge-safe">SAFE</span>';
+      const reasons = (j.reasons && j.reasons.length>0) ? `<div class="text-muted small">Reasons: ${j.reasons.join('; ')}</div>` : '';
+      const rows = (j.algorithms||[]).map(a=>{
+        const col = a.label==='phishing' ? '<span class="text-danger fw-semibold">phishing</span>' : '<span class="text-success">clean</span>';
+        return `<tr><td>${a.name}</td><td>${col}</td><td>${(a.confidence*100).toFixed(1)}%</td><td>${(a.accuracy*100).toFixed(1)}%</td></tr>`;
+      }).join('');
+      return `
+        <div class="card border-0">
+          <div class="card-body p-2">
+            <div class="mb-1">${badge} <span class="ms-2 small text-muted">vote: ${j.ensemble_vote||''}</span></div>
+            ${reasons}
+            <div class="table-responsive mt-2">
+              <table class="table table-sm table-striped algo-table align-middle">
+                <thead><tr><th>Algorithm</th><th>Prediction</th><th>Confidence</th><th>Accuracy</th></tr></thead>
+                <tbody>${rows}</tbody>
+              </table>
+            </div>
+          </div>
+        </div>`;
+    }
 
     document.getElementById('send').addEventListener('click', ()=>{ const m=document.getElementById('message').value.trim(); if(m) { send(m); document.getElementById('message').value=''; } });
     document.getElementById('message').addEventListener('keypress', e=>{ if(e.key==='Enter'){ e.preventDefault(); document.getElementById('send').click(); } });
