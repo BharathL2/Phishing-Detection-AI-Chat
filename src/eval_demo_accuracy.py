@@ -1,5 +1,7 @@
 import json
-from typing import List, Tuple
+import os
+import csv
+from typing import List, Tuple, Any
 
 # We evaluate the demo (standalone) detector used by microservices_demo.py
 # Note: This is a heuristics-based demo model, not trained. "Accuracy" here is illustrative.
@@ -14,7 +16,7 @@ except Exception as e:
     from microservices_demo import StandalonePhishingDetector
 
 
-def evaluate(detector: StandalonePhishingDetector, dataset: List[Tuple[str, int]]):
+def evaluate(detector: Any, dataset: List[Tuple[str, int]]):
     """
     dataset: list of (message, label) where label=1 for phishing, 0 for clean
     Returns basic metrics dict
@@ -60,33 +62,46 @@ def evaluate(detector: StandalonePhishingDetector, dataset: List[Tuple[str, int]
 if __name__ == '__main__':
     det = StandalonePhishingDetector()
 
-    # Tiny illustrative dataset (10 phishing, 10 clean) built from examples in the repo
-    phishing = [
-        "URGENT! Your account expires in 1 hour. Click here to verify immediately!",
-        "Congratulations! You won $5000 cash prize! Claim your free reward now!",
-        "Your PayPal account requires immediate verification. Login at fake-paypal.com",
-        "Bank Alert: Suspicious login detected. Verify your account to avoid suspension!",
-        "DHL: Your package is on hold due to unpaid customs. Pay the fee here to release delivery",
-        "Refund available: You were overcharged. Submit your card details for instant refund",
-        "Crypto Giveaway! Send 0.1 ETH and receive 1 ETH back instantly! Limited time offer!",
-        "ACTION REQUIRED: Update your billing information immediately",
-        "Your Netflix subscription will be suspended. Update your payment info to continue",
-        "OTP: 482913. If you didn't request this, reset your password immediately"
-    ]
-    clean = [
-        "Hi team! Meeting tomorrow at 2 PM in conference room A.",
-        "Hello, how are you today?",
-        "The meeting is scheduled for 3 PM tomorrow.",
-        "Thanks for the great presentation yesterday.",
-        "Let's discuss the project requirements next week.",
-        "I uploaded the notes to the shared folder. Please review when you can.",
-        "Lunch at 12:30?",
-        "Reminder: Submit timesheets by Friday.",
-        "Happy birthday! Wishing you a great year ahead.",
-        "The server maintenance window is Sunday 1-3 AM."
-    ]
-
-    dataset = [(m, 1) for m in phishing] + [(m, 0) for m in clean]
+    # If a CSV dataset exists at data/sample_dataset.csv, use it; else use built-in examples
+    csv_path = os.path.join('data', 'sample_dataset.csv')
+    dataset: List[Tuple[str, int]] = []
+    if os.path.exists(csv_path):
+        with open(csv_path, newline='', encoding='utf-8') as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                text = (row.get('text') or '').strip()
+                label_str = (row.get('label') or '').strip().lower()
+                if not text or label_str not in ('phishing','clean'):
+                    continue
+                y = 1 if label_str == 'phishing' else 0
+                dataset.append((text, y))
+    else:
+        # Tiny illustrative dataset (10 phishing, 10 clean) built from examples in the repo
+        phishing = [
+            "URGENT! Your account expires in 1 hour. Click here to verify immediately!",
+            "Congratulations! You won $5000 cash prize! Claim your free reward now!",
+            "Your PayPal account requires immediate verification. Login at fake-paypal.com",
+            "Bank Alert: Suspicious login detected. Verify your account to avoid suspension!",
+            "DHL: Your package is on hold due to unpaid customs. Pay the fee here to release delivery",
+            "Refund available: You were overcharged. Submit your card details for instant refund",
+            "Crypto Giveaway! Send 0.1 ETH and receive 1 ETH back instantly! Limited time offer!",
+            "ACTION REQUIRED: Update your billing information immediately",
+            "Your Netflix subscription will be suspended. Update your payment info to continue",
+            "OTP: 482913. If you didn't request this, reset your password immediately"
+        ]
+        clean = [
+            "Hi team! Meeting tomorrow at 2 PM in conference room A.",
+            "Hello, how are you today?",
+            "The meeting is scheduled for 3 PM tomorrow.",
+            "Thanks for the great presentation yesterday.",
+            "Let's discuss the project requirements next week.",
+            "I uploaded the notes to the shared folder. Please review when you can.",
+            "Lunch at 12:30?",
+            "Reminder: Submit timesheets by Friday.",
+            "Happy birthday! Wishing you a great year ahead.",
+            "The server maintenance window is Sunday 1-3 AM."
+        ]
+        dataset = [(m, 1) for m in phishing] + [(m, 0) for m in clean]
 
     results = evaluate(det, dataset)
     print(json.dumps(results, indent=2))

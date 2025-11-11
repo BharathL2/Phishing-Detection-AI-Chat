@@ -1,0 +1,21 @@
+text,label
+"URGENT! Your account expires in 1 hour. Click here to verify immediately!",phishing
+"Congratulations! You won $5000 cash prize! Claim your free reward now!",phishing
+"Your PayPal account requires immediate verification. Login at fake-paypal.com",phishing
+"Bank Alert: Suspicious login detected. Verify your account to avoid suspension!",phishing
+"DHL: Your package is on hold due to unpaid customs. Pay the fee here to release delivery",phishing
+"Refund available: You were overcharged. Submit your card details for instant refund",phishing
+"Crypto Giveaway! Send 0.1 ETH and receive 1 ETH back instantly! Limited time offer!",phishing
+"ACTION REQUIRED: Update your billing information immediately",phishing
+"Your Netflix subscription will be suspended. Update your payment info to continue",phishing
+"OTP: 482913. If you didn't request this, reset your password immediately",phishing
+"Hi team! Meeting tomorrow at 2 PM in conference room A.",clean
+"Hello, how are you today?",clean
+"The meeting is scheduled for 3 PM tomorrow.",clean
+"Thanks for the great presentation yesterday.",clean
+"Let's discuss the project requirements next week.",clean
+"I uploaded the notes to the shared folder. Please review when you can.",clean
+"Lunch at 12:30?",clean
+"Reminder: Submit timesheets by Friday.",clean
+"Happy birthday! Wishing you a great year ahead.",clean
+"The server maintenance window is Sunday 1-3 AM.",clean
