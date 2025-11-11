@@ -67,25 +67,42 @@ Note: For classroom/demo use, run `microservices_demo.py`. It’s self-contained
 - Optional legacy path (Docker/index.py) shows microservice architecture
 ## 🚀 Quick Start (Windows PowerShell)
 
-Run the standalone demo on port 5050:
+Run the standalone demo backend on port 5050 and the static UI on 8081.
+
+1) Install dependencies (one-time):
 
 ```powershell
-# From the project folder
-# Ensure dependencies are installed (one-time):
 python -m pip install --upgrade pip
-pip install -r requirements.txt
+python -m pip install flask flask-cors requests
+```
 
-# Run the server
-$env:PORT=5050; python src\microservices_demo.py
+2) Start the backend (5050):
+
+```powershell
+cd "C:\Users\l670b\Phishing Detection – AI Chat"
+python src\microservices_demo.py
 ```
 
 Open: http://127.0.0.1:5050
 
-If port 5050 is busy, try a different port (e.g., 5060):
+If port 5050 is busy, pick a different one:
 
 ```powershell
 $env:PORT=5060; python src\microservices_demo.py
 ```
+
+3) Start the static demo UI (docs/ on 8081):
+
+```powershell
+cd "C:\Users\l670b\Phishing Detection – AI Chat\docs"
+python -m http.server 8081
+```
+
+Open the login page: http://127.0.0.1:8081/login.html (sign in with any email; it redirects to the backend at 5050). 
+
+Alternatively, open the static demo directly: http://127.0.0.1:8081/index.html (you can set the API base URL there, default is http://127.0.0.1:5050).
+
+Note: If you later host `docs/` over HTTPS (e.g., GitHub Pages), browsers block calls to a local HTTP API. Use an HTTPS tunnel (e.g., ngrok) for the backend to avoid mixed content.
 
 ## 🖥️ Using the UI
 
@@ -93,6 +110,12 @@ $env:PORT=5060; python src\microservices_demo.py
 - Click preset example buttons to try common phishing scenarios
 - Use the theme toggle in the header to switch light/dark mode (it persists)
 - Click “View System Statistics” to see activity summary
+
+### Live demo flow
+- Visit http://127.0.0.1:8081/login.html and sign in with any email (demo only).
+- You’ll be redirected to http://127.0.0.1:5050/ (Flask UI).
+- Paste a phishing example like “URGENT! Your account expires in 1 hour. Click here to verify immediately!” → expect a red PHISHING badge and a high ensemble vote.
+- Paste a normal message like “Meeting moved to 3 PM tomorrow.” → expect a green SAFE badge with low/zero ensemble vote.
 
 ## 🔌 API Reference
 
@@ -247,6 +270,16 @@ Invoke-RestMethod -Uri 'http://127.0.0.1:5050/health' -Method GET | ConvertTo-Js
 Tip: If you’re running the server and requesting from the same PowerShell terminal, the output can get
 interleaved with server logs. Open a new PowerShell window for API tests.
 ```
+
+## 📈 Evaluation (illustrative)
+
+This demo includes a small script to compute an illustrative accuracy on a tiny synthetic set (10 phishing + 10 clean) using the standalone detector:
+
+```powershell
+python src\eval_demo_accuracy.py
+```
+
+Example output (will vary if you change samples): Accuracy ~95%, Precision 100%, Recall ~90%, F1 ~0.95. This is for demonstration only and not a benchmark; replace with real datasets and models for production-grade metrics.
 
 ## 🐳 Run with Docker (optional)
 
