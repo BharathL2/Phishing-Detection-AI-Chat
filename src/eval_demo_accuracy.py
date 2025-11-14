@@ -63,7 +63,8 @@ if __name__ == '__main__':
     det = StandalonePhishingDetector()
 
     # If a CSV dataset exists at data/sample_dataset.csv, use it; else use built-in examples
-    csv_path = os.path.join('data', 'sample_dataset.csv')
+    preferred = os.path.join('data', 'kaggle_phishing.csv')
+    csv_path = preferred if os.path.exists(preferred) else os.path.join('data', 'sample_dataset.csv')
     dataset: List[Tuple[str, int]] = []
     if os.path.exists(csv_path):
         with open(csv_path, newline='', encoding='utf-8') as f:

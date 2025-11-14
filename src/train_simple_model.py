@@ -9,7 +9,8 @@ from sklearn.pipeline import Pipeline
 from sklearn.metrics import classification_report
 import joblib
 
-DATA_PATH = os.path.join('data', 'sample_dataset.csv')
+DATA_PATH_PRIMARY = os.path.join('data', 'kaggle_phishing.csv')
+DATA_PATH_FALLBACK = os.path.join('data', 'sample_dataset.csv')
 MODEL_DIR = 'models'
 MODEL_PATH = os.path.join(MODEL_DIR, 'phish_logreg.pkl')
 
@@ -28,10 +29,11 @@ def build_pipeline():
     ])
 
 def main():
-    if not os.path.exists(DATA_PATH):
-        raise FileNotFoundError(f"Dataset not found at {DATA_PATH}")
+    data_path = DATA_PATH_PRIMARY if os.path.exists(DATA_PATH_PRIMARY) else DATA_PATH_FALLBACK
+    if not os.path.exists(data_path):
+        raise FileNotFoundError(f"Dataset not found at {DATA_PATH_PRIMARY} or {DATA_PATH_FALLBACK}")
     os.makedirs(MODEL_DIR, exist_ok=True)
-    df = load_data(DATA_PATH)
+    df = load_data(data_path)
     X = df['text']
     y = df['label']
     clf = build_pipeline()

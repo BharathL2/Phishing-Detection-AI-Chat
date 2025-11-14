@@ -1,0 +1,17 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Switch API to XGBoost (5072)</title>
+<style>body{font-family:system-ui,Segoe UI,Arial;padding:24px} .ok{color:green}</style>
+</head>
+<body>
+<h3>Switching API Base to XGBoost server (http://127.0.0.1:5072)</h3>
+<script>
+try{
+  localStorage.setItem('aichat.apiBase','http://127.0.0.1:5072');
+  document.write('<p class="ok">Done. Redirecting to demo…</p>');
+  setTimeout(()=>location.href='demo.html',800);
+}catch(e){
+  document.write('<p>Unable to set localStorage automatically. Open console and run:<br><code>localStorage.setItem(\'aichat.apiBase\', \'http://127.0.0.1:5072\')</code></p>');
+}
+</script>
+</body></html>

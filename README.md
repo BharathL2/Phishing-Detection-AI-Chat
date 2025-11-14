@@ -67,7 +67,7 @@ Note: For classroom/demo use, run `microservices_demo.py`. It’s self-contained
 - Optional legacy path (Docker/index.py) shows microservice architecture
 ## 🚀 Quick Start (Windows PowerShell)
 
-Run the standalone demo backend on port 5050 and the static UI on 8081.
+Preferred dynamic setup: run the unsupervised backend on port 5071 and the static UI on 8081 (the UI defaults to 5071). You can still run the classic demo on 5050 if needed.
 
 1) Install dependencies (one-time):
 
@@ -76,19 +76,19 @@ python -m pip install --upgrade pip
 python -m pip install flask flask-cors requests
 ```
 
-2) Start the backend (5050):
+2) Start the backend (Dynamic unsupervised on 5071):
 
 ```powershell
 cd "C:\Users\l670b\Phishing Detection – AI Chat"
-python src\microservices_demo.py
+python src\dynamic_unsupervised_server.py
 ```
 
-Open: http://127.0.0.1:5050
+Open health: http://127.0.0.1:5071/health
 
-If port 5050 is busy, pick a different one:
+If port 5071 is busy, pick a different one:
 
 ```powershell
-$env:PORT=5060; python src\microservices_demo.py
+$env:PORT=5075; python src\dynamic_unsupervised_server.py
 ```
 
 3) Start the static demo UI (docs/ on 8081):
@@ -98,9 +98,9 @@ cd "C:\Users\l670b\Phishing Detection – AI Chat\docs"
 python -m http.server 8081
 ```
 
-Open the login page: http://127.0.0.1:8081/login.html (sign in with any email; it redirects to the backend at 5050). 
+Open the login page: http://127.0.0.1:8081/login.html (sign in with any email; it redirects to the demo UI and sets the API base to http://127.0.0.1:5071).
 
-Alternatively, open the static demo directly: http://127.0.0.1:8081/index.html (you can set the API base URL there, default is http://127.0.0.1:5050).
+Alternatively, open the static demo directly: http://127.0.0.1:8081/index.html (you can set the API base URL there, default is http://127.0.0.1:5071).
 
 Note: If you later host `docs/` over HTTPS (e.g., GitHub Pages), browsers block calls to a local HTTP API. Use an HTTPS tunnel (e.g., ngrok) for the backend to avoid mixed content.
 
@@ -113,7 +113,7 @@ Note: If you later host `docs/` over HTTPS (e.g., GitHub Pages), browsers block 
 
 ### Live demo flow
 - Visit http://127.0.0.1:8081/login.html and sign in with any email (demo only).
-- You’ll be redirected to http://127.0.0.1:5050/ (Flask UI).
+- You’ll be redirected to docs UI (index.html) which targets http://127.0.0.1:5071 by default.
 - Paste a phishing example like “URGENT! Your account expires in 1 hour. Click here to verify immediately!” → expect a red PHISHING badge and a high ensemble vote.
 - Paste a normal message like “Meeting moved to 3 PM tomorrow.” → expect a green SAFE badge with low/zero ensemble vote.
 
@@ -195,19 +195,19 @@ PowerShell (Invoke-RestMethod):
 ```powershell
 $headers = @{ 'Content-Type' = 'application/json' }
 $body = '{"message":"URGENT! Your account expires in 1 hour. Click here to verify immediately!"}'
-Invoke-RestMethod -Uri 'http://127.0.0.1:5050/detect' -Method POST -Headers $headers -Body $body | ConvertTo-Json -Depth 6
+Invoke-RestMethod -Uri 'http://127.0.0.1:5071/detect' -Method POST -Headers $headers -Body $body | ConvertTo-Json -Depth 6
 ```
 
 Windows curl.exe:
 
 ```powershell
-curl.exe -H "Content-Type: application/json" -d "{\"message\":\"Hello team meeting moved to 3 PM tomorrow.\"}" http://127.0.0.1:5050/detect
+curl.exe -H "Content-Type: application/json" -d "{\"message\":\"Hello team meeting moved to 3 PM tomorrow.\"}" http://127.0.0.1:5071/detect
 ```
 
 GET with query (no body):
 
 ```powershell
-Invoke-RestMethod -Uri "http://127.0.0.1:5050/detect?message=Test%20message" -Method GET | ConvertTo-Json -Depth 6
+Invoke-RestMethod -Uri "http://127.0.0.1:5071/detect?message=Test%20message" -Method GET | ConvertTo-Json -Depth 6
 ```
 
 ### 🌐 Enable GitHub Pages (docs/)
@@ -259,13 +259,13 @@ Optional: Add a custom domain (CNAME) by creating `docs/CNAME` with your domain 
 # POST /detect
 $headers = @{ 'Content-Type' = 'application/json' }
 $body = '{"message": "Test message from PowerShell"}'
-Invoke-RestMethod -Uri 'http://127.0.0.1:5050/detect' -Method POST -Headers $headers -Body $body | ConvertTo-Json -Depth 5
+Invoke-RestMethod -Uri 'http://127.0.0.1:5071/detect' -Method POST -Headers $headers -Body $body | ConvertTo-Json -Depth 5
 
 # GET /stats
-Invoke-RestMethod -Uri 'http://127.0.0.1:5050/stats' -Method GET | ConvertTo-Json -Depth 5
+Invoke-RestMethod -Uri 'http://127.0.0.1:5071/stats' -Method GET | ConvertTo-Json -Depth 5
 
 # GET /health
-Invoke-RestMethod -Uri 'http://127.0.0.1:5050/health' -Method GET | ConvertTo-Json -Depth 5
+Invoke-RestMethod -Uri 'http://127.0.0.1:5071/health' -Method GET | ConvertTo-Json -Depth 5
 
 Tip: If you’re running the server and requesting from the same PowerShell terminal, the output can get
 interleaved with server logs. Open a new PowerShell window for API tests.
@@ -298,7 +298,7 @@ Health check: http://127.0.0.1:5000/health
 
 ## ⚙️ Configuration
 
-- `PORT` (env var): HTTP port for the demo server (default 5050). Example: `$env:PORT=5060`.
+- `PORT` (env var): HTTP port for the dynamic server (default 5071). Example: `$env:PORT=5075`.
 - `MONGO_URI`, `FLASK_ENV` (used by the Docker/index.py path for legacy components)
 
 Path note (Windows): This project folder name contains an en dash (–). When changing directories in
@@ -319,7 +319,7 @@ python -m venv .venv; .\.venv\Scripts\Activate.ps1; pip install -e .
 Run the demo app:
 
 ```powershell
-$env:PORT=5050; python src\microservices_demo.py
+$env:PORT=5071; python src\dynamic_unsupervised_server.py
 ```
 
 Run tests (if present):
@@ -333,7 +333,7 @@ python -m unittest discover
 - “127.0.0.1 refused to connect”
         - Try another port: `$env:PORT=5060; python src\microservices_demo.py`
         - Stop stray processes: `Get-Process python -ErrorAction SilentlyContinue | Stop-Process -Force`
-        - Check port usage: `netstat -ano | findstr LISTENING | findstr :5050`
+        - Check port usage: `netstat -ano | findstr LISTENING | findstr :5071`
         - Allow Python in Windows Firewall (Private networks)
 
 - “Module not found”
@@ -342,8 +342,150 @@ python -m unittest discover
 
 - “Invoke-WebRequest/Invoke-RestMethod fails while server is running”
         - Open a second PowerShell window and re-run the request there
-        - Or use your browser at http://127.0.0.1:5050/health
+        - Or use your browser at http://127.0.0.1:5071/health
 
 ## 📄 License
 
 MIT (see LICENSE if present).
+
+## 📚 Kaggle Dataset Integration (Optional)
+
+You can integrate a larger public dataset from Kaggle for experimentation or improved supervised training.
+
+### 1. Kaggle API Setup
+1. Create / log into your Kaggle account: https://www.kaggle.com/
+2. Profile (top right) → Account → API → Create New Token (downloads `kaggle.json`).
+3. Place `kaggle.json` at (Windows): `%USERPROFILE%\.kaggle\kaggle.json`.
+4. (Alternative) Set environment variables instead:
+   - `KAGGLE_USERNAME` = your Kaggle username
+   - `KAGGLE_KEY` = the API key from the JSON file
+
+Install package:
+
+```powershell
+pip install kaggle
+```
+
+### 2. Download a Dataset
+Use the generic downloader (does not hard-code a specific dataset):
+
+```powershell
+python -m src.data_fetch.kaggle_download --dataset owner/dataset-slug
+
+# Example (adjust to your chosen dataset):
+python -m src.data_fetch.kaggle_download --dataset ninjaapt/phishing-email-dataset
+```
+
+Files appear under: `data/raw/owner_dataset-slug/`
+
+Re-run with `--force` to re-download. Add `--no-unzip` if you want the raw archive.
+
+### 3. Normalize to a Unified CSV
+Goal: produce `data/kaggle_phishing.csv` with columns: `text,label` where label ∈ {`phishing`,`clean`}.
+
+If the dataset contains multiple CSVs, auto-detect columns via a helper snippet (edit heuristics as needed):
+
+```powershell
+python - <<'PY'
+import pandas as pd, glob, os
+root = 'data/raw'
+out = 'data/kaggle_phishing.csv'
+paths = glob.glob(os.path.join(root, '**', '*.csv'), recursive=True)
+rows = []
+TEXT_CANDIDATES = {'text','email text','body','content','message'}
+LABEL_CANDIDATES = {'label','phishing','is_phishing','class','target'}
+for p in paths:
+        try:
+                df = pd.read_csv(p, encoding='utf-8', errors='ignore')
+        except Exception:
+                continue
+        cols_lower = {c.lower(): c for c in df.columns}
+        text_col = next((cols_lower[c] for c in cols_lower if c in TEXT_CANDIDATES), None)
+        subj_col = cols_lower.get('subject')
+        label_col = next((cols_lower[c] for c in cols_lower if c in LABEL_CANDIDATES), None)
+        if not text_col and subj_col:
+                text_col = subj_col
+        if not text_col or not label_col:
+                continue
+        for _, r in df.iterrows():
+                raw_text = str(r.get(text_col,'')).strip()
+                if subj_col:
+                        raw_text = (str(r.get(subj_col,'')) + ' ' + raw_text).strip()
+                if not raw_text:
+                        continue
+                raw_label = str(r.get(label_col,'')).strip().lower()
+                if raw_label in ('phishing','spam','malicious','1','true','yes'):
+                        mapped = 'phishing'
+                elif raw_label in ('ham','legitimate','clean','0','false','no'):
+                        mapped = 'clean'
+                else:
+                        continue
+                rows.append({'text': raw_text, 'label': mapped})
+print('Collected', len(rows), 'rows')
+pd.DataFrame(rows).drop_duplicates().to_csv(out, index=False)
+print('Wrote', out)
+PY
+```
+
+Sanity check the first lines:
+
+```powershell
+Select-String -Path data\kaggle_phishing.csv -Pattern "" -Context 0,0 -ErrorAction SilentlyContinue | Select-Object -First 10
+```
+
+### 4. Train (Uses Existing Script)
+Rename or copy the unified file to `data/sample_dataset.csv` OR adjust `DATA_PATH` inside `src/train_simple_model.py` to point to `data/kaggle_phishing.csv`, then:
+
+```powershell
+python src\train_simple_model.py
+```
+
+Result: `models/phish_logreg.pkl`
+
+### 5. Evaluate
+
+```powershell
+python src\eval_demo_accuracy.py
+```
+
+If you retained the name `sample_dataset.csv` it will pick it up automatically; otherwise adapt the script.
+
+### 6. (Optional) Unsupervised Mode
+If the Kaggle dataset has inconsistent labels, skip normalization and run the anomaly-based server:
+
+```powershell
+python src\dynamic_unsupervised_server.py
+```
+
+Use POST /detect the same way; the response includes per-model anomaly scores.
+
+Baseline seeding (to show dynamic approach without labels):
+
+```powershell
+# Build a baseline of normal (clean) messages
+python -m src.data_fetch.build_normal_baseline  # creates data\normal_baseline.csv
+
+# Or start with the provided sample baseline (data/normal_baseline.csv)
+
+# Start the dynamic server (it auto-loads baseline if present)
+python src\dynamic_unsupervised_server.py
+```
+
+What to show: the file `data/normal_baseline.csv` contains only normal chat texts (no phishing labels). The server learns a normal boundary from these and flags anomalies at runtime. This demonstrates a dynamic, unlabeled approach (no static supervised training required).
+
+#### Alternate Baseline Formats
+You can also provide the baseline as:
+* `data/normal_baseline.txt`   (one clean message per line)
+* `data/normal_baseline.jsonl` (one JSON object per line: {"text": "..."})
+
+The dynamic server auto-detects CSV first, then TXT, then JSONL.
+
+### 7. (Optional) Synthetic Augmentation
+You can generate extra phishing variants by templating keywords; keep originals separate to avoid data leakage in evaluation. (Script placeholder to be added.)
+
+### Notes
+* Respect dataset license & attribution requirements.
+* For large datasets, consider sampling first (e.g., `head -n 20000` via WSL or PowerShell filtering) to iterate quickly.
+* Adjust vectorizer and model type as needed for better recall/precision trade-offs.
+* For ML features (training/eval/dynamic server), you may need: `pip install scikit-learn pandas numpy joblib`.
+

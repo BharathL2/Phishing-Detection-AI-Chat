@@ -1,21 +1,1501 @@
 text,label
-"URGENT! Your account expires in 1 hour. Click here to verify immediately!",phishing
-"Congratulations! You won $5000 cash prize! Claim your free reward now!",phishing
-"Your PayPal account requires immediate verification. Login at fake-paypal.com",phishing
-"Bank Alert: Suspicious login detected. Verify your account to avoid suspension!",phishing
-"DHL: Your package is on hold due to unpaid customs. Pay the fee here to release delivery",phishing
-"Refund available: You were overcharged. Submit your card details for instant refund",phishing
-"Crypto Giveaway! Send 0.1 ETH and receive 1 ETH back instantly! Limited time offer!",phishing
-"ACTION REQUIRED: Update your billing information immediately",phishing
-"Your Netflix subscription will be suspended. Update your payment info to continue",phishing
-"OTP: 482913. If you didn't request this, reset your password immediately",phishing
-"Hi team! Meeting tomorrow at 2 PM in conference room A.",clean
-"Hello, how are you today?",clean
-"The meeting is scheduled for 3 PM tomorrow.",clean
-"Thanks for the great presentation yesterday.",clean
-"Let's discuss the project requirements next week.",clean
-"I uploaded the notes to the shared folder. Please review when you can.",clean
-"Lunch at 12:30?",clean
-"Reminder: Submit timesheets by Friday.",clean
-"Happy birthday! Wishing you a great year ahead.",clean
-"The server maintenance window is Sunday 1-3 AM.",clean
+HMRC IMMEDIATELY! Package on hold due to customs. Click here to continue. Claim your free reward http://192.168.1.1/login,phishing
+HMRC VERIFY NOW! Overcharged invoice. Click here to continue. http://hmrc-secure.ml/login,phishing
+Apple URGENT! Your subscription will be cancelled. Confirm your identity to continue. http://apple-secure.gq/login,phishing
+DHL URGENT! Your subscription will be cancelled. Submit your details to continue. http://dhl-secure.ml/login,phishing
+FedEx IMMEDIATELY! Payment declined. Click here to continue. Refund available http://dhl-payments.example,phishing
+PayPal YOUR ACCOUNT EXPIRES! Your account will be suspended. Confirm your identity to continue. http://paypal-secure.ga/login,phishing
+HMRC ACCOUNT ALERT! Your subscription will be cancelled. Confirm your identity to continue. http://secure-login.example,phishing
+DHL IMMEDIATELY! Your subscription will be cancelled. Submit your details to continue. http://dhl-secure.ga/login,phishing
+Netflix ACCOUNT ALERT! Your subscription will be cancelled. Reset your password to continue. http://verify-payments.example,phishing
+Netflix VERIFY NOW! Your subscription will be cancelled. Login to continue to continue. Exclusive offer http://billing-secure.example,phishing
+HMRC VERIFY NOW! Package on hold due to customs. Verify your account to continue. Refund available http://hmrc-secure.tk/login,phishing
+FedEx SECURITY ALERT! Your account will be suspended. Reset your password to continue. Limited time prize http://fedex-secure.cf/login,phishing
+Microsoft YOUR ACCOUNT EXPIRES! Unusual login detected. Verify your account to continue. Cashback available http://billing-secure.example,phishing
+Microsoft SECURITY ALERT! Your subscription will be cancelled. Reset your password to continue. http://192.168.1.1/login,phishing
+Bank of America URGENT! Your account will be suspended. Submit your details to continue. Claim your free reward http://paypal-secure-login.example,phishing
+Microsoft SECURITY ALERT! Payment declined. Confirm your identity to continue. http://secure-login.example,phishing
+Bank of America VERIFY NOW! Unusual login detected. Submit your details to continue. http://bankofamerica-secure.cf/login,phishing
+Netflix YOUR ACCOUNT EXPIRES! Package on hold due to customs. Click here to continue. http://billing-secure.example,phishing
+Netflix VERIFY NOW! Package on hold due to customs. Click here to continue. Cashback available http://netflix-secure.ml/login,phishing
+Apple VERIFY NOW! Overcharged invoice. Click here to continue. You won $5000 http://verify-payments.example,phishing
+DHL LAST WARNING! Your subscription will be cancelled. Click here to continue. http://dhl-secure.cf/login,phishing
+Bank of America VERIFY NOW! Your subscription will be cancelled. Submit your details to continue. Exclusive offer http://bankofamerica-secure.gq/login,phishing
+Microsoft LAST WARNING! Package on hold due to customs. Confirm your identity to continue. http://microsoft-secure.ga/login,phishing
+Google VERIFY NOW! Your account will be suspended. Update billing info to continue. You won $5000 http://google-secure.gq/login,phishing
+Amazon LAST WARNING! Your account will be suspended. Click here to continue. http://amazon-secure.tk/login,phishing
+FedEx IMMEDIATELY! Your subscription will be cancelled. Confirm your identity to continue. Exclusive offer http://account-update.example,phishing
+IRS YOUR ACCOUNT EXPIRES! Payment declined. Verify your account to continue. http://irs-secure.cf/login,phishing
+FedEx SECURITY ALERT! Payment declined. Update billing info to continue. http://secure-login.example,phishing
+HMRC IMMEDIATELY! Payment declined. Click here to continue. http://hmrc-secure.ml/login,phishing
+Apple YOUR ACCOUNT EXPIRES! Payment declined. Verify your account to continue. Exclusive offer http://account-update.example,phishing
+Bank of America YOUR ACCOUNT EXPIRES! Overcharged invoice. Submit your details to continue. Cashback available http://secure-login.example,phishing
+Amazon ACTION REQUIRED! Payment declined. Update billing info to continue. http://paypal-secure-login.example,phishing
+Netflix SECURITY ALERT! Payment declined. Click here to continue. Refund available http://netflix-secure.gq/login,phishing
+HMRC YOUR ACCOUNT EXPIRES! Your subscription will be cancelled. Verify your account to continue. You won $5000 http://secure-login.example,phishing
+PayPal URGENT! Payment declined. Confirm your identity to continue. http://paypal-secure.gq/login,phishing
+Bank of America ACTION REQUIRED! Overcharged invoice. Click here to continue. Refund available http://account-update.example,phishing
+IRS LAST WARNING! Overcharged invoice. Confirm your identity to continue. You won $5000 http://paypal-secure-login.example,phishing
+IRS VERIFY NOW! Unusual login detected. Reset your password to continue. Cashback available http://irs-secure.cf/login,phishing
+Netflix FINAL NOTICE! Unusual login detected. Update billing info to continue. http://netflix-secure.gq/login,phishing
+IRS IMMEDIATELY! Overcharged invoice. Click here to continue. Crypto giveaway http://192.168.1.1/login,phishing
+Bank of America LAST WARNING! Unusual login detected. Reset your password to continue. Refund available http://billing-secure.example,phishing
+HMRC VERIFY NOW! Package on hold due to customs. Click here to continue. http://billing-secure.example,phishing
+Bank of America ACTION REQUIRED! Your account will be suspended. Reset your password to continue. http://bankofamerica-secure.gq/login,phishing
+Amazon ACCOUNT ALERT! Package on hold due to customs. Verify your account to continue. http://billing-secure.example,phishing
+DHL URGENT! Package on hold due to customs. Click here to continue. http://dhl-secure.ga/login,phishing
+Netflix FINAL NOTICE! Package on hold due to customs. Verify your account to continue. http://paypal-secure-login.example,phishing
+Bank of America IMMEDIATELY! Your subscription will be cancelled. Login to continue to continue. http://dhl-payments.example,phishing
+Netflix SECURITY ALERT! Your account will be suspended. Verify your account to continue. Refund available http://secure-login.example,phishing
+Amazon LAST WARNING! Your account will be suspended. Login to continue to continue. http://paypal-secure-login.example,phishing
+Netflix LAST WARNING! Your subscription will be cancelled. Submit your details to continue. http://192.168.1.1/login,phishing
+PayPal ACTION REQUIRED! Unusual login detected. Login to continue to continue. http://paypal-secure-login.example,phishing
+Amazon FINAL NOTICE! Package on hold due to customs. Verify your account to continue. Refund available http://secure-login.example,phishing
+Amazon LAST WARNING! Payment declined. Submit your details to continue. Refund available http://amazon-secure.ml/login,phishing
+Microsoft ACCOUNT ALERT! Your account will be suspended. Reset your password to continue. http://microsoft-secure.gq/login,phishing
+Microsoft VERIFY NOW! Your account will be suspended. Reset your password to continue. Crypto giveaway http://192.168.1.1/login,phishing
+DHL URGENT! Overcharged invoice. Click here to continue. http://dhl-payments.example,phishing
+Apple IMMEDIATELY! Overcharged invoice. Update billing info to continue. You won $5000 http://apple-secure.gq/login,phishing
+HMRC LAST WARNING! Payment declined. Reset your password to continue. Cashback available http://dhl-payments.example,phishing
+HMRC IMMEDIATELY! Unusual login detected. Login to continue to continue. http://hmrc-secure.ga/login,phishing
+Apple ACTION REQUIRED! Payment declined. Verify your account to continue. http://paypal-secure-login.example,phishing
+Netflix FINAL NOTICE! Overcharged invoice. Update billing info to continue. http://netflix-secure.cf/login,phishing
+IRS ACCOUNT ALERT! Payment declined. Update billing info to continue. http://account-update.example,phishing
+Netflix IMMEDIATELY! Overcharged invoice. Reset your password to continue. http://netflix-secure.ml/login,phishing
+HMRC FINAL NOTICE! Your subscription will be cancelled. Verify your account to continue. You won $5000 http://account-update.example,phishing
+IRS IMMEDIATELY! Payment declined. Update billing info to continue. http://account-update.example,phishing
+Microsoft YOUR ACCOUNT EXPIRES! Your subscription will be cancelled. Update billing info to continue. Cashback available http://secure-login.example,phishing
+Bank of America SECURITY ALERT! Your subscription will be cancelled. Verify your account to continue. http://bankofamerica-secure.ml/login,phishing
+Bank of America YOUR ACCOUNT EXPIRES! Payment declined. Verify your account to continue. http://dhl-payments.example,phishing
+Google VERIFY NOW! Overcharged invoice. Update billing info to continue. http://192.168.1.1/login,phishing
+Google YOUR ACCOUNT EXPIRES! Your subscription will be cancelled. Reset your password to continue. http://billing-secure.example,phishing
+Apple YOUR ACCOUNT EXPIRES! Your subscription will be cancelled. Login to continue to continue. You won $5000 http://apple-secure.ga/login,phishing
+FedEx VERIFY NOW! Your subscription will be cancelled. Click here to continue. Exclusive offer http://192.168.1.1/login,phishing
+Bank of America SECURITY ALERT! Unusual login detected. Update billing info to continue. http://bankofamerica-secure.cf/login,phishing
+Microsoft URGENT! Overcharged invoice. Submit your details to continue. http://secure-login.example,phishing
+DHL SECURITY ALERT! Payment declined. Submit your details to continue. http://account-update.example,phishing
+DHL SECURITY ALERT! Your account will be suspended. Update billing info to continue. http://paypal-secure-login.example,phishing
+Google ACTION REQUIRED! Overcharged invoice. Confirm your identity to continue. Exclusive offer http://google-secure.cf/login,phishing
+Netflix YOUR ACCOUNT EXPIRES! Your account will be suspended. Verify your account to continue. Crypto giveaway http://account-update.example,phishing
+FedEx SECURITY ALERT! Payment declined. Reset your password to continue. You won $5000 http://fedex-secure.gq/login,phishing
+PayPal ACCOUNT ALERT! Package on hold due to customs. Verify your account to continue. Cashback available http://secure-login.example,phishing
+Amazon LAST WARNING! Your account will be suspended. Submit your details to continue. http://amazon-secure.tk/login,phishing
+IRS LAST WARNING! Package on hold due to customs. Update billing info to continue. Crypto giveaway http://192.168.1.1/login,phishing
+Bank of America ACTION REQUIRED! Your account will be suspended. Reset your password to continue. http://billing-secure.example,phishing
+Microsoft SECURITY ALERT! Your subscription will be cancelled. Login to continue to continue. Cashback available http://microsoft-secure.ga/login,phishing
+HMRC IMMEDIATELY! Overcharged invoice. Submit your details to continue. http://dhl-payments.example,phishing
+HMRC ACCOUNT ALERT! Overcharged invoice. Click here to continue. http://secure-login.example,phishing
+Google IMMEDIATELY! Unusual login detected. Update billing info to continue. http://bank-update.example,phishing
+Microsoft ACTION REQUIRED! Overcharged invoice. Login to continue to continue. http://billing-secure.example,phishing
+Apple YOUR ACCOUNT EXPIRES! Payment declined. Update billing info to continue. http://apple-secure.ml/login,phishing
+Bank of America FINAL NOTICE! Your subscription will be cancelled. Update billing info to continue. http://bankofamerica-secure.cf/login,phishing
+FedEx ACTION REQUIRED! Your subscription will be cancelled. Update billing info to continue. http://fedex-secure.gq/login,phishing
+DHL VERIFY NOW! Overcharged invoice. Click here to continue. http://dhl-secure.cf/login,phishing
+Google VERIFY NOW! Your subscription will be cancelled. Submit your details to continue. http://bank-update.example,phishing
+PayPal IMMEDIATELY! Your subscription will be cancelled. Reset your password to continue. http://paypal-secure.gq/login,phishing
+FedEx YOUR ACCOUNT EXPIRES! Overcharged invoice. Confirm your identity to continue. Cashback available http://fedex-secure.cf/login,phishing
+DHL FINAL NOTICE! Your subscription will be cancelled. Reset your password to continue. Claim your free reward http://dhl-secure.gq/login,phishing
+Netflix LAST WARNING! Package on hold due to customs. Verify your account to continue. http://billing-secure.example,phishing
+Amazon FINAL NOTICE! Unusual login detected. Verify your account to continue. You won $5000 http://amazon-secure.tk/login,phishing
+Apple FINAL NOTICE! Your subscription will be cancelled. Login to continue to continue. http://apple-secure.tk/login,phishing
+IRS FINAL NOTICE! Payment declined. Update billing info to continue. http://192.168.1.1/login,phishing
+DHL YOUR ACCOUNT EXPIRES! Your account will be suspended. Click here to continue. http://verify-payments.example,phishing
+HMRC URGENT! Your subscription will be cancelled. Verify your account to continue. http://hmrc-secure.ml/login,phishing
+Bank of America VERIFY NOW! Payment declined. Submit your details to continue. http://account-update.example,phishing
+Microsoft YOUR ACCOUNT EXPIRES! Unusual login detected. Update billing info to continue. http://microsoft-secure.gq/login,phishing
+PayPal IMMEDIATELY! Your subscription will be cancelled. Submit your details to continue. http://billing-secure.example,phishing
+Netflix LAST WARNING! Overcharged invoice. Verify your account to continue. You won $5000 http://paypal-secure-login.example,phishing
+IRS YOUR ACCOUNT EXPIRES! Your account will be suspended. Reset your password to continue. Cashback available http://billing-secure.example,phishing
+Google IMMEDIATELY! Your subscription will be cancelled. Login to continue to continue. http://account-update.example,phishing
+Apple LAST WARNING! Your subscription will be cancelled. Login to continue to continue. http://apple-secure.ml/login,phishing
+DHL FINAL NOTICE! Your account will be suspended. Update billing info to continue. http://billing-secure.example,phishing
+DHL VERIFY NOW! Payment declined. Confirm your identity to continue. http://secure-login.example,phishing
+FedEx FINAL NOTICE! Your account will be suspended. Click here to continue. Cashback available http://secure-login.example,phishing
+HMRC FINAL NOTICE! Your account will be suspended. Confirm your identity to continue. http://192.168.1.1/login,phishing
+HMRC YOUR ACCOUNT EXPIRES! Your subscription will be cancelled. Reset your password to continue. http://paypal-secure-login.example,phishing
+Google IMMEDIATELY! Unusual login detected. Update billing info to continue. http://dhl-payments.example,phishing
+Netflix ACCOUNT ALERT! Package on hold due to customs. Update billing info to continue. http://paypal-secure-login.example,phishing
+Apple URGENT! Your account will be suspended. Update billing info to continue. Crypto giveaway http://verify-payments.example,phishing
+Microsoft VERIFY NOW! Your account will be suspended. Submit your details to continue. http://bank-update.example,phishing
+Amazon VERIFY NOW! Overcharged invoice. Reset your password to continue. http://bank-update.example,phishing
+Amazon FINAL NOTICE! Your subscription will be cancelled. Confirm your identity to continue. http://bank-update.example,phishing
+Google IMMEDIATELY! Package on hold due to customs. Click here to continue. http://account-update.example,phishing
+DHL VERIFY NOW! Overcharged invoice. Click here to continue. http://account-update.example,phishing
+Bank of America YOUR ACCOUNT EXPIRES! Package on hold due to customs. Click here to continue. http://bank-update.example,phishing
+DHL VERIFY NOW! Unusual login detected. Login to continue to continue. http://bank-update.example,phishing
+Amazon YOUR ACCOUNT EXPIRES! Your subscription will be cancelled. Confirm your identity to continue. http://192.168.1.1/login,phishing
+DHL SECURITY ALERT! Overcharged invoice. Reset your password to continue. You won $5000 http://billing-secure.example,phishing
+IRS YOUR ACCOUNT EXPIRES! Your subscription will be cancelled. Submit your details to continue. http://irs-secure.gq/login,phishing
+Apple SECURITY ALERT! Unusual login detected. Update billing info to continue. http://account-update.example,phishing
+Amazon SECURITY ALERT! Unusual login detected. Click here to continue. http://amazon-secure.ml/login,phishing
+Google URGENT! Overcharged invoice. Verify your account to continue. http://dhl-payments.example,phishing
+Google IMMEDIATELY! Payment declined. Confirm your identity to continue. Claim your free reward http://paypal-secure-login.example,phishing
+Netflix IMMEDIATELY! Unusual login detected. Update billing info to continue. Cashback available http://paypal-secure-login.example,phishing
+FedEx VERIFY NOW! Unusual login detected. Update billing info to continue. http://bank-update.example,phishing
+PayPal IMMEDIATELY! Package on hold due to customs. Verify your account to continue. http://billing-secure.example,phishing
+Bank of America SECURITY ALERT! Package on hold due to customs. Click here to continue. http://verify-payments.example,phishing
+DHL URGENT! Unusual login detected. Click here to continue. http://dhl-secure.cf/login,phishing
+Netflix LAST WARNING! Payment declined. Confirm your identity to continue. http://netflix-secure.tk/login,phishing
+IRS SECURITY ALERT! Package on hold due to customs. Confirm your identity to continue. Limited time prize http://irs-secure.ga/login,phishing
+Google FINAL NOTICE! Your account will be suspended. Login to continue to continue. http://bank-update.example,phishing
+HMRC VERIFY NOW! Your account will be suspended. Verify your account to continue. http://dhl-payments.example,phishing
+DHL SECURITY ALERT! Unusual login detected. Login to continue to continue. http://dhl-secure.cf/login,phishing
+Google IMMEDIATELY! Payment declined. Verify your account to continue. http://billing-secure.example,phishing
+DHL URGENT! Package on hold due to customs. Submit your details to continue. http://secure-login.example,phishing
+HMRC URGENT! Package on hold due to customs. Confirm your identity to continue. http://billing-secure.example,phishing
+Amazon ACCOUNT ALERT! Package on hold due to customs. Verify your account to continue. Crypto giveaway http://192.168.1.1/login,phishing
+HMRC URGENT! Payment declined. Reset your password to continue. Crypto giveaway http://hmrc-secure.ga/login,phishing
+FedEx SECURITY ALERT! Your subscription will be cancelled. Verify your account to continue. Limited time prize http://dhl-payments.example,phishing
+DHL ACTION REQUIRED! Payment declined. Reset your password to continue. http://billing-secure.example,phishing
+FedEx IMMEDIATELY! Your account will be suspended. Update billing info to continue. Claim your free reward http://paypal-secure-login.example,phishing
+Apple ACCOUNT ALERT! Payment declined. Click here to continue. Limited time prize http://verify-payments.example,phishing
+HMRC FINAL NOTICE! Payment declined. Confirm your identity to continue. http://hmrc-secure.ml/login,phishing
+Google URGENT! Overcharged invoice. Confirm your identity to continue. Limited time prize http://account-update.example,phishing
+HMRC YOUR ACCOUNT EXPIRES! Unusual login detected. Login to continue to continue. http://hmrc-secure.tk/login,phishing
+DHL YOUR ACCOUNT EXPIRES! Your account will be suspended. Click here to continue. Limited time prize http://dhl-secure.ga/login,phishing
+HMRC VERIFY NOW! Overcharged invoice. Update billing info to continue. http://192.168.1.1/login,phishing
+HMRC IMMEDIATELY! Payment declined. Submit your details to continue. http://hmrc-secure.ga/login,phishing
+Amazon YOUR ACCOUNT EXPIRES! Your subscription will be cancelled. Update billing info to continue. http://verify-payments.example,phishing
+FedEx VERIFY NOW! Unusual login detected. Login to continue to continue. Crypto giveaway http://account-update.example,phishing
+Google IMMEDIATELY! Your subscription will be cancelled. Login to continue to continue. http://google-secure.ga/login,phishing
+Amazon ACTION REQUIRED! Overcharged invoice. Submit your details to continue. Refund available http://account-update.example,phishing
+Amazon ACCOUNT ALERT! Your subscription will be cancelled. Submit your details to continue. http://amazon-secure.ml/login,phishing
+Netflix VERIFY NOW! Your subscription will be cancelled. Reset your password to continue. Refund available http://netflix-secure.ga/login,phishing
+Amazon ACCOUNT ALERT! Your subscription will be cancelled. Click here to continue. Claim your free reward http://paypal-secure-login.example,phishing
+Bank of America YOUR ACCOUNT EXPIRES! Unusual login detected. Update billing info to continue. http://verify-payments.example,phishing
+Amazon URGENT! Package on hold due to customs. Login to continue to continue. http://bank-update.example,phishing
+PayPal URGENT! Payment declined. Update billing info to continue. http://verify-payments.example,phishing
+Google IMMEDIATELY! Unusual login detected. Click here to continue. http://google-secure.gq/login,phishing
+HMRC VERIFY NOW! Unusual login detected. Login to continue to continue. http://billing-secure.example,phishing
+IRS SECURITY ALERT! Package on hold due to customs. Click here to continue. Cashback available http://account-update.example,phishing
+Amazon SECURITY ALERT! Payment declined. Reset your password to continue. http://amazon-secure.ga/login,phishing
+HMRC FINAL NOTICE! Your subscription will be cancelled. Reset your password to continue. http://hmrc-secure.tk/login,phishing
+Bank of America SECURITY ALERT! Package on hold due to customs. Click here to continue. http://192.168.1.1/login,phishing
+IRS VERIFY NOW! Unusual login detected. Confirm your identity to continue. http://irs-secure.cf/login,phishing
+PayPal FINAL NOTICE! Unusual login detected. Confirm your identity to continue. http://paypal-secure.cf/login,phishing
+Amazon IMMEDIATELY! Overcharged invoice. Reset your password to continue. http://billing-secure.example,phishing
+Microsoft VERIFY NOW! Overcharged invoice. Submit your details to continue. http://secure-login.example,phishing
+HMRC FINAL NOTICE! Your subscription will be cancelled. Click here to continue. Refund available http://billing-secure.example,phishing
+FedEx URGENT! Your subscription will be cancelled. Verify your account to continue. http://fedex-secure.tk/login,phishing
+Bank of America VERIFY NOW! Payment declined. Verify your account to continue. http://bankofamerica-secure.ga/login,phishing
+FedEx IMMEDIATELY! Your subscription will be cancelled. Click here to continue. Limited time prize http://secure-login.example,phishing
+DHL YOUR ACCOUNT EXPIRES! Payment declined. Login to continue to continue. http://bank-update.example,phishing
+Amazon VERIFY NOW! Unusual login detected. Click here to continue. http://billing-secure.example,phishing
+IRS YOUR ACCOUNT EXPIRES! Package on hold due to customs. Confirm your identity to continue. Claim your free reward http://paypal-secure-login.example,phishing
+PayPal URGENT! Unusual login detected. Verify your account to continue. http://192.168.1.1/login,phishing
+DHL ACCOUNT ALERT! Your account will be suspended. Click here to continue. http://dhl-secure.cf/login,phishing
+Apple LAST WARNING! Overcharged invoice. Confirm your identity to continue. http://apple-secure.tk/login,phishing
+Microsoft URGENT! Your account will be suspended. Update billing info to continue. http://paypal-secure-login.example,phishing
+HMRC SECURITY ALERT! Your account will be suspended. Reset your password to continue. http://hmrc-secure.gq/login,phishing
+Google ACCOUNT ALERT! Payment declined. Click here to continue. http://account-update.example,phishing
+Microsoft VERIFY NOW! Payment declined. Click here to continue. http://microsoft-secure.ml/login,phishing
+Bank of America VERIFY NOW! Your account will be suspended. Login to continue to continue. http://account-update.example,phishing
+FedEx ACCOUNT ALERT! Package on hold due to customs. Login to continue to continue. http://fedex-secure.ga/login,phishing
+Amazon ACTION REQUIRED! Your subscription will be cancelled. Confirm your identity to continue. http://amazon-secure.cf/login,phishing
+Google YOUR ACCOUNT EXPIRES! Overcharged invoice. Login to continue to continue. http://dhl-payments.example,phishing
+HMRC ACCOUNT ALERT! Payment declined. Verify your account to continue. Exclusive offer http://billing-secure.example,phishing
+IRS URGENT! Overcharged invoice. Reset your password to continue. Exclusive offer http://irs-secure.ga/login,phishing
+DHL IMMEDIATELY! Your account will be suspended. Login to continue to continue. http://paypal-secure-login.example,phishing
+Apple URGENT! Overcharged invoice. Update billing info to continue. http://dhl-payments.example,phishing
+Apple ACTION REQUIRED! Payment declined. Click here to continue. Refund available http://dhl-payments.example,phishing
+Bank of America VERIFY NOW! Your subscription will be cancelled. Login to continue to continue. Cashback available http://bank-update.example,phishing
+Apple VERIFY NOW! Your subscription will be cancelled. Confirm your identity to continue. http://apple-secure.ga/login,phishing
+HMRC URGENT! Package on hold due to customs. Submit your details to continue. http://hmrc-secure.gq/login,phishing
+HMRC SECURITY ALERT! Unusual login detected. Reset your password to continue. http://hmrc-secure.gq/login,phishing
+HMRC ACTION REQUIRED! Unusual login detected. Reset your password to continue. http://hmrc-secure.tk/login,phishing
+DHL VERIFY NOW! Package on hold due to customs. Update billing info to continue. http://192.168.1.1/login,phishing
+HMRC VERIFY NOW! Package on hold due to customs. Click here to continue. http://hmrc-secure.ga/login,phishing
+Netflix LAST WARNING! Payment declined. Reset your password to continue. Claim your free reward http://netflix-secure.tk/login,phishing
+Apple VERIFY NOW! Package on hold due to customs. Submit your details to continue. http://secure-login.example,phishing
+IRS ACTION REQUIRED! Payment declined. Confirm your identity to continue. Claim your free reward http://192.168.1.1/login,phishing
+PayPal SECURITY ALERT! Package on hold due to customs. Reset your password to continue. http://bank-update.example,phishing
+Google LAST WARNING! Your subscription will be cancelled. Confirm your identity to continue. Refund available http://bank-update.example,phishing
+Amazon ACCOUNT ALERT! Overcharged invoice. Login to continue to continue. http://bank-update.example,phishing
+Microsoft VERIFY NOW! Payment declined. Confirm your identity to continue. http://account-update.example,phishing
+Netflix FINAL NOTICE! Package on hold due to customs. Click here to continue. http://dhl-payments.example,phishing
+Bank of America VERIFY NOW! Your account will be suspended. Submit your details to continue. Refund available http://bankofamerica-secure.gq/login,phishing
+Netflix SECURITY ALERT! Your subscription will be cancelled. Click here to continue. http://dhl-payments.example,phishing
+Microsoft URGENT! Overcharged invoice. Update billing info to continue. http://paypal-secure-login.example,phishing
+FedEx LAST WARNING! Unusual login detected. Click here to continue. http://dhl-payments.example,phishing
+Netflix URGENT! Payment declined. Reset your password to continue. http://192.168.1.1/login,phishing
+Google YOUR ACCOUNT EXPIRES! Your account will be suspended. Confirm your identity to continue. http://google-secure.ml/login,phishing
+Apple VERIFY NOW! Your account will be suspended. Update billing info to continue. http://apple-secure.tk/login,phishing
+Amazon SECURITY ALERT! Overcharged invoice. Login to continue to continue. http://verify-payments.example,phishing
+Google VERIFY NOW! Package on hold due to customs. Click here to continue. http://account-update.example,phishing
+DHL SECURITY ALERT! Overcharged invoice. Click here to continue. http://dhl-secure.tk/login,phishing
+Apple ACCOUNT ALERT! Overcharged invoice. Click here to continue. http://apple-secure.cf/login,phishing
+PayPal SECURITY ALERT! Unusual login detected. Reset your password to continue. http://dhl-payments.example,phishing
+FedEx LAST WARNING! Package on hold due to customs. Login to continue to continue. http://fedex-secure.ga/login,phishing
+Apple ACCOUNT ALERT! Package on hold due to customs. Submit your details to continue. Refund available http://bank-update.example,phishing
+Google ACTION REQUIRED! Your subscription will be cancelled. Submit your details to continue. Refund available http://google-secure.ml/login,phishing
+PayPal LAST WARNING! Unusual login detected. Click here to continue. http://paypal-secure-login.example,phishing
+Apple YOUR ACCOUNT EXPIRES! Your account will be suspended. Reset your password to continue. http://apple-secure.tk/login,phishing
+HMRC ACCOUNT ALERT! Your account will be suspended. Reset your password to continue. http://paypal-secure-login.example,phishing
+Google SECURITY ALERT! Your subscription will be cancelled. Reset your password to continue. http://google-secure.gq/login,phishing
+DHL IMMEDIATELY! Payment declined. Login to continue to continue. Limited time prize http://192.168.1.1/login,phishing
+FedEx IMMEDIATELY! Unusual login detected. Click here to continue. http://billing-secure.example,phishing
+Microsoft ACTION REQUIRED! Payment declined. Login to continue to continue. http://secure-login.example,phishing
+FedEx SECURITY ALERT! Package on hold due to customs. Reset your password to continue. http://fedex-secure.cf/login,phishing
+FedEx VERIFY NOW! Package on hold due to customs. Submit your details to continue. http://fedex-secure.gq/login,phishing
+HMRC YOUR ACCOUNT EXPIRES! Your subscription will be cancelled. Click here to continue. Refund available http://hmrc-secure.gq/login,phishing
+PayPal ACTION REQUIRED! Payment declined. Login to continue to continue. http://dhl-payments.example,phishing
+Bank of America ACTION REQUIRED! Unusual login detected. Confirm your identity to continue. http://bankofamerica-secure.tk/login,phishing
+PayPal ACTION REQUIRED! Overcharged invoice. Update billing info to continue. http://paypal-secure.ga/login,phishing
+Google LAST WARNING! Unusual login detected. Confirm your identity to continue. http://google-secure.ml/login,phishing
+Bank of America YOUR ACCOUNT EXPIRES! Package on hold due to customs. Verify your account to continue. http://verify-payments.example,phishing
+FedEx ACCOUNT ALERT! Your account will be suspended. Login to continue to continue. http://billing-secure.example,phishing
+Netflix ACTION REQUIRED! Unusual login detected. Submit your details to continue. http://verify-payments.example,phishing
+Netflix LAST WARNING! Payment declined. Submit your details to continue. Limited time prize http://dhl-payments.example,phishing
+Apple ACTION REQUIRED! Your account will be suspended. Confirm your identity to continue. Exclusive offer http://bank-update.example,phishing
+Microsoft IMMEDIATELY! Unusual login detected. Verify your account to continue. http://bank-update.example,phishing
+Apple ACCOUNT ALERT! Overcharged invoice. Verify your account to continue. http://192.168.1.1/login,phishing
+Netflix SECURITY ALERT! Your account will be suspended. Confirm your identity to continue. http://netflix-secure.ml/login,phishing
+FedEx LAST WARNING! Overcharged invoice. Reset your password to continue. http://fedex-secure.gq/login,phishing
+DHL ACTION REQUIRED! Unusual login detected. Login to continue to continue. http://verify-payments.example,phishing
+Netflix ACTION REQUIRED! Package on hold due to customs. Verify your account to continue. http://dhl-payments.example,phishing
+IRS URGENT! Your account will be suspended. Submit your details to continue. Cashback available http://billing-secure.example,phishing
+IRS SECURITY ALERT! Package on hold due to customs. Confirm your identity to continue. Cashback available http://billing-secure.example,phishing
+DHL YOUR ACCOUNT EXPIRES! Package on hold due to customs. Verify your account to continue. http://dhl-secure.tk/login,phishing
+Netflix YOUR ACCOUNT EXPIRES! Payment declined. Update billing info to continue. http://dhl-payments.example,phishing
+FedEx ACCOUNT ALERT! Unusual login detected. Login to continue to continue. http://192.168.1.1/login,phishing
+Apple VERIFY NOW! Unusual login detected. Click here to continue. You won $5000 http://billing-secure.example,phishing
+Netflix IMMEDIATELY! Unusual login detected. Click here to continue. http://netflix-secure.ml/login,phishing
+FedEx ACCOUNT ALERT! Your subscription will be cancelled. Verify your account to continue. http://bank-update.example,phishing
+DHL YOUR ACCOUNT EXPIRES! Your account will be suspended. Click here to continue. http://bank-update.example,phishing
+Amazon ACCOUNT ALERT! Your account will be suspended. Click here to continue. Limited time prize http://amazon-secure.tk/login,phishing
+Bank of America SECURITY ALERT! Unusual login detected. Verify your account to continue. http://bankofamerica-secure.cf/login,phishing
+PayPal VERIFY NOW! Unusual login detected. Verify your account to continue. http://paypal-secure.cf/login,phishing
+Apple FINAL NOTICE! Overcharged invoice. Submit your details to continue. http://apple-secure.tk/login,phishing
+Microsoft ACCOUNT ALERT! Unusual login detected. Submit your details to continue. http://dhl-payments.example,phishing
+Amazon VERIFY NOW! Overcharged invoice. Update billing info to continue. You won $5000 http://192.168.1.1/login,phishing
+Google VERIFY NOW! Your subscription will be cancelled. Update billing info to continue. http://google-secure.gq/login,phishing
+FedEx ACTION REQUIRED! Overcharged invoice. Update billing info to continue. http://billing-secure.example,phishing
+Apple VERIFY NOW! Payment declined. Confirm your identity to continue. http://billing-secure.example,phishing
+PayPal ACCOUNT ALERT! Package on hold due to customs. Reset your password to continue. Exclusive offer http://billing-secure.example,phishing
+HMRC URGENT! Payment declined. Confirm your identity to continue. Cashback available http://account-update.example,phishing
+IRS YOUR ACCOUNT EXPIRES! Overcharged invoice. Verify your account to continue. http://irs-secure.ml/login,phishing
+PayPal IMMEDIATELY! Your account will be suspended. Verify your account to continue. http://paypal-secure.ml/login,phishing
+Microsoft VERIFY NOW! Overcharged invoice. Submit your details to continue. http://secure-login.example,phishing
+Apple LAST WARNING! Unusual login detected. Confirm your identity to continue. http://bank-update.example,phishing
+FedEx ACTION REQUIRED! Overcharged invoice. Update billing info to continue. Crypto giveaway http://billing-secure.example,phishing
+Amazon LAST WARNING! Overcharged invoice. Reset your password to continue. Crypto giveaway http://billing-secure.example,phishing
+Google ACCOUNT ALERT! Unusual login detected. Update billing info to continue. http://google-secure.gq/login,phishing
+HMRC VERIFY NOW! Payment declined. Update billing info to continue. http://hmrc-secure.ga/login,phishing
+Bank of America ACCOUNT ALERT! Package on hold due to customs. Update billing info to continue. Exclusive offer http://bankofamerica-secure.gq/login,phishing
+DHL VERIFY NOW! Unusual login detected. Login to continue to continue. Limited time prize http://dhl-secure.gq/login,phishing
+Amazon LAST WARNING! Your account will be suspended. Click here to continue. http://amazon-secure.ml/login,phishing
+PayPal VERIFY NOW! Payment declined. Verify your account to continue. http://bank-update.example,phishing
+Amazon FINAL NOTICE! Unusual login detected. Reset your password to continue. http://verify-payments.example,phishing
+Amazon VERIFY NOW! Package on hold due to customs. Login to continue to continue. http://secure-login.example,phishing
+Netflix SECURITY ALERT! Your subscription will be cancelled. Submit your details to continue. http://secure-login.example,phishing
+Microsoft YOUR ACCOUNT EXPIRES! Package on hold due to customs. Verify your account to continue. http://billing-secure.example,phishing
+PayPal FINAL NOTICE! Overcharged invoice. Confirm your identity to continue. Crypto giveaway http://billing-secure.example,phishing
+HMRC VERIFY NOW! Payment declined. Confirm your identity to continue. http://192.168.1.1/login,phishing
+Google FINAL NOTICE! Your account will be suspended. Verify your account to continue. Cashback available http://bank-update.example,phishing
+Netflix URGENT! Unusual login detected. Login to continue to continue. http://netflix-secure.cf/login,phishing
+Microsoft VERIFY NOW! Your account will be suspended. Reset your password to continue. http://microsoft-secure.ml/login,phishing
+Google ACCOUNT ALERT! Your account will be suspended. Verify your account to continue. Claim your free reward http://bank-update.example,phishing
+FedEx FINAL NOTICE! Package on hold due to customs. Confirm your identity to continue. http://billing-secure.example,phishing
+Amazon URGENT! Your account will be suspended. Login to continue to continue. http://192.168.1.1/login,phishing
+Apple FINAL NOTICE! Your account will be suspended. Login to continue to continue. http://apple-secure.ml/login,phishing
+Amazon ACTION REQUIRED! Your subscription will be cancelled. Update billing info to continue. http://dhl-payments.example,phishing
+Apple YOUR ACCOUNT EXPIRES! Overcharged invoice. Submit your details to continue. http://account-update.example,phishing
+HMRC IMMEDIATELY! Payment declined. Confirm your identity to continue. http://hmrc-secure.gq/login,phishing
+Bank of America URGENT! Overcharged invoice. Submit your details to continue. http://account-update.example,phishing
+Netflix ACTION REQUIRED! Overcharged invoice. Reset your password to continue. http://account-update.example,phishing
+Google IMMEDIATELY! Payment declined. Confirm your identity to continue. http://google-secure.cf/login,phishing
+Google URGENT! Payment declined. Confirm your identity to continue. http://billing-secure.example,phishing
+Microsoft FINAL NOTICE! Your account will be suspended. Submit your details to continue. http://microsoft-secure.ga/login,phishing
+Bank of America VERIFY NOW! Your account will be suspended. Click here to continue. http://bankofamerica-secure.cf/login,phishing
+Netflix ACTION REQUIRED! Package on hold due to customs. Submit your details to continue. http://netflix-secure.cf/login,phishing
+Google SECURITY ALERT! Your account will be suspended. Update billing info to continue. http://192.168.1.1/login,phishing
+FedEx IMMEDIATELY! Overcharged invoice. Verify your account to continue. http://192.168.1.1/login,phishing
+Amazon URGENT! Your account will be suspended. Submit your details to continue. http://bank-update.example,phishing
+Apple SECURITY ALERT! Payment declined. Confirm your identity to continue. http://account-update.example,phishing
+Netflix FINAL NOTICE! Package on hold due to customs. Verify your account to continue. http://secure-login.example,phishing
+Microsoft URGENT! Your subscription will be cancelled. Verify your account to continue. Limited time prize http://secure-login.example,phishing
+HMRC URGENT! Package on hold due to customs. Verify your account to continue. Exclusive offer http://account-update.example,phishing
+PayPal ACTION REQUIRED! Unusual login detected. Confirm your identity to continue. Cashback available http://dhl-payments.example,phishing
+HMRC ACCOUNT ALERT! Unusual login detected. Verify your account to continue. http://account-update.example,phishing
+DHL URGENT! Overcharged invoice. Confirm your identity to continue. http://192.168.1.1/login,phishing
+Microsoft VERIFY NOW! Your account will be suspended. Update billing info to continue. http://paypal-secure-login.example,phishing
+FedEx SECURITY ALERT! Your subscription will be cancelled. Update billing info to continue. Claim your free reward http://fedex-secure.ml/login,phishing
+DHL ACTION REQUIRED! Payment declined. Submit your details to continue. http://paypal-secure-login.example,phishing
+Apple VERIFY NOW! Payment declined. Verify your account to continue. Claim your free reward http://dhl-payments.example,phishing
+Google ACCOUNT ALERT! Overcharged invoice. Click here to continue. http://google-secure.cf/login,phishing
+HMRC URGENT! Your account will be suspended. Submit your details to continue. Refund available http://account-update.example,phishing
+FedEx FINAL NOTICE! Your subscription will be cancelled. Click here to continue. http://verify-payments.example,phishing
+Google LAST WARNING! Overcharged invoice. Login to continue to continue. http://paypal-secure-login.example,phishing
+Apple ACCOUNT ALERT! Unusual login detected. Submit your details to continue. http://apple-secure.ga/login,phishing
+Apple YOUR ACCOUNT EXPIRES! Your account will be suspended. Update billing info to continue. http://bank-update.example,phishing
+FedEx LAST WARNING! Unusual login detected. Reset your password to continue. http://account-update.example,phishing
+PayPal FINAL NOTICE! Overcharged invoice. Confirm your identity to continue. http://paypal-secure.ml/login,phishing
+FedEx LAST WARNING! Overcharged invoice. Update billing info to continue. http://bank-update.example,phishing
+HMRC ACCOUNT ALERT! Payment declined. Reset your password to continue. http://bank-update.example,phishing
+FedEx ACTION REQUIRED! Package on hold due to customs. Verify your account to continue. http://192.168.1.1/login,phishing
+Apple URGENT! Your account will be suspended. Confirm your identity to continue. http://verify-payments.example,phishing
+HMRC URGENT! Your account will be suspended. Submit your details to continue. http://hmrc-secure.ml/login,phishing
+PayPal LAST WARNING! Payment declined. Confirm your identity to continue. http://bank-update.example,phishing
+PayPal URGENT! Overcharged invoice. Confirm your identity to continue. http://secure-login.example,phishing
+DHL VERIFY NOW! Your account will be suspended. Reset your password to continue. http://paypal-secure-login.example,phishing
+Netflix IMMEDIATELY! Overcharged invoice. Click here to continue. Claim your free reward http://billing-secure.example,phishing
+DHL SECURITY ALERT! Unusual login detected. Click here to continue. http://bank-update.example,phishing
+Amazon FINAL NOTICE! Your account will be suspended. Login to continue to continue. http://amazon-secure.cf/login,phishing
+Microsoft VERIFY NOW! Your account will be suspended. Update billing info to continue. http://microsoft-secure.cf/login,phishing
+HMRC ACCOUNT ALERT! Your account will be suspended. Confirm your identity to continue. http://hmrc-secure.gq/login,phishing
+Google FINAL NOTICE! Your account will be suspended. Click here to continue. http://billing-secure.example,phishing
+IRS URGENT! Unusual login detected. Verify your account to continue. Claim your free reward http://192.168.1.1/login,phishing
+Microsoft IMMEDIATELY! Your subscription will be cancelled. Reset your password to continue. http://paypal-secure-login.example,phishing
+Apple ACCOUNT ALERT! Package on hold due to customs. Update billing info to continue. Cashback available http://verify-payments.example,phishing
+FedEx URGENT! Payment declined. Click here to continue. You won $5000 http://dhl-payments.example,phishing
+IRS SECURITY ALERT! Unusual login detected. Submit your details to continue. Crypto giveaway http://bank-update.example,phishing
+FedEx VERIFY NOW! Payment declined. Update billing info to continue. Limited time prize http://fedex-secure.gq/login,phishing
+DHL LAST WARNING! Your account will be suspended. Login to continue to continue. Claim your free reward http://paypal-secure-login.example,phishing
+HMRC ACTION REQUIRED! Payment declined. Login to continue to continue. You won $5000 http://hmrc-secure.ga/login,phishing
+Google ACCOUNT ALERT! Unusual login detected. Submit your details to continue. You won $5000 http://192.168.1.1/login,phishing
+Apple VERIFY NOW! Payment declined. Confirm your identity to continue. You won $5000 http://dhl-payments.example,phishing
+IRS ACCOUNT ALERT! Payment declined. Submit your details to continue. Exclusive offer http://paypal-secure-login.example,phishing
+Apple LAST WARNING! Overcharged invoice. Confirm your identity to continue. Exclusive offer http://apple-secure.ga/login,phishing
+DHL YOUR ACCOUNT EXPIRES! Your account will be suspended. Verify your account to continue. Crypto giveaway http://dhl-secure.tk/login,phishing
+FedEx FINAL NOTICE! Package on hold due to customs. Verify your account to continue. http://account-update.example,phishing
+Netflix FINAL NOTICE! Payment declined. Click here to continue. Limited time prize http://paypal-secure-login.example,phishing
+FedEx YOUR ACCOUNT EXPIRES! Payment declined. Reset your password to continue. http://fedex-secure.gq/login,phishing
+Amazon YOUR ACCOUNT EXPIRES! Your subscription will be cancelled. Reset your password to continue. http://amazon-secure.cf/login,phishing
+IRS LAST WARNING! Payment declined. Reset your password to continue. Refund available http://irs-secure.gq/login,phishing
+Amazon VERIFY NOW! Package on hold due to customs. Verify your account to continue. http://secure-login.example,phishing
+Google LAST WARNING! Unusual login detected. Update billing info to continue. http://verify-payments.example,phishing
+Microsoft YOUR ACCOUNT EXPIRES! Package on hold due to customs. Verify your account to continue. Crypto giveaway http://192.168.1.1/login,phishing
+Microsoft IMMEDIATELY! Overcharged invoice. Update billing info to continue. http://paypal-secure-login.example,phishing
+Microsoft VERIFY NOW! Unusual login detected. Click here to continue. http://microsoft-secure.ml/login,phishing
+HMRC ACCOUNT ALERT! Package on hold due to customs. Verify your account to continue. http://paypal-secure-login.example,phishing
+FedEx SECURITY ALERT! Your account will be suspended. Click here to continue. Claim your free reward http://account-update.example,phishing
+Microsoft YOUR ACCOUNT EXPIRES! Package on hold due to customs. Submit your details to continue. http://microsoft-secure.tk/login,phishing
+Google IMMEDIATELY! Payment declined. Reset your password to continue. http://google-secure.ml/login,phishing
+FedEx FINAL NOTICE! Payment declined. Reset your password to continue. http://fedex-secure.tk/login,phishing
+Google YOUR ACCOUNT EXPIRES! Your account will be suspended. Reset your password to continue. Refund available http://google-secure.ga/login,phishing
+HMRC IMMEDIATELY! Your subscription will be cancelled. Login to continue to continue. http://account-update.example,phishing
+Apple ACTION REQUIRED! Overcharged invoice. Reset your password to continue. http://apple-secure.cf/login,phishing
+HMRC ACTION REQUIRED! Package on hold due to customs. Verify your account to continue. http://hmrc-secure.gq/login,phishing
+Amazon YOUR ACCOUNT EXPIRES! Payment declined. Confirm your identity to continue. http://amazon-secure.tk/login,phishing
+IRS IMMEDIATELY! Overcharged invoice. Submit your details to continue. Crypto giveaway http://account-update.example,phishing
+DHL YOUR ACCOUNT EXPIRES! Package on hold due to customs. Confirm your identity to continue. Exclusive offer http://paypal-secure-login.example,phishing
+FedEx ACCOUNT ALERT! Payment declined. Submit your details to continue. http://billing-secure.example,phishing
+IRS IMMEDIATELY! Your subscription will be cancelled. Login to continue to continue. Claim your free reward http://irs-secure.ga/login,phishing
+Netflix VERIFY NOW! Payment declined. Update billing info to continue. http://paypal-secure-login.example,phishing
+Google VERIFY NOW! Package on hold due to customs. Login to continue to continue. http://192.168.1.1/login,phishing
+Google FINAL NOTICE! Your subscription will be cancelled. Verify your account to continue. Exclusive offer http://secure-login.example,phishing
+PayPal YOUR ACCOUNT EXPIRES! Your subscription will be cancelled. Verify your account to continue. http://bank-update.example,phishing
+Google SECURITY ALERT! Payment declined. Login to continue to continue. http://verify-payments.example,phishing
+Amazon FINAL NOTICE! Unusual login detected. Click here to continue. Crypto giveaway http://192.168.1.1/login,phishing
+IRS YOUR ACCOUNT EXPIRES! Overcharged invoice. Confirm your identity to continue. You won $5000 http://billing-secure.example,phishing
+FedEx VERIFY NOW! Your account will be suspended. Submit your details to continue. http://bank-update.example,phishing
+Microsoft IMMEDIATELY! Package on hold due to customs. Login to continue to continue. http://billing-secure.example,phishing
+PayPal YOUR ACCOUNT EXPIRES! Unusual login detected. Reset your password to continue. http://verify-payments.example,phishing
+Bank of America LAST WARNING! Package on hold due to customs. Verify your account to continue. http://dhl-payments.example,phishing
+IRS SECURITY ALERT! Overcharged invoice. Verify your account to continue. Claim your free reward http://account-update.example,phishing
+IRS ACCOUNT ALERT! Unusual login detected. Confirm your identity to continue. http://irs-secure.ga/login,phishing
+DHL FINAL NOTICE! Overcharged invoice. Submit your details to continue. http://dhl-secure.cf/login,phishing
+PayPal FINAL NOTICE! Package on hold due to customs. Submit your details to continue. Refund available http://paypal-secure.ga/login,phishing
+Amazon SECURITY ALERT! Your subscription will be cancelled. Update billing info to continue. http://billing-secure.example,phishing
+Microsoft YOUR ACCOUNT EXPIRES! Package on hold due to customs. Click here to continue. http://verify-payments.example,phishing
+DHL ACCOUNT ALERT! Payment declined. Update billing info to continue. You won $5000 http://verify-payments.example,phishing
+Google ACCOUNT ALERT! Your account will be suspended. Submit your details to continue. http://google-secure.cf/login,phishing
+Amazon YOUR ACCOUNT EXPIRES! Unusual login detected. Reset your password to continue. http://dhl-payments.example,phishing
+Netflix YOUR ACCOUNT EXPIRES! Unusual login detected. Submit your details to continue. http://netflix-secure.cf/login,phishing
+PayPal IMMEDIATELY! Your subscription will be cancelled. Submit your details to continue. http://secure-login.example,phishing
+Microsoft LAST WARNING! Your subscription will be cancelled. Login to continue to continue. http://microsoft-secure.ga/login,phishing
+Bank of America ACCOUNT ALERT! Your account will be suspended. Reset your password to continue. http://bankofamerica-secure.ga/login,phishing
+Amazon SECURITY ALERT! Your account will be suspended. Login to continue to continue. http://amazon-secure.tk/login,phishing
+Netflix LAST WARNING! Package on hold due to customs. Confirm your identity to continue. http://secure-login.example,phishing
+Bank of America SECURITY ALERT! Your subscription will be cancelled. Login to continue to continue. http://bankofamerica-secure.tk/login,phishing
+Bank of America ACCOUNT ALERT! Unusual login detected. Reset your password to continue. Refund available http://192.168.1.1/login,phishing
+HMRC ACTION REQUIRED! Overcharged invoice. Click here to continue. http://192.168.1.1/login,phishing
+Amazon ACTION REQUIRED! Overcharged invoice. Update billing info to continue. http://amazon-secure.tk/login,phishing
+Netflix IMMEDIATELY! Package on hold due to customs. Confirm your identity to continue. http://netflix-secure.ml/login,phishing
+Amazon FINAL NOTICE! Your account will be suspended. Login to continue to continue. Limited time prize http://billing-secure.example,phishing
+PayPal FINAL NOTICE! Overcharged invoice. Verify your account to continue. http://account-update.example,phishing
+DHL URGENT! Your subscription will be cancelled. Submit your details to continue. http://dhl-secure.gq/login,phishing
+Bank of America VERIFY NOW! Unusual login detected. Click here to continue. http://bankofamerica-secure.gq/login,phishing
+Microsoft ACCOUNT ALERT! Package on hold due to customs. Confirm your identity to continue. Exclusive offer http://microsoft-secure.tk/login,phishing
+PayPal FINAL NOTICE! Your account will be suspended. Verify your account to continue. http://paypal-secure-login.example,phishing
+HMRC VERIFY NOW! Payment declined. Submit your details to continue. http://hmrc-secure.gq/login,phishing
+Apple ACTION REQUIRED! Your account will be suspended. Reset your password to continue. Limited time prize http://account-update.example,phishing
+Netflix VERIFY NOW! Payment declined. Reset your password to continue. http://netflix-secure.cf/login,phishing
+Amazon URGENT! Your account will be suspended. Verify your account to continue. http://verify-payments.example,phishing
+IRS URGENT! Package on hold due to customs. Reset your password to continue. http://irs-secure.ml/login,phishing
+PayPal ACTION REQUIRED! Unusual login detected. Update billing info to continue. http://paypal-secure.ml/login,phishing
+DHL IMMEDIATELY! Your account will be suspended. Submit your details to continue. Exclusive offer http://billing-secure.example,phishing
+DHL IMMEDIATELY! Payment declined. Update billing info to continue. http://secure-login.example,phishing
+IRS ACTION REQUIRED! Your subscription will be cancelled. Reset your password to continue. You won $5000 http://irs-secure.gq/login,phishing
+PayPal URGENT! Your account will be suspended. Submit your details to continue. Exclusive offer http://paypal-secure.ml/login,phishing
+Netflix URGENT! Package on hold due to customs. Confirm your identity to continue. http://netflix-secure.ml/login,phishing
+Microsoft ACCOUNT ALERT! Your account will be suspended. Reset your password to continue. http://verify-payments.example,phishing
+PayPal ACTION REQUIRED! Overcharged invoice. Verify your account to continue. http://paypal-secure.cf/login,phishing
+DHL FINAL NOTICE! Your account will be suspended. Reset your password to continue. http://dhl-secure.ga/login,phishing
+IRS FINAL NOTICE! Overcharged invoice. Login to continue to continue. Crypto giveaway http://bank-update.example,phishing
+Amazon VERIFY NOW! Your subscription will be cancelled. Submit your details to continue. Exclusive offer http://amazon-secure.ga/login,phishing
+HMRC URGENT! Your account will be suspended. Reset your password to continue. http://paypal-secure-login.example,phishing
+DHL IMMEDIATELY! Overcharged invoice. Verify your account to continue. http://paypal-secure-login.example,phishing
+PayPal ACTION REQUIRED! Unusual login detected. Login to continue to continue. Claim your free reward http://paypal-secure-login.example,phishing
+FedEx YOUR ACCOUNT EXPIRES! Your account will be suspended. Login to continue to continue. http://192.168.1.1/login,phishing
+Microsoft IMMEDIATELY! Overcharged invoice. Confirm your identity to continue. Cashback available http://microsoft-secure.ga/login,phishing
+FedEx SECURITY ALERT! Package on hold due to customs. Login to continue to continue. Exclusive offer http://fedex-secure.ml/login,phishing
+Netflix IMMEDIATELY! Your account will be suspended. Verify your account to continue. Exclusive offer http://dhl-payments.example,phishing
+Apple ACCOUNT ALERT! Your subscription will be cancelled. Submit your details to continue. http://apple-secure.tk/login,phishing
+Bank of America ACTION REQUIRED! Package on hold due to customs. Submit your details to continue. Cashback available http://bankofamerica-secure.ga/login,phishing
+Netflix IMMEDIATELY! Your subscription will be cancelled. Login to continue to continue. http://paypal-secure-login.example,phishing
+HMRC FINAL NOTICE! Your subscription will be cancelled. Reset your password to continue. Exclusive offer http://bank-update.example,phishing
+Apple LAST WARNING! Payment declined. Click here to continue. Refund available http://apple-secure.tk/login,phishing
+Amazon ACTION REQUIRED! Payment declined. Verify your account to continue. http://verify-payments.example,phishing
+DHL IMMEDIATELY! Your account will be suspended. Click here to continue. Cashback available http://bank-update.example,phishing
+Bank of America ACCOUNT ALERT! Your account will be suspended. Click here to continue. http://bankofamerica-secure.gq/login,phishing
+Microsoft SECURITY ALERT! Your account will be suspended. Update billing info to continue. http://microsoft-secure.ml/login,phishing
+Netflix FINAL NOTICE! Payment declined. Reset your password to continue. http://secure-login.example,phishing
+IRS LAST WARNING! Unusual login detected. Login to continue to continue. http://irs-secure.ga/login,phishing
+Microsoft ACTION REQUIRED! Your subscription will be cancelled. Update billing info to continue. http://account-update.example,phishing
+Apple URGENT! Package on hold due to customs. Update billing info to continue. http://apple-secure.gq/login,phishing
+Apple ACCOUNT ALERT! Unusual login detected. Update billing info to continue. Crypto giveaway http://apple-secure.ga/login,phishing
+PayPal YOUR ACCOUNT EXPIRES! Unusual login detected. Confirm your identity to continue. http://account-update.example,phishing
+Bank of America LAST WARNING! Your subscription will be cancelled. Login to continue to continue. Refund available http://secure-login.example,phishing
+Amazon SECURITY ALERT! Your subscription will be cancelled. Reset your password to continue. Limited time prize http://dhl-payments.example,phishing
+FedEx URGENT! Package on hold due to customs. Login to continue to continue. http://192.168.1.1/login,phishing
+Amazon YOUR ACCOUNT EXPIRES! Unusual login detected. Confirm your identity to continue. You won $5000 http://amazon-secure.gq/login,phishing
+Amazon URGENT! Payment declined. Confirm your identity to continue. Limited time prize http://account-update.example,phishing
+FedEx ACTION REQUIRED! Unusual login detected. Submit your details to continue. Claim your free reward http://192.168.1.1/login,phishing
+Apple ACCOUNT ALERT! Unusual login detected. Click here to continue. http://paypal-secure-login.example,phishing
+FedEx FINAL NOTICE! Your subscription will be cancelled. Reset your password to continue. http://paypal-secure-login.example,phishing
+Google ACCOUNT ALERT! Package on hold due to customs. Verify your account to continue. http://google-secure.gq/login,phishing
+Netflix SECURITY ALERT! Package on hold due to customs. Reset your password to continue. http://netflix-secure.tk/login,phishing
+IRS SECURITY ALERT! Overcharged invoice. Submit your details to continue. Limited time prize http://dhl-payments.example,phishing
+IRS LAST WARNING! Overcharged invoice. Login to continue to continue. Exclusive offer http://irs-secure.tk/login,phishing
+Amazon ACCOUNT ALERT! Your subscription will be cancelled. Reset your password to continue. http://verify-payments.example,phishing
+HMRC ACCOUNT ALERT! Your account will be suspended. Update billing info to continue. Claim your free reward http://hmrc-secure.tk/login,phishing
+PayPal URGENT! Payment declined. Update billing info to continue. http://192.168.1.1/login,phishing
+Google SECURITY ALERT! Overcharged invoice. Reset your password to continue. http://bank-update.example,phishing
+IRS LAST WARNING! Payment declined. Verify your account to continue. Refund available http://irs-secure.ga/login,phishing
+DHL IMMEDIATELY! Unusual login detected. Click here to continue. Exclusive offer http://192.168.1.1/login,phishing
+Apple IMMEDIATELY! Overcharged invoice. Reset your password to continue. http://bank-update.example,phishing
+Microsoft ACTION REQUIRED! Payment declined. Confirm your identity to continue. You won $5000 http://microsoft-secure.ml/login,phishing
+Microsoft VERIFY NOW! Package on hold due to customs. Login to continue to continue. http://microsoft-secure.tk/login,phishing
+PayPal SECURITY ALERT! Overcharged invoice. Confirm your identity to continue. http://paypal-secure.tk/login,phishing
+Microsoft IMMEDIATELY! Package on hold due to customs. Reset your password to continue. http://microsoft-secure.tk/login,phishing
+Amazon ACTION REQUIRED! Unusual login detected. Login to continue to continue. http://bank-update.example,phishing
+DHL SECURITY ALERT! Payment declined. Update billing info to continue. http://dhl-secure.gq/login,phishing
+Microsoft ACTION REQUIRED! Payment declined. Reset your password to continue. http://microsoft-secure.cf/login,phishing
+Google FINAL NOTICE! Unusual login detected. Verify your account to continue. http://192.168.1.1/login,phishing
+HMRC IMMEDIATELY! Package on hold due to customs. Click here to continue. Limited time prize http://paypal-secure-login.example,phishing
+IRS LAST WARNING! Your account will be suspended. Confirm your identity to continue. http://paypal-secure-login.example,phishing
+HMRC YOUR ACCOUNT EXPIRES! Your subscription will be cancelled. Confirm your identity to continue. http://hmrc-secure.tk/login,phishing
+Apple VERIFY NOW! Overcharged invoice. Submit your details to continue. http://apple-secure.cf/login,phishing
+Netflix ACTION REQUIRED! Your subscription will be cancelled. Verify your account to continue. Exclusive offer http://verify-payments.example,phishing
+Microsoft LAST WARNING! Package on hold due to customs. Submit your details to continue. Limited time prize http://microsoft-secure.tk/login,phishing
+Bank of America SECURITY ALERT! Payment declined. Confirm your identity to continue. http://billing-secure.example,phishing
+PayPal VERIFY NOW! Payment declined. Submit your details to continue. Claim your free reward http://192.168.1.1/login,phishing
+IRS IMMEDIATELY! Overcharged invoice. Click here to continue. http://billing-secure.example,phishing
+FedEx SECURITY ALERT! Payment declined. Reset your password to continue. http://fedex-secure.ga/login,phishing
+Microsoft ACTION REQUIRED! Overcharged invoice. Confirm your identity to continue. http://microsoft-secure.ga/login,phishing
+Amazon URGENT! Payment declined. Login to continue to continue. http://amazon-secure.ga/login,phishing
+DHL FINAL NOTICE! Payment declined. Submit your details to continue. http://verify-payments.example,phishing
+Amazon ACTION REQUIRED! Package on hold due to customs. Reset your password to continue. http://amazon-secure.cf/login,phishing
+IRS IMMEDIATELY! Payment declined. Verify your account to continue. Refund available http://paypal-secure-login.example,phishing
+Apple ACCOUNT ALERT! Your account will be suspended. Submit your details to continue. http://apple-secure.gq/login,phishing
+Microsoft ACTION REQUIRED! Overcharged invoice. Submit your details to continue. http://microsoft-secure.ml/login,phishing
+PayPal LAST WARNING! Payment declined. Click here to continue. Crypto giveaway http://paypal-secure.cf/login,phishing
+Apple SECURITY ALERT! Your account will be suspended. Login to continue to continue. http://apple-secure.gq/login,phishing
+Google ACTION REQUIRED! Payment declined. Submit your details to continue. http://google-secure.ga/login,phishing
+Bank of America FINAL NOTICE! Payment declined. Click here to continue. Refund available http://account-update.example,phishing
+HMRC LAST WARNING! Your subscription will be cancelled. Login to continue to continue. Exclusive offer http://secure-login.example,phishing
+HMRC URGENT! Your subscription will be cancelled. Update billing info to continue. http://hmrc-secure.gq/login,phishing
+DHL FINAL NOTICE! Payment declined. Update billing info to continue. http://dhl-secure.cf/login,phishing
+DHL VERIFY NOW! Overcharged invoice. Submit your details to continue. http://dhl-secure.ga/login,phishing
+Apple FINAL NOTICE! Package on hold due to customs. Reset your password to continue. You won $5000 http://dhl-payments.example,phishing
+HMRC ACCOUNT ALERT! Unusual login detected. Submit your details to continue. Cashback available http://hmrc-secure.gq/login,phishing
+Amazon URGENT! Overcharged invoice. Submit your details to continue. http://dhl-payments.example,phishing
+PayPal YOUR ACCOUNT EXPIRES! Unusual login detected. Reset your password to continue. http://paypal-secure.tk/login,phishing
+IRS LAST WARNING! Package on hold due to customs. Reset your password to continue. http://bank-update.example,phishing
+HMRC ACCOUNT ALERT! Unusual login detected. Confirm your identity to continue. http://hmrc-secure.cf/login,phishing
+Netflix FINAL NOTICE! Overcharged invoice. Login to continue to continue. http://192.168.1.1/login,phishing
+FedEx IMMEDIATELY! Unusual login detected. Verify your account to continue. Refund available http://billing-secure.example,phishing
+FedEx ACCOUNT ALERT! Overcharged invoice. Reset your password to continue. Refund available http://verify-payments.example,phishing
+HMRC IMMEDIATELY! Your subscription will be cancelled. Update billing info to continue. http://paypal-secure-login.example,phishing
+Microsoft URGENT! Your subscription will be cancelled. Submit your details to continue. Claim your free reward http://dhl-payments.example,phishing
+IRS YOUR ACCOUNT EXPIRES! Unusual login detected. Verify your account to continue. http://192.168.1.1/login,phishing
+Google ACCOUNT ALERT! Your subscription will be cancelled. Login to continue to continue. You won $5000 http://secure-login.example,phishing
+Amazon ACTION REQUIRED! Your subscription will be cancelled. Confirm your identity to continue. http://amazon-secure.cf/login,phishing
+HMRC SECURITY ALERT! Payment declined. Update billing info to continue. http://hmrc-secure.gq/login,phishing
+Amazon ACCOUNT ALERT! Unusual login detected. Click here to continue. http://amazon-secure.tk/login,phishing
+HMRC LAST WARNING! Package on hold due to customs. Verify your account to continue. http://hmrc-secure.cf/login,phishing
+Apple FINAL NOTICE! Your account will be suspended. Verify your account to continue. http://billing-secure.example,phishing
+Google VERIFY NOW! Overcharged invoice. Confirm your identity to continue. Cashback available http://google-secure.cf/login,phishing
+FedEx LAST WARNING! Payment declined. Verify your account to continue. Claim your free reward http://fedex-secure.tk/login,phishing
+IRS VERIFY NOW! Your account will be suspended. Verify your account to continue. http://irs-secure.ga/login,phishing
+Apple URGENT! Your account will be suspended. Confirm your identity to continue. http://apple-secure.tk/login,phishing
+Microsoft YOUR ACCOUNT EXPIRES! Your account will be suspended. Update billing info to continue. http://bank-update.example,phishing
+Amazon URGENT! Payment declined. Reset your password to continue. http://billing-secure.example,phishing
+Netflix SECURITY ALERT! Your account will be suspended. Submit your details to continue. http://netflix-secure.tk/login,phishing
+Google LAST WARNING! Your subscription will be cancelled. Confirm your identity to continue. http://google-secure.cf/login,phishing
+DHL ACTION REQUIRED! Overcharged invoice. Click here to continue. http://account-update.example,phishing
+Google ACCOUNT ALERT! Your account will be suspended. Verify your account to continue. You won $5000 http://verify-payments.example,phishing
+HMRC YOUR ACCOUNT EXPIRES! Your account will be suspended. Verify your account to continue. http://verify-payments.example,phishing
+Bank of America FINAL NOTICE! Your subscription will be cancelled. Login to continue to continue. http://bankofamerica-secure.tk/login,phishing
+Bank of America ACTION REQUIRED! Your account will be suspended. Submit your details to continue. http://dhl-payments.example,phishing
+FedEx SECURITY ALERT! Your account will be suspended. Login to continue to continue. Refund available http://fedex-secure.ml/login,phishing
+HMRC ACTION REQUIRED! Unusual login detected. Reset your password to continue. http://billing-secure.example,phishing
+Bank of America ACCOUNT ALERT! Unusual login detected. Submit your details to continue. Exclusive offer http://paypal-secure-login.example,phishing
+DHL SECURITY ALERT! Payment declined. Login to continue to continue. http://dhl-secure.tk/login,phishing
+Netflix IMMEDIATELY! Overcharged invoice. Update billing info to continue. http://netflix-secure.cf/login,phishing
+FedEx URGENT! Package on hold due to customs. Submit your details to continue. http://192.168.1.1/login,phishing
+Google IMMEDIATELY! Payment declined. Update billing info to continue. Crypto giveaway http://google-secure.gq/login,phishing
+IRS LAST WARNING! Unusual login detected. Login to continue to continue. http://verify-payments.example,phishing
+Amazon YOUR ACCOUNT EXPIRES! Package on hold due to customs. Reset your password to continue. http://amazon-secure.gq/login,phishing
+IRS URGENT! Package on hold due to customs. Click here to continue. http://bank-update.example,phishing
+Netflix IMMEDIATELY! Payment declined. Submit your details to continue. Crypto giveaway http://netflix-secure.ml/login,phishing
+Apple SECURITY ALERT! Your subscription will be cancelled. Update billing info to continue. Exclusive offer http://apple-secure.cf/login,phishing
+Google ACCOUNT ALERT! Payment declined. Click here to continue. http://google-secure.cf/login,phishing
+PayPal VERIFY NOW! Your account will be suspended. Confirm your identity to continue. http://billing-secure.example,phishing
+Apple LAST WARNING! Package on hold due to customs. Login to continue to continue. http://apple-secure.tk/login,phishing
+Amazon YOUR ACCOUNT EXPIRES! Overcharged invoice. Reset your password to continue. http://bank-update.example,phishing
+FedEx YOUR ACCOUNT EXPIRES! Your account will be suspended. Click here to continue. http://fedex-secure.ga/login,phishing
+HMRC FINAL NOTICE! Overcharged invoice. Confirm your identity to continue. http://hmrc-secure.ml/login,phishing
+Google ACTION REQUIRED! Package on hold due to customs. Submit your details to continue. http://google-secure.gq/login,phishing
+Amazon LAST WARNING! Payment declined. Click here to continue. Refund available http://account-update.example,phishing
+Bank of America SECURITY ALERT! Package on hold due to customs. Click here to continue. http://verify-payments.example,phishing
+Google YOUR ACCOUNT EXPIRES! Overcharged invoice. Login to continue to continue. http://192.168.1.1/login,phishing
+PayPal VERIFY NOW! Your account will be suspended. Login to continue to continue. http://paypal-secure-login.example,phishing
+Google VERIFY NOW! Your subscription will be cancelled. Submit your details to continue. http://192.168.1.1/login,phishing
+Netflix IMMEDIATELY! Package on hold due to customs. Update billing info to continue. http://dhl-payments.example,phishing
+Microsoft SECURITY ALERT! Package on hold due to customs. Confirm your identity to continue. http://microsoft-secure.ga/login,phishing
+DHL YOUR ACCOUNT EXPIRES! Your subscription will be cancelled. Submit your details to continue. Limited time prize http://billing-secure.example,phishing
+Apple ACCOUNT ALERT! Package on hold due to customs. Login to continue to continue. http://apple-secure.gq/login,phishing
+DHL ACCOUNT ALERT! Your subscription will be cancelled. Login to continue to continue. http://192.168.1.1/login,phishing
+HMRC ACCOUNT ALERT! Your account will be suspended. Login to continue to continue. http://bank-update.example,phishing
+HMRC SECURITY ALERT! Package on hold due to customs. Login to continue to continue. http://billing-secure.example,phishing
+Microsoft URGENT! Your account will be suspended. Confirm your identity to continue. Claim your free reward http://secure-login.example,phishing
+Amazon FINAL NOTICE! Your subscription will be cancelled. Submit your details to continue. http://amazon-secure.tk/login,phishing
+DHL LAST WARNING! Overcharged invoice. Submit your details to continue. Refund available http://dhl-secure.gq/login,phishing
+Amazon VERIFY NOW! Your subscription will be cancelled. Update billing info to continue. http://billing-secure.example,phishing
+PayPal SECURITY ALERT! Payment declined. Update billing info to continue. http://dhl-payments.example,phishing
+PayPal URGENT! Unusual login detected. Login to continue to continue. Refund available http://bank-update.example,phishing
+HMRC ACCOUNT ALERT! Overcharged invoice. Submit your details to continue. http://account-update.example,phishing
+Amazon FINAL NOTICE! Your subscription will be cancelled. Update billing info to continue. http://amazon-secure.ml/login,phishing
+Apple IMMEDIATELY! Your account will be suspended. Update billing info to continue. http://apple-secure.gq/login,phishing
+DHL URGENT! Payment declined. Reset your password to continue. http://dhl-secure.ga/login,phishing
+IRS URGENT! Package on hold due to customs. Submit your details to continue. http://billing-secure.example,phishing
+IRS VERIFY NOW! Your account will be suspended. Reset your password to continue. http://dhl-payments.example,phishing
+Netflix VERIFY NOW! Overcharged invoice. Click here to continue. Limited time prize http://netflix-secure.ml/login,phishing
+Amazon ACCOUNT ALERT! Unusual login detected. Reset your password to continue. Refund available http://bank-update.example,phishing
+HMRC URGENT! Package on hold due to customs. Click here to continue. Claim your free reward http://account-update.example,phishing
+HMRC ACCOUNT ALERT! Your account will be suspended. Update billing info to continue. http://hmrc-secure.gq/login,phishing
+FedEx VERIFY NOW! Overcharged invoice. Submit your details to continue. http://fedex-secure.ml/login,phishing
+FedEx VERIFY NOW! Your account will be suspended. Click here to continue. Refund available http://secure-login.example,phishing
+Amazon LAST WARNING! Package on hold due to customs. Submit your details to continue. http://amazon-secure.cf/login,phishing
+HMRC IMMEDIATELY! Package on hold due to customs. Login to continue to continue. Exclusive offer http://hmrc-secure.tk/login,phishing
+PayPal ACTION REQUIRED! Unusual login detected. Submit your details to continue. http://account-update.example,phishing
+Microsoft SECURITY ALERT! Package on hold due to customs. Update billing info to continue. http://microsoft-secure.tk/login,phishing
+Apple URGENT! Package on hold due to customs. Login to continue to continue. http://secure-login.example,phishing
+Bank of America ACCOUNT ALERT! Your account will be suspended. Confirm your identity to continue. Cashback available http://billing-secure.example,phishing
+DHL YOUR ACCOUNT EXPIRES! Payment declined. Update billing info to continue. http://secure-login.example,phishing
+Apple LAST WARNING! Package on hold due to customs. Verify your account to continue. http://billing-secure.example,phishing
+Netflix FINAL NOTICE! Package on hold due to customs. Login to continue to continue. http://secure-login.example,phishing
+Apple ACTION REQUIRED! Your account will be suspended. Click here to continue. Limited time prize http://paypal-secure-login.example,phishing
+Bank of America FINAL NOTICE! Package on hold due to customs. Verify your account to continue. http://bankofamerica-secure.gq/login,phishing
+Netflix ACTION REQUIRED! Your subscription will be cancelled. Verify your account to continue. http://netflix-secure.ml/login,phishing
+HMRC URGENT! Overcharged invoice. Submit your details to continue. http://hmrc-secure.tk/login,phishing
+DHL IMMEDIATELY! Package on hold due to customs. Verify your account to continue. http://dhl-secure.ml/login,phishing
+Bank of America FINAL NOTICE! Your account will be suspended. Confirm your identity to continue. http://dhl-payments.example,phishing
+FedEx FINAL NOTICE! Overcharged invoice. Login to continue to continue. Limited time prize http://dhl-payments.example,phishing
+Microsoft ACTION REQUIRED! Unusual login detected. Click here to continue. Claim your free reward http://microsoft-secure.ga/login,phishing
+Netflix ACCOUNT ALERT! Payment declined. Update billing info to continue. http://billing-secure.example,phishing
+Bank of America ACTION REQUIRED! Overcharged invoice. Login to continue to continue. Crypto giveaway http://192.168.1.1/login,phishing
+Amazon FINAL NOTICE! Package on hold due to customs. Login to continue to continue. You won $5000 http://secure-login.example,phishing
+HMRC URGENT! Overcharged invoice. Submit your details to continue. http://account-update.example,phishing
+Apple FINAL NOTICE! Overcharged invoice. Confirm your identity to continue. http://apple-secure.ml/login,phishing
+IRS FINAL NOTICE! Payment declined. Verify your account to continue. http://irs-secure.gq/login,phishing
+PayPal LAST WARNING! Overcharged invoice. Submit your details to continue. http://192.168.1.1/login,phishing
+Netflix ACTION REQUIRED! Package on hold due to customs. Login to continue to continue. http://netflix-secure.cf/login,phishing
+Amazon IMMEDIATELY! Unusual login detected. Reset your password to continue. Cashback available http://account-update.example,phishing
+FedEx SECURITY ALERT! Payment declined. Update billing info to continue. http://secure-login.example,phishing
+FedEx IMMEDIATELY! Overcharged invoice. Login to continue to continue. http://billing-secure.example,phishing
+DHL VERIFY NOW! Your subscription will be cancelled. Confirm your identity to continue. http://dhl-secure.tk/login,phishing
+Apple FINAL NOTICE! Your subscription will be cancelled. Update billing info to continue. http://dhl-payments.example,phishing
+FedEx YOUR ACCOUNT EXPIRES! Payment declined. Submit your details to continue. http://secure-login.example,phishing
+Netflix YOUR ACCOUNT EXPIRES! Your subscription will be cancelled. Verify your account to continue. Cashback available http://netflix-secure.ml/login,phishing
+Netflix ACCOUNT ALERT! Package on hold due to customs. Confirm your identity to continue. http://account-update.example,phishing
+FedEx IMMEDIATELY! Package on hold due to customs. Update billing info to continue. http://account-update.example,phishing
+HMRC SECURITY ALERT! Your subscription will be cancelled. Click here to continue. Limited time prize http://hmrc-secure.gq/login,phishing
+PayPal ACTION REQUIRED! Your subscription will be cancelled. Click here to continue. Claim your free reward http://paypal-secure-login.example,phishing
+IRS URGENT! Package on hold due to customs. Login to continue to continue. http://billing-secure.example,phishing
+Amazon YOUR ACCOUNT EXPIRES! Payment declined. Confirm your identity to continue. http://amazon-secure.cf/login,phishing
+IRS ACTION REQUIRED! Overcharged invoice. Submit your details to continue. http://192.168.1.1/login,phishing
+Apple FINAL NOTICE! Package on hold due to customs. Verify your account to continue. http://bank-update.example,phishing
+Bank of America LAST WARNING! Payment declined. Update billing info to continue. You won $5000 http://account-update.example,phishing
+Apple SECURITY ALERT! Your subscription will be cancelled. Submit your details to continue. http://192.168.1.1/login,phishing
+IRS URGENT! Overcharged invoice. Submit your details to continue. http://irs-secure.ml/login,phishing
+IRS VERIFY NOW! Your account will be suspended. Submit your details to continue. http://paypal-secure-login.example,phishing
+FedEx URGENT! Overcharged invoice. Login to continue to continue. http://bank-update.example,phishing
+Microsoft ACCOUNT ALERT! Package on hold due to customs. Confirm your identity to continue. http://verify-payments.example,phishing
+DHL YOUR ACCOUNT EXPIRES! Your subscription will be cancelled. Submit your details to continue. http://dhl-secure.gq/login,phishing
+Microsoft FINAL NOTICE! Your account will be suspended. Verify your account to continue. http://secure-login.example,phishing
+Bank of America VERIFY NOW! Payment declined. Click here to continue. http://dhl-payments.example,phishing
+Bank of America ACTION REQUIRED! Package on hold due to customs. Update billing info to continue. http://billing-secure.example,phishing
+Microsoft ACCOUNT ALERT! Unusual login detected. Confirm your identity to continue. http://paypal-secure-login.example,phishing
+Microsoft VERIFY NOW! Overcharged invoice. Submit your details to continue. http://dhl-payments.example,phishing
+Google FINAL NOTICE! Overcharged invoice. Reset your password to continue. Cashback available http://paypal-secure-login.example,phishing
+HMRC IMMEDIATELY! Your subscription will be cancelled. Login to continue to continue. http://hmrc-secure.gq/login,phishing
+Microsoft ACCOUNT ALERT! Overcharged invoice. Submit your details to continue. http://microsoft-secure.tk/login,phishing
+Bank of America ACTION REQUIRED! Overcharged invoice. Update billing info to continue. http://bankofamerica-secure.ga/login,phishing
+Bank of America URGENT! Payment declined. Login to continue to continue. http://paypal-secure-login.example,phishing
+Apple FINAL NOTICE! Overcharged invoice. Login to continue to continue. Refund available http://192.168.1.1/login,phishing
+Google URGENT! Package on hold due to customs. Verify your account to continue. http://google-secure.gq/login,phishing
+Apple VERIFY NOW! Your subscription will be cancelled. Login to continue to continue. http://apple-secure.tk/login,phishing
+Netflix IMMEDIATELY! Payment declined. Reset your password to continue. http://paypal-secure-login.example,phishing
+Amazon VERIFY NOW! Package on hold due to customs. Click here to continue. http://verify-payments.example,phishing
+Apple ACCOUNT ALERT! Unusual login detected. Reset your password to continue. Claim your free reward http://bank-update.example,phishing
+IRS URGENT! Your subscription will be cancelled. Reset your password to continue. http://verify-payments.example,phishing
+Apple FINAL NOTICE! Your account will be suspended. Reset your password to continue. http://billing-secure.example,phishing
+IRS FINAL NOTICE! Payment declined. Login to continue to continue. http://bank-update.example,phishing
+FedEx YOUR ACCOUNT EXPIRES! Payment declined. Login to continue to continue. http://secure-login.example,phishing
+DHL IMMEDIATELY! Package on hold due to customs. Update billing info to continue. http://account-update.example,phishing
+Amazon ACCOUNT ALERT! Unusual login detected. Update billing info to continue. http://secure-login.example,phishing
+DHL LAST WARNING! Your account will be suspended. Reset your password to continue. http://dhl-secure.ml/login,phishing
+Google ACCOUNT ALERT! Your subscription will be cancelled. Reset your password to continue. http://google-secure.ml/login,phishing
+Google LAST WARNING! Package on hold due to customs. Verify your account to continue. Crypto giveaway http://google-secure.ml/login,phishing
+IRS ACCOUNT ALERT! Your account will be suspended. Verify your account to continue. You won $5000 http://bank-update.example,phishing
+Apple URGENT! Payment declined. Submit your details to continue. http://dhl-payments.example,phishing
+IRS FINAL NOTICE! Your subscription will be cancelled. Update billing info to continue. http://irs-secure.gq/login,phishing
+Netflix URGENT! Payment declined. Confirm your identity to continue. http://secure-login.example,phishing
+Microsoft ACTION REQUIRED! Your account will be suspended. Update billing info to continue. http://microsoft-secure.tk/login,phishing
+PayPal LAST WARNING! Overcharged invoice. Update billing info to continue. Crypto giveaway http://paypal-secure.ga/login,phishing
+Amazon FINAL NOTICE! Overcharged invoice. Update billing info to continue. Claim your free reward http://bank-update.example,phishing
+Microsoft ACCOUNT ALERT! Payment declined. Reset your password to continue. Claim your free reward http://192.168.1.1/login,phishing
+HMRC LAST WARNING! Your account will be suspended. Submit your details to continue. http://account-update.example,phishing
+Microsoft LAST WARNING! Package on hold due to customs. Verify your account to continue. Refund available http://microsoft-secure.cf/login,phishing
+Netflix VERIFY NOW! Package on hold due to customs. Confirm your identity to continue. Exclusive offer http://netflix-secure.gq/login,phishing
+PayPal SECURITY ALERT! Package on hold due to customs. Click here to continue. Claim your free reward http://billing-secure.example,phishing
+HMRC IMMEDIATELY! Package on hold due to customs. Update billing info to continue. Crypto giveaway http://dhl-payments.example,phishing
+DHL ACCOUNT ALERT! Payment declined. Click here to continue. Refund available http://account-update.example,phishing
+HMRC VERIFY NOW! Unusual login detected. Verify your account to continue. http://bank-update.example,phishing
+Google IMMEDIATELY! Overcharged invoice. Update billing info to continue. Cashback available http://192.168.1.1/login,phishing
+HMRC ACCOUNT ALERT! Package on hold due to customs. Update billing info to continue. http://paypal-secure-login.example,phishing
+Bank of America IMMEDIATELY! Unusual login detected. Verify your account to continue. Crypto giveaway http://billing-secure.example,phishing
+IRS SECURITY ALERT! Payment declined. Reset your password to continue. http://dhl-payments.example,phishing
+Apple YOUR ACCOUNT EXPIRES! Your subscription will be cancelled. Update billing info to continue. You won $5000 http://192.168.1.1/login,phishing
+HMRC FINAL NOTICE! Package on hold due to customs. Login to continue to continue. http://hmrc-secure.tk/login,phishing
+Bank of America IMMEDIATELY! Overcharged invoice. Update billing info to continue. Refund available http://paypal-secure-login.example,phishing
+Bank of America IMMEDIATELY! Overcharged invoice. Reset your password to continue. Cashback available http://bankofamerica-secure.ml/login,phishing
+DHL YOUR ACCOUNT EXPIRES! Your subscription will be cancelled. Login to continue to continue. Refund available http://dhl-secure.ga/login,phishing
+FedEx YOUR ACCOUNT EXPIRES! Overcharged invoice. Update billing info to continue. http://fedex-secure.gq/login,phishing
+Netflix YOUR ACCOUNT EXPIRES! Package on hold due to customs. Login to continue to continue. http://paypal-secure-login.example,phishing
+HMRC VERIFY NOW! Unusual login detected. Reset your password to continue. http://account-update.example,phishing
+Google FINAL NOTICE! Payment declined. Reset your password to continue. Crypto giveaway http://google-secure.ml/login,phishing
+FedEx FINAL NOTICE! Overcharged invoice. Update billing info to continue. Exclusive offer http://fedex-secure.cf/login,phishing
+DHL LAST WARNING! Your account will be suspended. Submit your details to continue. http://account-update.example,phishing
+Apple SECURITY ALERT! Your subscription will be cancelled. Update billing info to continue. Cashback available http://paypal-secure-login.example,phishing
+Amazon FINAL NOTICE! Payment declined. Click here to continue. http://amazon-secure.gq/login,phishing
+DHL SECURITY ALERT! Your account will be suspended. Verify your account to continue. Crypto giveaway http://verify-payments.example,phishing
+IRS YOUR ACCOUNT EXPIRES! Package on hold due to customs. Reset your password to continue. http://irs-secure.ml/login,phishing
+PayPal VERIFY NOW! Your subscription will be cancelled. Click here to continue. http://paypal-secure.cf/login,phishing
+PayPal LAST WARNING! Your subscription will be cancelled. Click here to continue. Claim your free reward http://dhl-payments.example,phishing
+Google ACCOUNT ALERT! Package on hold due to customs. Update billing info to continue. http://google-secure.ml/login,phishing
+PayPal FINAL NOTICE! Payment declined. Submit your details to continue. Exclusive offer http://paypal-secure.ga/login,phishing
+Microsoft URGENT! Package on hold due to customs. Click here to continue. Refund available http://microsoft-secure.tk/login,phishing
+Amazon YOUR ACCOUNT EXPIRES! Your account will be suspended. Login to continue to continue. http://account-update.example,phishing
+HMRC FINAL NOTICE! Your subscription will be cancelled. Reset your password to continue. http://secure-login.example,phishing
+Apple VERIFY NOW! Unusual login detected. Click here to continue. http://apple-secure.tk/login,phishing
+HMRC LAST WARNING! Your subscription will be cancelled. Click here to continue. http://hmrc-secure.ga/login,phishing
+IRS IMMEDIATELY! Your subscription will be cancelled. Update billing info to continue. You won $5000 http://bank-update.example,phishing
+Netflix ACCOUNT ALERT! Your account will be suspended. Submit your details to continue. Exclusive offer http://verify-payments.example,phishing
+FedEx URGENT! Unusual login detected. Click here to continue. http://fedex-secure.ml/login,phishing
+FedEx VERIFY NOW! Package on hold due to customs. Submit your details to continue. http://bank-update.example,phishing
+PayPal SECURITY ALERT! Package on hold due to customs. Reset your password to continue. You won $5000 http://bank-update.example,phishing
+Apple FINAL NOTICE! Package on hold due to customs. Confirm your identity to continue. http://192.168.1.1/login,phishing
+FedEx YOUR ACCOUNT EXPIRES! Overcharged invoice. Reset your password to continue. http://fedex-secure.ml/login,phishing
+Google FINAL NOTICE! Unusual login detected. Submit your details to continue. http://google-secure.gq/login,phishing
+Microsoft ACTION REQUIRED! Overcharged invoice. Click here to continue. http://microsoft-secure.tk/login,phishing
+HMRC VERIFY NOW! Payment declined. Submit your details to continue. Cashback available http://bank-update.example,phishing
+Netflix FINAL NOTICE! Payment declined. Reset your password to continue. http://netflix-secure.tk/login,phishing
+PayPal ACTION REQUIRED! Your account will be suspended. Verify your account to continue. Exclusive offer http://paypal-secure.gq/login,phishing
+HMRC SECURITY ALERT! Payment declined. Login to continue to continue. http://hmrc-secure.ml/login,phishing
+IRS IMMEDIATELY! Your subscription will be cancelled. Click here to continue. http://verify-payments.example,phishing
+HMRC URGENT! Overcharged invoice. Reset your password to continue. http://paypal-secure-login.example,phishing
+PayPal FINAL NOTICE! Your account will be suspended. Confirm your identity to continue. http://paypal-secure.ml/login,phishing
+Apple IMMEDIATELY! Package on hold due to customs. Click here to continue. Exclusive offer http://apple-secure.ml/login,phishing
+IRS ACTION REQUIRED! Package on hold due to customs. Confirm your identity to continue. http://verify-payments.example,phishing
+IRS ACCOUNT ALERT! Payment declined. Login to continue to continue. http://paypal-secure-login.example,phishing
+Netflix ACTION REQUIRED! Payment declined. Confirm your identity to continue. http://192.168.1.1/login,phishing
+IRS YOUR ACCOUNT EXPIRES! Unusual login detected. Reset your password to continue. http://dhl-payments.example,phishing
+Microsoft SECURITY ALERT! Package on hold due to customs. Submit your details to continue. Claim your free reward http://microsoft-secure.gq/login,phishing
+DHL ACCOUNT ALERT! Payment declined. Update billing info to continue. http://secure-login.example,phishing
+DHL URGENT! Your subscription will be cancelled. Confirm your identity to continue. http://dhl-secure.ml/login,phishing
+Amazon ACCOUNT ALERT! Package on hold due to customs. Click here to continue. http://amazon-secure.cf/login,phishing
+FedEx ACTION REQUIRED! Unusual login detected. Verify your account to continue. http://fedex-secure.ga/login,phishing
+Bank of America SECURITY ALERT! Your subscription will be cancelled. Confirm your identity to continue. http://dhl-payments.example,phishing
+Netflix YOUR ACCOUNT EXPIRES! Package on hold due to customs. Submit your details to continue. http://verify-payments.example,phishing
+DHL URGENT! Overcharged invoice. Login to continue to continue. http://secure-login.example,phishing
+FedEx ACCOUNT ALERT! Payment declined. Submit your details to continue. http://verify-payments.example,phishing
+Amazon URGENT! Package on hold due to customs. Login to continue to continue. http://billing-secure.example,phishing
+FedEx VERIFY NOW! Your subscription will be cancelled. Confirm your identity to continue. Cashback available http://fedex-secure.cf/login,phishing
+Google VERIFY NOW! Your subscription will be cancelled. Click here to continue. http://google-secure.ga/login,phishing
+Bank of America YOUR ACCOUNT EXPIRES! Package on hold due to customs. Confirm your identity to continue. Exclusive offer http://bankofamerica-secure.gq/login,phishing
+Microsoft ACTION REQUIRED! Your subscription will be cancelled. Submit your details to continue. http://account-update.example,phishing
+HMRC LAST WARNING! Overcharged invoice. Confirm your identity to continue. http://hmrc-secure.ga/login,phishing
+Microsoft ACCOUNT ALERT! Overcharged invoice. Login to continue to continue. Cashback available http://paypal-secure-login.example,phishing
+FedEx LAST WARNING! Unusual login detected. Reset your password to continue. http://secure-login.example,phishing
+Netflix ACCOUNT ALERT! Payment declined. Confirm your identity to continue. http://netflix-secure.ml/login,phishing
+Amazon ACCOUNT ALERT! Package on hold due to customs. Verify your account to continue. http://verify-payments.example,phishing
+Amazon ACTION REQUIRED! Unusual login detected. Submit your details to continue. Cashback available http://amazon-secure.cf/login,phishing
+PayPal ACCOUNT ALERT! Package on hold due to customs. Verify your account to continue. http://account-update.example,phishing
+DHL VERIFY NOW! Overcharged invoice. Update billing info to continue. http://192.168.1.1/login,phishing
+HMRC URGENT! Overcharged invoice. Update billing info to continue. http://hmrc-secure.tk/login,phishing
+DHL LAST WARNING! Package on hold due to customs. Submit your details to continue. http://secure-login.example,phishing
+PayPal IMMEDIATELY! Package on hold due to customs. Update billing info to continue. Refund available http://dhl-payments.example,phishing
+Team meeting scheduled: Reminder to submit timesheets by Friday. Have a nice day,clean
+Invoice paid: Please review the attached notes. Cheers,clean
+"Training session: Please review the attached notes. Regards,",clean
+Server maintenance: Let's meet tomorrow at 2 PM. Thanks!,clean
+Onsite schedule: Reminder to submit timesheets by Friday. Cheers,clean
+Project update: Let's meet tomorrow at 2 PM. Schedule shared on the calendar. Cheers,clean
+Weekly report: The server will be updated on Sunday. See you soon,clean
+Team meeting scheduled: Reminder to submit timesheets by Friday. Meeting room A at 3 PM. Best regards,clean
+"Onsite schedule: Reminder to submit timesheets by Friday. Regards,",clean
+Invoice paid: Thanks for the presentation yesterday. See the doc in the shared drive. Thanks!,clean
+Training session: The server will be updated on Sunday. Best regards,clean
+Project update: Great work on the release. Schedule shared on the calendar. Cheers,clean
+"Server maintenance: Thanks for the presentation yesterday. See the doc in the shared drive. Regards,",clean
+"Onsite schedule: The server will be updated on Sunday. Regards,",clean
+Onsite schedule: Thanks for the presentation yesterday. Meeting room A at 3 PM. Best regards,clean
+Training session: Thanks for the presentation yesterday. Cheers,clean
+"Onsite schedule: Please review the attached notes. Regards,",clean
+Project update: Let's meet tomorrow at 2 PM. Schedule shared on the calendar. Cheers,clean
+Invoice paid: Reminder to submit timesheets by Friday. See the doc in the shared drive. Best regards,clean
+"Weekly report: Thanks for the presentation yesterday. Regards,",clean
+Project update: Let's meet tomorrow at 2 PM. See the doc in the shared drive. See you soon,clean
+Training session: The server will be updated on Sunday. See you soon,clean
+Team meeting scheduled: Looking forward to our 1:1 next week. Schedule shared on the calendar. Thanks!,clean
+Project update: Can we reschedule to Wednesday? Meeting room A at 3 PM. Have a nice day,clean
+Invoice paid: Can we reschedule to Wednesday? Best regards,clean
+Vacation request: The server will be updated on Sunday. Thanks!,clean
+Team meeting scheduled: Reminder to submit timesheets by Friday. Best regards,clean
+Vacation request: The server will be updated on Sunday. Thanks!,clean
+Server maintenance: Can we reschedule to Wednesday? Have a nice day,clean
+Server maintenance: The server will be updated on Sunday. Best regards,clean
+Team meeting scheduled: Great work on the release. Have a nice day,clean
+Training session: Let's meet tomorrow at 2 PM. See you soon,clean
+"Server maintenance: Let's meet tomorrow at 2 PM. Schedule shared on the calendar. Regards,",clean
+Team meeting scheduled: Great work on the release. Meeting room A at 3 PM. See you soon,clean
+Vacation request: Reminder to submit timesheets by Friday. Best regards,clean
+Weekly report: Reminder to submit timesheets by Friday. Best regards,clean
+Weekly report: Let's meet tomorrow at 2 PM. Meeting room A at 3 PM. Have a nice day,clean
+Server maintenance: Can we reschedule to Wednesday? Meeting room A at 3 PM. Thanks!,clean
+Project update: Thanks for the presentation yesterday. Best regards,clean
+"Server maintenance: Let's meet tomorrow at 2 PM. Regards,",clean
+Vacation request: Can we reschedule to Wednesday? Thanks!,clean
+Project update: Please review the attached notes. Thanks!,clean
+Server maintenance: Looking forward to our 1:1 next week. Schedule shared on the calendar. Thanks!,clean
+Onsite schedule: Thanks for the presentation yesterday. Meeting room A at 3 PM. Best regards,clean
+Project update: Looking forward to our 1:1 next week. Meeting room A at 3 PM. See you soon,clean
+"Project update: Thanks for the presentation yesterday. Meeting room A at 3 PM. Regards,",clean
+Invoice paid: Reminder to submit timesheets by Friday. Schedule shared on the calendar. Cheers,clean
+Weekly report: Thanks for the presentation yesterday. Meeting room A at 3 PM. Thanks!,clean
+Team meeting scheduled: Reminder to submit timesheets by Friday. Thanks!,clean
+Server maintenance: Let's meet tomorrow at 2 PM. Meeting room A at 3 PM. See you soon,clean
+Vacation request: Can we reschedule to Wednesday? Best regards,clean
+"Lunch plans: Let's meet tomorrow at 2 PM. Schedule shared on the calendar. Regards,",clean
+Training session: The server will be updated on Sunday. Thanks!,clean
+Team meeting scheduled: Looking forward to our 1:1 next week. Thanks!,clean
+Team meeting scheduled: Reminder to submit timesheets by Friday. Meeting room A at 3 PM. Cheers,clean
+"Lunch plans: Great work on the release. Regards,",clean
+Weekly report: Thanks for the presentation yesterday. Schedule shared on the calendar. Best regards,clean
+Team meeting scheduled: Please review the attached notes. Cheers,clean
+Invoice paid: Please review the attached notes. Meeting room A at 3 PM. Best regards,clean
+"Weekly report: Can we reschedule to Wednesday? Regards,",clean
+Weekly report: Looking forward to our 1:1 next week. See you soon,clean
+Vacation request: The server will be updated on Sunday. See you soon,clean
+Training session: Please review the attached notes. See the doc in the shared drive. Best regards,clean
+Weekly report: Great work on the release. Schedule shared on the calendar. See you soon,clean
+"Onsite schedule: Looking forward to our 1:1 next week. Schedule shared on the calendar. Regards,",clean
+Onsite schedule: Can we reschedule to Wednesday? See the doc in the shared drive. Best regards,clean
+"Vacation request: Reminder to submit timesheets by Friday. Regards,",clean
+Team meeting scheduled: Can we reschedule to Wednesday? See the doc in the shared drive. Have a nice day,clean
+Vacation request: Great work on the release. Best regards,clean
+Birthday wishes: The server will be updated on Sunday. See the doc in the shared drive. Thanks!,clean
+Weekly report: Reminder to submit timesheets by Friday. Thanks!,clean
+Onsite schedule: Looking forward to our 1:1 next week. Thanks!,clean
+Birthday wishes: Looking forward to our 1:1 next week. See the doc in the shared drive. Best regards,clean
+"Team meeting scheduled: Thanks for the presentation yesterday. Regards,",clean
+Birthday wishes: Can we reschedule to Wednesday? See the doc in the shared drive. Best regards,clean
+"Project update: Can we reschedule to Wednesday? See the doc in the shared drive. Regards,",clean
+Birthday wishes: Can we reschedule to Wednesday? Meeting room A at 3 PM. Best regards,clean
+Onsite schedule: Reminder to submit timesheets by Friday. Schedule shared on the calendar. See you soon,clean
+"Onsite schedule: Let's meet tomorrow at 2 PM. Schedule shared on the calendar. Regards,",clean
+"Birthday wishes: Please review the attached notes. Regards,",clean
+Team meeting scheduled: Looking forward to our 1:1 next week. Meeting room A at 3 PM. Best regards,clean
+"Training session: Great work on the release. Schedule shared on the calendar. Regards,",clean
+Birthday wishes: Let's meet tomorrow at 2 PM. Cheers,clean
+Server maintenance: The server will be updated on Sunday. Cheers,clean
+Weekly report: The server will be updated on Sunday. See you soon,clean
+Lunch plans: Looking forward to our 1:1 next week. Meeting room A at 3 PM. Thanks!,clean
+Server maintenance: Let's meet tomorrow at 2 PM. Meeting room A at 3 PM. Best regards,clean
+Vacation request: Looking forward to our 1:1 next week. See the doc in the shared drive. Best regards,clean
+"Weekly report: Looking forward to our 1:1 next week. Meeting room A at 3 PM. Regards,",clean
+"Onsite schedule: Thanks for the presentation yesterday. Schedule shared on the calendar. Regards,",clean
+Invoice paid: Please review the attached notes. Thanks!,clean
+Team meeting scheduled: Please review the attached notes. Cheers,clean
+Team meeting scheduled: Please review the attached notes. See the doc in the shared drive. See you soon,clean
+Weekly report: Let's meet tomorrow at 2 PM. See the doc in the shared drive. See you soon,clean
+"Vacation request: Looking forward to our 1:1 next week. Regards,",clean
+Weekly report: Looking forward to our 1:1 next week. Schedule shared on the calendar. Best regards,clean
+Project update: Thanks for the presentation yesterday. Cheers,clean
+"Training session: Please review the attached notes. See the doc in the shared drive. Regards,",clean
+"Birthday wishes: Reminder to submit timesheets by Friday. Schedule shared on the calendar. Regards,",clean
+"Training session: The server will be updated on Sunday. Regards,",clean
+Training session: Looking forward to our 1:1 next week. See you soon,clean
+Project update: Let's meet tomorrow at 2 PM. Meeting room A at 3 PM. Best regards,clean
+Lunch plans: Great work on the release. Thanks!,clean
+Invoice paid: Thanks for the presentation yesterday. See the doc in the shared drive. Have a nice day,clean
+Server maintenance: Looking forward to our 1:1 next week. Cheers,clean
+Vacation request: Please review the attached notes. Meeting room A at 3 PM. Best regards,clean
+Server maintenance: Please review the attached notes. Best regards,clean
+"Server maintenance: Can we reschedule to Wednesday? Meeting room A at 3 PM. Regards,",clean
+Training session: Reminder to submit timesheets by Friday. Cheers,clean
+Birthday wishes: Looking forward to our 1:1 next week. Best regards,clean
+Lunch plans: Can we reschedule to Wednesday? Thanks!,clean
+Server maintenance: Thanks for the presentation yesterday. See the doc in the shared drive. Cheers,clean
+Training session: Thanks for the presentation yesterday. See you soon,clean
+Lunch plans: Looking forward to our 1:1 next week. Schedule shared on the calendar. See you soon,clean
+Onsite schedule: Can we reschedule to Wednesday? Meeting room A at 3 PM. Best regards,clean
+Training session: The server will be updated on Sunday. See you soon,clean
+Server maintenance: Great work on the release. Thanks!,clean
+Training session: Great work on the release. Schedule shared on the calendar. Best regards,clean
+"Onsite schedule: The server will be updated on Sunday. Meeting room A at 3 PM. Regards,",clean
+Training session: Can we reschedule to Wednesday? Schedule shared on the calendar. Thanks!,clean
+Birthday wishes: Please review the attached notes. Best regards,clean
+Invoice paid: Please review the attached notes. See you soon,clean
+Training session: Great work on the release. Cheers,clean
+"Team meeting scheduled: Please review the attached notes. See the doc in the shared drive. Regards,",clean
+Team meeting scheduled: Thanks for the presentation yesterday. Have a nice day,clean
+Onsite schedule: Reminder to submit timesheets by Friday. Schedule shared on the calendar. Best regards,clean
+Vacation request: The server will be updated on Sunday. Schedule shared on the calendar. Have a nice day,clean
+Training session: Reminder to submit timesheets by Friday. Schedule shared on the calendar. Best regards,clean
+Lunch plans: Let's meet tomorrow at 2 PM. Schedule shared on the calendar. See you soon,clean
+Project update: Reminder to submit timesheets by Friday. Thanks!,clean
+Onsite schedule: Let's meet tomorrow at 2 PM. Schedule shared on the calendar. Thanks!,clean
+Lunch plans: Reminder to submit timesheets by Friday. Thanks!,clean
+Training session: Great work on the release. Have a nice day,clean
+Invoice paid: Great work on the release. Best regards,clean
+Vacation request: Thanks for the presentation yesterday. Best regards,clean
+Onsite schedule: Great work on the release. Meeting room A at 3 PM. Cheers,clean
+"Weekly report: Thanks for the presentation yesterday. Regards,",clean
+Team meeting scheduled: Thanks for the presentation yesterday. See the doc in the shared drive. Have a nice day,clean
+Invoice paid: Thanks for the presentation yesterday. Thanks!,clean
+Invoice paid: Can we reschedule to Wednesday? Schedule shared on the calendar. Have a nice day,clean
+Training session: Thanks for the presentation yesterday. See the doc in the shared drive. Best regards,clean
+Server maintenance: Great work on the release. Cheers,clean
+Invoice paid: Let's meet tomorrow at 2 PM. See you soon,clean
+Vacation request: Reminder to submit timesheets by Friday. See the doc in the shared drive. Best regards,clean
+Birthday wishes: Let's meet tomorrow at 2 PM. See the doc in the shared drive. Thanks!,clean
+Birthday wishes: Please review the attached notes. See you soon,clean
+Lunch plans: Thanks for the presentation yesterday. Schedule shared on the calendar. Have a nice day,clean
+Server maintenance: Please review the attached notes. Meeting room A at 3 PM. See you soon,clean
+Vacation request: Can we reschedule to Wednesday? See the doc in the shared drive. Have a nice day,clean
+Lunch plans: Reminder to submit timesheets by Friday. See you soon,clean
+Birthday wishes: Let's meet tomorrow at 2 PM. Best regards,clean
+Server maintenance: Looking forward to our 1:1 next week. Best regards,clean
+"Weekly report: Reminder to submit timesheets by Friday. Regards,",clean
+Training session: Reminder to submit timesheets by Friday. Schedule shared on the calendar. Have a nice day,clean
+Team meeting scheduled: Can we reschedule to Wednesday? See you soon,clean
+Team meeting scheduled: Reminder to submit timesheets by Friday. Schedule shared on the calendar. Have a nice day,clean
+"Server maintenance: Please review the attached notes. Schedule shared on the calendar. Regards,",clean
+Weekly report: Thanks for the presentation yesterday. See you soon,clean
+Weekly report: Let's meet tomorrow at 2 PM. Have a nice day,clean
+Project update: Thanks for the presentation yesterday. Have a nice day,clean
+Project update: Reminder to submit timesheets by Friday. Have a nice day,clean
+Project update: Let's meet tomorrow at 2 PM. Meeting room A at 3 PM. Cheers,clean
+Training session: Thanks for the presentation yesterday. Schedule shared on the calendar. Best regards,clean
+Invoice paid: The server will be updated on Sunday. Have a nice day,clean
+Project update: The server will be updated on Sunday. Schedule shared on the calendar. See you soon,clean
+Team meeting scheduled: Reminder to submit timesheets by Friday. Thanks!,clean
+Server maintenance: Great work on the release. Best regards,clean
+Onsite schedule: The server will be updated on Sunday. Schedule shared on the calendar. Best regards,clean
+"Server maintenance: Reminder to submit timesheets by Friday. Schedule shared on the calendar. Regards,",clean
+Team meeting scheduled: Reminder to submit timesheets by Friday. Best regards,clean
+Birthday wishes: Let's meet tomorrow at 2 PM. See the doc in the shared drive. Thanks!,clean
+Birthday wishes: Great work on the release. Schedule shared on the calendar. See you soon,clean
+Birthday wishes: Reminder to submit timesheets by Friday. Schedule shared on the calendar. Cheers,clean
+Training session: Great work on the release. See the doc in the shared drive. Best regards,clean
+Vacation request: The server will be updated on Sunday. See you soon,clean
+Project update: Looking forward to our 1:1 next week. See you soon,clean
+Team meeting scheduled: Please review the attached notes. Thanks!,clean
+Onsite schedule: Please review the attached notes. Have a nice day,clean
+Vacation request: Reminder to submit timesheets by Friday. Cheers,clean
+Team meeting scheduled: Please review the attached notes. See the doc in the shared drive. Thanks!,clean
+Vacation request: Please review the attached notes. Meeting room A at 3 PM. Have a nice day,clean
+Training session: Thanks for the presentation yesterday. See the doc in the shared drive. Best regards,clean
+Training session: Thanks for the presentation yesterday. Schedule shared on the calendar. Thanks!,clean
+Weekly report: Can we reschedule to Wednesday? See the doc in the shared drive. Have a nice day,clean
+Server maintenance: Reminder to submit timesheets by Friday. See the doc in the shared drive. Best regards,clean
+"Birthday wishes: Reminder to submit timesheets by Friday. Schedule shared on the calendar. Regards,",clean
+Team meeting scheduled: Great work on the release. Best regards,clean
+Team meeting scheduled: Reminder to submit timesheets by Friday. Cheers,clean
+"Lunch plans: Can we reschedule to Wednesday? Meeting room A at 3 PM. Regards,",clean
+"Server maintenance: Please review the attached notes. Schedule shared on the calendar. Regards,",clean
+Vacation request: Please review the attached notes. Meeting room A at 3 PM. Best regards,clean
+Team meeting scheduled: Please review the attached notes. Schedule shared on the calendar. Thanks!,clean
+Server maintenance: Let's meet tomorrow at 2 PM. Best regards,clean
+Team meeting scheduled: Let's meet tomorrow at 2 PM. Have a nice day,clean
+Project update: Looking forward to our 1:1 next week. See the doc in the shared drive. Best regards,clean
+Server maintenance: Can we reschedule to Wednesday? Best regards,clean
+Lunch plans: The server will be updated on Sunday. Thanks!,clean
+Server maintenance: Please review the attached notes. Schedule shared on the calendar. See you soon,clean
+Birthday wishes: Reminder to submit timesheets by Friday. Best regards,clean
+Lunch plans: Looking forward to our 1:1 next week. Schedule shared on the calendar. See you soon,clean
+Lunch plans: Can we reschedule to Wednesday? Meeting room A at 3 PM. Cheers,clean
+Onsite schedule: Let's meet tomorrow at 2 PM. Schedule shared on the calendar. Best regards,clean
+Invoice paid: Please review the attached notes. Schedule shared on the calendar. Have a nice day,clean
+Lunch plans: Can we reschedule to Wednesday? Have a nice day,clean
+Team meeting scheduled: The server will be updated on Sunday. See the doc in the shared drive. Thanks!,clean
+Vacation request: Can we reschedule to Wednesday? Best regards,clean
+Onsite schedule: Reminder to submit timesheets by Friday. Schedule shared on the calendar. Best regards,clean
+Team meeting scheduled: Let's meet tomorrow at 2 PM. Cheers,clean
+Team meeting scheduled: Great work on the release. Thanks!,clean
+Onsite schedule: Can we reschedule to Wednesday? See the doc in the shared drive. Have a nice day,clean
+Project update: The server will be updated on Sunday. Thanks!,clean
+Project update: Can we reschedule to Wednesday? Have a nice day,clean
+"Training session: Let's meet tomorrow at 2 PM. Meeting room A at 3 PM. Regards,",clean
+Team meeting scheduled: Thanks for the presentation yesterday. Have a nice day,clean
+Weekly report: Please review the attached notes. See the doc in the shared drive. Best regards,clean
+Lunch plans: Please review the attached notes. Thanks!,clean
+Training session: The server will be updated on Sunday. Schedule shared on the calendar. Thanks!,clean
+Birthday wishes: Great work on the release. Cheers,clean
+Training session: Thanks for the presentation yesterday. Meeting room A at 3 PM. Cheers,clean
+Team meeting scheduled: Thanks for the presentation yesterday. Cheers,clean
+Weekly report: Thanks for the presentation yesterday. Best regards,clean
+Birthday wishes: Thanks for the presentation yesterday. Best regards,clean
+"Training session: Let's meet tomorrow at 2 PM. Regards,",clean
+"Training session: Great work on the release. Regards,",clean
+Server maintenance: Please review the attached notes. Thanks!,clean
+Lunch plans: Reminder to submit timesheets by Friday. Schedule shared on the calendar. Best regards,clean
+"Project update: The server will be updated on Sunday. See the doc in the shared drive. Regards,",clean
+"Server maintenance: Great work on the release. See the doc in the shared drive. Regards,",clean
+Team meeting scheduled: Thanks for the presentation yesterday. Have a nice day,clean
+Lunch plans: Reminder to submit timesheets by Friday. Cheers,clean
+"Onsite schedule: The server will be updated on Sunday. Regards,",clean
+Onsite schedule: Please review the attached notes. See you soon,clean
+Onsite schedule: The server will be updated on Sunday. See the doc in the shared drive. Best regards,clean
+Vacation request: Reminder to submit timesheets by Friday. Thanks!,clean
+Project update: Can we reschedule to Wednesday? Best regards,clean
+Team meeting scheduled: Let's meet tomorrow at 2 PM. Have a nice day,clean
+Vacation request: Great work on the release. Cheers,clean
+Server maintenance: Let's meet tomorrow at 2 PM. See the doc in the shared drive. Thanks!,clean
+Project update: Thanks for the presentation yesterday. Thanks!,clean
+"Lunch plans: Please review the attached notes. See the doc in the shared drive. Regards,",clean
+Training session: Looking forward to our 1:1 next week. Best regards,clean
+Birthday wishes: The server will be updated on Sunday. Thanks!,clean
+Lunch plans: The server will be updated on Sunday. Have a nice day,clean
+"Vacation request: Great work on the release. Regards,",clean
+Training session: Can we reschedule to Wednesday? Meeting room A at 3 PM. Thanks!,clean
+"Vacation request: Can we reschedule to Wednesday? Regards,",clean
+Project update: Can we reschedule to Wednesday? Have a nice day,clean
+"Birthday wishes: Reminder to submit timesheets by Friday. Regards,",clean
+Team meeting scheduled: Let's meet tomorrow at 2 PM. Cheers,clean
+Server maintenance: Can we reschedule to Wednesday? Best regards,clean
+Birthday wishes: The server will be updated on Sunday. See the doc in the shared drive. Cheers,clean
+Training session: Thanks for the presentation yesterday. Meeting room A at 3 PM. See you soon,clean
+Lunch plans: Great work on the release. See you soon,clean
+Vacation request: Can we reschedule to Wednesday? Best regards,clean
+"Invoice paid: The server will be updated on Sunday. Regards,",clean
+Training session: The server will be updated on Sunday. See the doc in the shared drive. See you soon,clean
+Team meeting scheduled: Great work on the release. Thanks!,clean
+Server maintenance: Let's meet tomorrow at 2 PM. Schedule shared on the calendar. Best regards,clean
+Lunch plans: Can we reschedule to Wednesday? Best regards,clean
+Onsite schedule: Let's meet tomorrow at 2 PM. Meeting room A at 3 PM. Have a nice day,clean
+Project update: Looking forward to our 1:1 next week. Cheers,clean
+Lunch plans: Let's meet tomorrow at 2 PM. Meeting room A at 3 PM. Best regards,clean
+Server maintenance: Let's meet tomorrow at 2 PM. Best regards,clean
+"Project update: Great work on the release. Schedule shared on the calendar. Regards,",clean
+Server maintenance: Let's meet tomorrow at 2 PM. Have a nice day,clean
+Birthday wishes: Let's meet tomorrow at 2 PM. Cheers,clean
+Weekly report: The server will be updated on Sunday. Have a nice day,clean
+Birthday wishes: Let's meet tomorrow at 2 PM. See the doc in the shared drive. See you soon,clean
+Birthday wishes: Let's meet tomorrow at 2 PM. Thanks!,clean
+Server maintenance: Let's meet tomorrow at 2 PM. Cheers,clean
+Onsite schedule: Please review the attached notes. Meeting room A at 3 PM. See you soon,clean
+"Project update: Looking forward to our 1:1 next week. See the doc in the shared drive. Regards,",clean
+Server maintenance: The server will be updated on Sunday. Schedule shared on the calendar. Have a nice day,clean
+Birthday wishes: Reminder to submit timesheets by Friday. Schedule shared on the calendar. See you soon,clean
+Team meeting scheduled: Please review the attached notes. Cheers,clean
+Server maintenance: Please review the attached notes. See the doc in the shared drive. Best regards,clean
+Onsite schedule: Reminder to submit timesheets by Friday. See the doc in the shared drive. Best regards,clean
+Lunch plans: The server will be updated on Sunday. Best regards,clean
+Invoice paid: Thanks for the presentation yesterday. Meeting room A at 3 PM. Cheers,clean
+Lunch plans: Thanks for the presentation yesterday. Cheers,clean
+"Project update: Can we reschedule to Wednesday? See the doc in the shared drive. Regards,",clean
+Team meeting scheduled: Reminder to submit timesheets by Friday. See the doc in the shared drive. Best regards,clean
+Project update: Can we reschedule to Wednesday? Cheers,clean
+"Team meeting scheduled: Reminder to submit timesheets by Friday. Regards,",clean
+Vacation request: Looking forward to our 1:1 next week. See the doc in the shared drive. Best regards,clean
+Birthday wishes: Can we reschedule to Wednesday? See the doc in the shared drive. See you soon,clean
+Onsite schedule: Can we reschedule to Wednesday? Best regards,clean
+"Project update: Reminder to submit timesheets by Friday. Meeting room A at 3 PM. Regards,",clean
+Server maintenance: Looking forward to our 1:1 next week. Meeting room A at 3 PM. Cheers,clean
+Project update: Looking forward to our 1:1 next week. Cheers,clean
+Project update: Thanks for the presentation yesterday. Meeting room A at 3 PM. Have a nice day,clean
+"Project update: Thanks for the presentation yesterday. Regards,",clean
+Team meeting scheduled: Looking forward to our 1:1 next week. See you soon,clean
+"Weekly report: Looking forward to our 1:1 next week. Regards,",clean
+Team meeting scheduled: Looking forward to our 1:1 next week. Cheers,clean
+Server maintenance: Thanks for the presentation yesterday. See you soon,clean
+Team meeting scheduled: Great work on the release. Schedule shared on the calendar. Best regards,clean
+Birthday wishes: Thanks for the presentation yesterday. See the doc in the shared drive. Thanks!,clean
+Onsite schedule: Looking forward to our 1:1 next week. Schedule shared on the calendar. Have a nice day,clean
+Weekly report: Thanks for the presentation yesterday. Schedule shared on the calendar. See you soon,clean
+Birthday wishes: Please review the attached notes. Have a nice day,clean
+Team meeting scheduled: Thanks for the presentation yesterday. Schedule shared on the calendar. Have a nice day,clean
+Team meeting scheduled: Great work on the release. Schedule shared on the calendar. See you soon,clean
+Birthday wishes: Please review the attached notes. Cheers,clean
+Vacation request: The server will be updated on Sunday. Cheers,clean
+Lunch plans: Can we reschedule to Wednesday? Meeting room A at 3 PM. Have a nice day,clean
+"Onsite schedule: Great work on the release. Regards,",clean
+Training session: Let's meet tomorrow at 2 PM. Have a nice day,clean
+Project update: Great work on the release. Cheers,clean
+Team meeting scheduled: Reminder to submit timesheets by Friday. Cheers,clean
+"Server maintenance: Please review the attached notes. Schedule shared on the calendar. Regards,",clean
+Invoice paid: Can we reschedule to Wednesday? Cheers,clean
+"Invoice paid: Great work on the release. See the doc in the shared drive. Regards,",clean
+"Lunch plans: Thanks for the presentation yesterday. Regards,",clean
+Onsite schedule: Looking forward to our 1:1 next week. See the doc in the shared drive. Thanks!,clean
+Invoice paid: Please review the attached notes. Thanks!,clean
+"Weekly report: Great work on the release. See the doc in the shared drive. Regards,",clean
+"Training session: Thanks for the presentation yesterday. Regards,",clean
+Invoice paid: Reminder to submit timesheets by Friday. See you soon,clean
+Weekly report: Reminder to submit timesheets by Friday. Schedule shared on the calendar. Best regards,clean
+Vacation request: Let's meet tomorrow at 2 PM. Thanks!,clean
+Weekly report: Can we reschedule to Wednesday? Schedule shared on the calendar. Thanks!,clean
+Invoice paid: Thanks for the presentation yesterday. See the doc in the shared drive. Best regards,clean
+Vacation request: Let's meet tomorrow at 2 PM. Schedule shared on the calendar. Thanks!,clean
+Lunch plans: Looking forward to our 1:1 next week. See you soon,clean
+Invoice paid: Reminder to submit timesheets by Friday. See the doc in the shared drive. Have a nice day,clean
+Lunch plans: Looking forward to our 1:1 next week. Meeting room A at 3 PM. See you soon,clean
+Weekly report: Thanks for the presentation yesterday. See you soon,clean
+Birthday wishes: Can we reschedule to Wednesday? Have a nice day,clean
+Project update: Let's meet tomorrow at 2 PM. Cheers,clean
+Birthday wishes: Let's meet tomorrow at 2 PM. Cheers,clean
+Lunch plans: The server will be updated on Sunday. Have a nice day,clean
+Lunch plans: Thanks for the presentation yesterday. See you soon,clean
+Birthday wishes: Reminder to submit timesheets by Friday. See the doc in the shared drive. Cheers,clean
+Birthday wishes: Please review the attached notes. Meeting room A at 3 PM. See you soon,clean
+Team meeting scheduled: Thanks for the presentation yesterday. See you soon,clean
+Server maintenance: Great work on the release. Meeting room A at 3 PM. Cheers,clean
+"Lunch plans: The server will be updated on Sunday. Meeting room A at 3 PM. Regards,",clean
+Onsite schedule: Please review the attached notes. Best regards,clean
+"Lunch plans: Please review the attached notes. Schedule shared on the calendar. Regards,",clean
+Birthday wishes: Reminder to submit timesheets by Friday. Have a nice day,clean
+"Server maintenance: Looking forward to our 1:1 next week. Meeting room A at 3 PM. Regards,",clean
+"Lunch plans: The server will be updated on Sunday. Meeting room A at 3 PM. Regards,",clean
+"Vacation request: Reminder to submit timesheets by Friday. Regards,",clean
+Lunch plans: Great work on the release. Meeting room A at 3 PM. Have a nice day,clean
+Lunch plans: Let's meet tomorrow at 2 PM. Meeting room A at 3 PM. Best regards,clean
+Vacation request: Please review the attached notes. See the doc in the shared drive. Thanks!,clean
+Training session: Let's meet tomorrow at 2 PM. Best regards,clean
+Weekly report: Let's meet tomorrow at 2 PM. Thanks!,clean
+Team meeting scheduled: Please review the attached notes. Meeting room A at 3 PM. Thanks!,clean
+"Training session: The server will be updated on Sunday. Meeting room A at 3 PM. Regards,",clean
+Lunch plans: Thanks for the presentation yesterday. See the doc in the shared drive. Have a nice day,clean
+"Birthday wishes: Looking forward to our 1:1 next week. See the doc in the shared drive. Regards,",clean
+Training session: The server will be updated on Sunday. Meeting room A at 3 PM. See you soon,clean
+Training session: Let's meet tomorrow at 2 PM. See you soon,clean
+"Vacation request: Reminder to submit timesheets by Friday. See the doc in the shared drive. Regards,",clean
+"Team meeting scheduled: Please review the attached notes. See the doc in the shared drive. Regards,",clean
+Server maintenance: Looking forward to our 1:1 next week. Schedule shared on the calendar. Have a nice day,clean
+Lunch plans: Thanks for the presentation yesterday. Schedule shared on the calendar. Cheers,clean
+Vacation request: The server will be updated on Sunday. Best regards,clean
+Birthday wishes: Please review the attached notes. Best regards,clean
+Project update: Can we reschedule to Wednesday? See the doc in the shared drive. Cheers,clean
+Team meeting scheduled: Please review the attached notes. Cheers,clean
+Invoice paid: Reminder to submit timesheets by Friday. Schedule shared on the calendar. Best regards,clean
+Server maintenance: The server will be updated on Sunday. See you soon,clean
+Invoice paid: The server will be updated on Sunday. Schedule shared on the calendar. Thanks!,clean
+Birthday wishes: Thanks for the presentation yesterday. Schedule shared on the calendar. Thanks!,clean
+Lunch plans: Great work on the release. See the doc in the shared drive. Best regards,clean
+"Lunch plans: Please review the attached notes. Regards,",clean
+Training session: Please review the attached notes. Meeting room A at 3 PM. Have a nice day,clean
+"Lunch plans: Looking forward to our 1:1 next week. Regards,",clean
+Training session: Great work on the release. Thanks!,clean
+Invoice paid: Can we reschedule to Wednesday? See the doc in the shared drive. Cheers,clean
+Training session: Reminder to submit timesheets by Friday. Schedule shared on the calendar. Have a nice day,clean
+Server maintenance: Great work on the release. Meeting room A at 3 PM. Best regards,clean
+Server maintenance: Please review the attached notes. Thanks!,clean
+Server maintenance: The server will be updated on Sunday. Meeting room A at 3 PM. Have a nice day,clean
+Lunch plans: Let's meet tomorrow at 2 PM. Thanks!,clean
+Team meeting scheduled: Thanks for the presentation yesterday. Schedule shared on the calendar. Best regards,clean
+Project update: Reminder to submit timesheets by Friday. Meeting room A at 3 PM. See you soon,clean
+Onsite schedule: Can we reschedule to Wednesday? Best regards,clean
+Server maintenance: Can we reschedule to Wednesday? See you soon,clean
+Birthday wishes: Let's meet tomorrow at 2 PM. Meeting room A at 3 PM. Thanks!,clean
+Invoice paid: Can we reschedule to Wednesday? Schedule shared on the calendar. Cheers,clean
+Server maintenance: Let's meet tomorrow at 2 PM. Thanks!,clean
+Weekly report: Thanks for the presentation yesterday. Best regards,clean
+Weekly report: Great work on the release. See the doc in the shared drive. Best regards,clean
+Server maintenance: Can we reschedule to Wednesday? Meeting room A at 3 PM. Best regards,clean
+Onsite schedule: Let's meet tomorrow at 2 PM. Best regards,clean
+Training session: Great work on the release. Schedule shared on the calendar. See you soon,clean
+Birthday wishes: Let's meet tomorrow at 2 PM. Meeting room A at 3 PM. Thanks!,clean
+Birthday wishes: Looking forward to our 1:1 next week. See the doc in the shared drive. Have a nice day,clean
+Birthday wishes: Great work on the release. Thanks!,clean
+Birthday wishes: Great work on the release. Cheers,clean
+"Vacation request: The server will be updated on Sunday. See the doc in the shared drive. Regards,",clean
+Lunch plans: Please review the attached notes. Cheers,clean
+Project update: Let's meet tomorrow at 2 PM. See you soon,clean
+Server maintenance: Great work on the release. Schedule shared on the calendar. See you soon,clean
+Weekly report: Let's meet tomorrow at 2 PM. Have a nice day,clean
+Team meeting scheduled: Looking forward to our 1:1 next week. Schedule shared on the calendar. Best regards,clean
+Training session: Please review the attached notes. Best regards,clean
+Vacation request: Looking forward to our 1:1 next week. See the doc in the shared drive. Best regards,clean
+Birthday wishes: Thanks for the presentation yesterday. See you soon,clean
+Invoice paid: The server will be updated on Sunday. Meeting room A at 3 PM. Best regards,clean
+Onsite schedule: The server will be updated on Sunday. Cheers,clean
+"Weekly report: Great work on the release. Meeting room A at 3 PM. Regards,",clean
+Training session: Please review the attached notes. See you soon,clean
+Lunch plans: Can we reschedule to Wednesday? Best regards,clean
+Lunch plans: Reminder to submit timesheets by Friday. Schedule shared on the calendar. See you soon,clean
+"Onsite schedule: Looking forward to our 1:1 next week. Regards,",clean
+Weekly report: Can we reschedule to Wednesday? Meeting room A at 3 PM. Have a nice day,clean
+Team meeting scheduled: Thanks for the presentation yesterday. See you soon,clean
+Server maintenance: Reminder to submit timesheets by Friday. See the doc in the shared drive. Have a nice day,clean
+Invoice paid: Let's meet tomorrow at 2 PM. See you soon,clean
+"Server maintenance: Thanks for the presentation yesterday. Regards,",clean
+Weekly report: Great work on the release. Best regards,clean
+Lunch plans: The server will be updated on Sunday. Best regards,clean
+Weekly report: Thanks for the presentation yesterday. Meeting room A at 3 PM. Cheers,clean
+Invoice paid: The server will be updated on Sunday. Thanks!,clean
+Team meeting scheduled: The server will be updated on Sunday. Cheers,clean
+Onsite schedule: Great work on the release. Meeting room A at 3 PM. Best regards,clean
+Vacation request: Thanks for the presentation yesterday. Cheers,clean
+Weekly report: Reminder to submit timesheets by Friday. See the doc in the shared drive. Have a nice day,clean
+Team meeting scheduled: Can we reschedule to Wednesday? Thanks!,clean
+Lunch plans: Looking forward to our 1:1 next week. See you soon,clean
+Lunch plans: Great work on the release. Meeting room A at 3 PM. Cheers,clean
+"Invoice paid: Thanks for the presentation yesterday. Regards,",clean
+Onsite schedule: Please review the attached notes. See the doc in the shared drive. See you soon,clean
+Onsite schedule: Reminder to submit timesheets by Friday. Meeting room A at 3 PM. Best regards,clean
+Training session: Please review the attached notes. Cheers,clean
+Training session: Great work on the release. Schedule shared on the calendar. Have a nice day,clean
+Vacation request: Thanks for the presentation yesterday. Thanks!,clean
+Weekly report: Can we reschedule to Wednesday? Best regards,clean
+Training session: Let's meet tomorrow at 2 PM. See the doc in the shared drive. Best regards,clean
+Lunch plans: Looking forward to our 1:1 next week. See you soon,clean
+"Vacation request: Reminder to submit timesheets by Friday. Regards,",clean
+Birthday wishes: Reminder to submit timesheets by Friday. See the doc in the shared drive. Thanks!,clean
+Team meeting scheduled: Let's meet tomorrow at 2 PM. See the doc in the shared drive. Have a nice day,clean
+Vacation request: Reminder to submit timesheets by Friday. See you soon,clean
+Birthday wishes: Please review the attached notes. Schedule shared on the calendar. See you soon,clean
+Invoice paid: Let's meet tomorrow at 2 PM. Schedule shared on the calendar. Best regards,clean
+"Weekly report: Please review the attached notes. Regards,",clean
+Project update: Can we reschedule to Wednesday? Have a nice day,clean
+Invoice paid: Let's meet tomorrow at 2 PM. Schedule shared on the calendar. Cheers,clean
+Server maintenance: Great work on the release. Meeting room A at 3 PM. Cheers,clean
+Project update: Reminder to submit timesheets by Friday. See you soon,clean
+Invoice paid: Looking forward to our 1:1 next week. Meeting room A at 3 PM. Best regards,clean
+Project update: Can we reschedule to Wednesday? Have a nice day,clean
+Invoice paid: The server will be updated on Sunday. Have a nice day,clean
+Training session: Please review the attached notes. Thanks!,clean
+Onsite schedule: Thanks for the presentation yesterday. Schedule shared on the calendar. See you soon,clean
+Server maintenance: Can we reschedule to Wednesday? Have a nice day,clean
+Project update: Looking forward to our 1:1 next week. Cheers,clean
+"Invoice paid: Looking forward to our 1:1 next week. Regards,",clean
+Invoice paid: The server will be updated on Sunday. See the doc in the shared drive. Thanks!,clean
+Training session: The server will be updated on Sunday. Meeting room A at 3 PM. Thanks!,clean
+Weekly report: Thanks for the presentation yesterday. Thanks!,clean
+"Invoice paid: Reminder to submit timesheets by Friday. Regards,",clean
+Birthday wishes: Thanks for the presentation yesterday. See you soon,clean
+Onsite schedule: Great work on the release. Schedule shared on the calendar. Best regards,clean
+Lunch plans: The server will be updated on Sunday. Have a nice day,clean
+Weekly report: Reminder to submit timesheets by Friday. Have a nice day,clean
+"Project update: Great work on the release. Schedule shared on the calendar. Regards,",clean
+"Vacation request: Great work on the release. Regards,",clean
+Project update: Let's meet tomorrow at 2 PM. Meeting room A at 3 PM. Cheers,clean
+"Training session: Can we reschedule to Wednesday? Regards,",clean
+Server maintenance: Please review the attached notes. Thanks!,clean
+Birthday wishes: Great work on the release. Have a nice day,clean
+Invoice paid: Great work on the release. Meeting room A at 3 PM. Have a nice day,clean
+Lunch plans: Let's meet tomorrow at 2 PM. Thanks!,clean
+Vacation request: Can we reschedule to Wednesday? See the doc in the shared drive. Cheers,clean
+Training session: Let's meet tomorrow at 2 PM. Thanks!,clean
+Training session: Great work on the release. See the doc in the shared drive. Cheers,clean
+Birthday wishes: Thanks for the presentation yesterday. See you soon,clean
+"Project update: Reminder to submit timesheets by Friday. Schedule shared on the calendar. Regards,",clean
+Server maintenance: Thanks for the presentation yesterday. Thanks!,clean
+"Onsite schedule: Great work on the release. Regards,",clean
+"Birthday wishes: Let's meet tomorrow at 2 PM. Regards,",clean
+Weekly report: Looking forward to our 1:1 next week. Best regards,clean
+Weekly report: Reminder to submit timesheets by Friday. See you soon,clean
+Project update: Looking forward to our 1:1 next week. Meeting room A at 3 PM. Have a nice day,clean
+Onsite schedule: Can we reschedule to Wednesday? Thanks!,clean
+"Team meeting scheduled: The server will be updated on Sunday. Regards,",clean
+Weekly report: Thanks for the presentation yesterday. Have a nice day,clean
+Lunch plans: Can we reschedule to Wednesday? Thanks!,clean
+Onsite schedule: Can we reschedule to Wednesday? Best regards,clean
+Project update: Please review the attached notes. Cheers,clean
+"Weekly report: Thanks for the presentation yesterday. Schedule shared on the calendar. Regards,",clean
+Training session: The server will be updated on Sunday. Meeting room A at 3 PM. See you soon,clean
+Onsite schedule: Thanks for the presentation yesterday. Meeting room A at 3 PM. Best regards,clean
+Server maintenance: Please review the attached notes. Cheers,clean
+Lunch plans: Great work on the release. Meeting room A at 3 PM. Cheers,clean
+Birthday wishes: Thanks for the presentation yesterday. Thanks!,clean
+Server maintenance: Can we reschedule to Wednesday? See the doc in the shared drive. Have a nice day,clean
+Team meeting scheduled: Looking forward to our 1:1 next week. Schedule shared on the calendar. Thanks!,clean
+"Birthday wishes: Thanks for the presentation yesterday. See the doc in the shared drive. Regards,",clean
+Weekly report: Looking forward to our 1:1 next week. See the doc in the shared drive. Thanks!,clean
+Training session: Great work on the release. Thanks!,clean
+Project update: The server will be updated on Sunday. Best regards,clean
+Vacation request: Thanks for the presentation yesterday. Schedule shared on the calendar. Best regards,clean
+Project update: Please review the attached notes. Cheers,clean
+Invoice paid: Reminder to submit timesheets by Friday. Schedule shared on the calendar. Have a nice day,clean
+Lunch plans: Looking forward to our 1:1 next week. See you soon,clean
+Server maintenance: Great work on the release. Best regards,clean
+Training session: Great work on the release. Schedule shared on the calendar. Thanks!,clean
+Training session: Thanks for the presentation yesterday. Meeting room A at 3 PM. Best regards,clean
+Team meeting scheduled: Looking forward to our 1:1 next week. See the doc in the shared drive. Best regards,clean
+Project update: Can we reschedule to Wednesday? See the doc in the shared drive. See you soon,clean
+Lunch plans: Reminder to submit timesheets by Friday. Best regards,clean
+"Server maintenance: Reminder to submit timesheets by Friday. See the doc in the shared drive. Regards,",clean
+Weekly report: The server will be updated on Sunday. See you soon,clean
+Training session: Let's meet tomorrow at 2 PM. See you soon,clean
+Team meeting scheduled: Please review the attached notes. See you soon,clean
+Lunch plans: Can we reschedule to Wednesday? Schedule shared on the calendar. Have a nice day,clean
+Birthday wishes: Reminder to submit timesheets by Friday. See you soon,clean
+Onsite schedule: Let's meet tomorrow at 2 PM. Schedule shared on the calendar. Thanks!,clean
+Project update: Thanks for the presentation yesterday. Best regards,clean
+Invoice paid: Reminder to submit timesheets by Friday. Schedule shared on the calendar. Cheers,clean
+Server maintenance: Reminder to submit timesheets by Friday. Meeting room A at 3 PM. Cheers,clean
+Vacation request: Thanks for the presentation yesterday. See the doc in the shared drive. Thanks!,clean
+Weekly report: Please review the attached notes. Meeting room A at 3 PM. Best regards,clean
+Invoice paid: Please review the attached notes. Thanks!,clean
+Server maintenance: Can we reschedule to Wednesday? Have a nice day,clean
+Training session: Can we reschedule to Wednesday? See the doc in the shared drive. Cheers,clean
+Birthday wishes: Great work on the release. Cheers,clean
+"Project update: Let's meet tomorrow at 2 PM. Regards,",clean
+Team meeting scheduled: The server will be updated on Sunday. Thanks!,clean
+Project update: The server will be updated on Sunday. See the doc in the shared drive. Best regards,clean
+Vacation request: Please review the attached notes. Meeting room A at 3 PM. Cheers,clean
+Server maintenance: Great work on the release. Thanks!,clean
+Project update: Can we reschedule to Wednesday? Best regards,clean
+"Server maintenance: The server will be updated on Sunday. Regards,",clean
+Invoice paid: Let's meet tomorrow at 2 PM. Cheers,clean
+Invoice paid: Great work on the release. See the doc in the shared drive. Best regards,clean
+Onsite schedule: Reminder to submit timesheets by Friday. Thanks!,clean
+"Server maintenance: Can we reschedule to Wednesday? See the doc in the shared drive. Regards,",clean
+Team meeting scheduled: Great work on the release. See you soon,clean
+Lunch plans: Reminder to submit timesheets by Friday. Have a nice day,clean
+Server maintenance: Please review the attached notes. See the doc in the shared drive. Best regards,clean
+Birthday wishes: Can we reschedule to Wednesday? Have a nice day,clean
+Project update: Reminder to submit timesheets by Friday. Have a nice day,clean
+"Birthday wishes: Can we reschedule to Wednesday? See the doc in the shared drive. Regards,",clean
+"Birthday wishes: Can we reschedule to Wednesday? See the doc in the shared drive. Regards,",clean
+Invoice paid: Great work on the release. Schedule shared on the calendar. Have a nice day,clean
+Server maintenance: Thanks for the presentation yesterday. See you soon,clean
+"Lunch plans: Can we reschedule to Wednesday? Regards,",clean
+Project update: Can we reschedule to Wednesday? Schedule shared on the calendar. Thanks!,clean
+"Weekly report: The server will be updated on Sunday. Meeting room A at 3 PM. Regards,",clean
+Birthday wishes: Reminder to submit timesheets by Friday. Meeting room A at 3 PM. Cheers,clean
+Onsite schedule: Let's meet tomorrow at 2 PM. Thanks!,clean
+Lunch plans: The server will be updated on Sunday. Schedule shared on the calendar. Thanks!,clean
+Weekly report: Looking forward to our 1:1 next week. See the doc in the shared drive. Cheers,clean
+Weekly report: Thanks for the presentation yesterday. See the doc in the shared drive. Have a nice day,clean
+Lunch plans: Let's meet tomorrow at 2 PM. Meeting room A at 3 PM. Best regards,clean
+Lunch plans: Please review the attached notes. See you soon,clean
+Lunch plans: Thanks for the presentation yesterday. Have a nice day,clean
+"Vacation request: Looking forward to our 1:1 next week. See the doc in the shared drive. Regards,",clean
+Server maintenance: Can we reschedule to Wednesday? Meeting room A at 3 PM. Have a nice day,clean
+"Birthday wishes: Looking forward to our 1:1 next week. Regards,",clean
+Vacation request: Can we reschedule to Wednesday? Meeting room A at 3 PM. Best regards,clean
+Vacation request: Can we reschedule to Wednesday? Cheers,clean
+Project update: Please review the attached notes. Cheers,clean
+Invoice paid: Looking forward to our 1:1 next week. Meeting room A at 3 PM. Have a nice day,clean
+"Onsite schedule: Great work on the release. Regards,",clean
+Invoice paid: Great work on the release. See the doc in the shared drive. Best regards,clean
+Birthday wishes: Let's meet tomorrow at 2 PM. Best regards,clean
+Team meeting scheduled: Please review the attached notes. Thanks!,clean
+Invoice paid: Thanks for the presentation yesterday. Best regards,clean
+Team meeting scheduled: Thanks for the presentation yesterday. See you soon,clean
+Onsite schedule: Reminder to submit timesheets by Friday. Best regards,clean
+Onsite schedule: Reminder to submit timesheets by Friday. Schedule shared on the calendar. Have a nice day,clean
+Team meeting scheduled: Reminder to submit timesheets by Friday. Meeting room A at 3 PM. See you soon,clean
+Invoice paid: Can we reschedule to Wednesday? Have a nice day,clean
+Onsite schedule: Can we reschedule to Wednesday? Have a nice day,clean
+Invoice paid: The server will be updated on Sunday. Cheers,clean
+Onsite schedule: Looking forward to our 1:1 next week. See the doc in the shared drive. Best regards,clean
+"Project update: Reminder to submit timesheets by Friday. Regards,",clean
+Onsite schedule: Reminder to submit timesheets by Friday. See you soon,clean
+Project update: Let's meet tomorrow at 2 PM. See the doc in the shared drive. Thanks!,clean
+"Training session: Reminder to submit timesheets by Friday. Schedule shared on the calendar. Regards,",clean
+Invoice paid: Please review the attached notes. Have a nice day,clean
+Birthday wishes: Reminder to submit timesheets by Friday. Meeting room A at 3 PM. Have a nice day,clean
+Team meeting scheduled: Please review the attached notes. Best regards,clean
+Team meeting scheduled: Can we reschedule to Wednesday? See the doc in the shared drive. Cheers,clean
+Training session: The server will be updated on Sunday. Cheers,clean
+Training session: Thanks for the presentation yesterday. Have a nice day,clean
+Vacation request: Please review the attached notes. Meeting room A at 3 PM. Cheers,clean
+Birthday wishes: Can we reschedule to Wednesday? Thanks!,clean
+Invoice paid: Great work on the release. Thanks!,clean
+Invoice paid: Thanks for the presentation yesterday. Best regards,clean
+Lunch plans: Looking forward to our 1:1 next week. See the doc in the shared drive. Have a nice day,clean
+Onsite schedule: Great work on the release. See the doc in the shared drive. Cheers,clean
+Invoice paid: Can we reschedule to Wednesday? Schedule shared on the calendar. Have a nice day,clean
+"Invoice paid: Thanks for the presentation yesterday. Schedule shared on the calendar. Regards,",clean
+Server maintenance: Thanks for the presentation yesterday. See the doc in the shared drive. Have a nice day,clean
+Lunch plans: The server will be updated on Sunday. Best regards,clean
+Project update: Looking forward to our 1:1 next week. Schedule shared on the calendar. Thanks!,clean
+Lunch plans: Please review the attached notes. Meeting room A at 3 PM. Cheers,clean
+Onsite schedule: Thanks for the presentation yesterday. Thanks!,clean
+Birthday wishes: Reminder to submit timesheets by Friday. Cheers,clean
+Project update: Thanks for the presentation yesterday. See you soon,clean
+"Weekly report: Reminder to submit timesheets by Friday. Regards,",clean
+Server maintenance: Let's meet tomorrow at 2 PM. Meeting room A at 3 PM. Thanks!,clean
+Team meeting scheduled: Great work on the release. See the doc in the shared drive. Best regards,clean
+Server maintenance: Looking forward to our 1:1 next week. Best regards,clean
+"Training session: Thanks for the presentation yesterday. Schedule shared on the calendar. Regards,",clean
+"Server maintenance: Can we reschedule to Wednesday? Schedule shared on the calendar. Regards,",clean
+Lunch plans: Great work on the release. Best regards,clean
+Invoice paid: Looking forward to our 1:1 next week. See you soon,clean
+Server maintenance: Reminder to submit timesheets by Friday. Have a nice day,clean
+Project update: Let's meet tomorrow at 2 PM. See the doc in the shared drive. See you soon,clean
+Weekly report: Please review the attached notes. Meeting room A at 3 PM. Have a nice day,clean
+Training session: Let's meet tomorrow at 2 PM. Schedule shared on the calendar. See you soon,clean
+Onsite schedule: Let's meet tomorrow at 2 PM. See the doc in the shared drive. Thanks!,clean
+Project update: Let's meet tomorrow at 2 PM. Meeting room A at 3 PM. Cheers,clean
+Training session: Can we reschedule to Wednesday? See the doc in the shared drive. Thanks!,clean
+Birthday wishes: Great work on the release. See you soon,clean
+Team meeting scheduled: Looking forward to our 1:1 next week. Best regards,clean
+Team meeting scheduled: Looking forward to our 1:1 next week. Best regards,clean
+Lunch plans: Please review the attached notes. See you soon,clean
+Project update: Thanks for the presentation yesterday. Meeting room A at 3 PM. Cheers,clean
+Weekly report: Great work on the release. Have a nice day,clean
+"Training session: Looking forward to our 1:1 next week. Regards,",clean
+Team meeting scheduled: Reminder to submit timesheets by Friday. Best regards,clean
+Project update: Great work on the release. Cheers,clean
+"Lunch plans: Let's meet tomorrow at 2 PM. Regards,",clean
+Training session: The server will be updated on Sunday. See the doc in the shared drive. Best regards,clean
+Invoice paid: Please review the attached notes. Cheers,clean
+Server maintenance: Great work on the release. Thanks!,clean
+Invoice paid: The server will be updated on Sunday. Thanks!,clean
+"Training session: Please review the attached notes. See the doc in the shared drive. Regards,",clean
+Project update: Reminder to submit timesheets by Friday. See you soon,clean
+"Lunch plans: The server will be updated on Sunday. Regards,",clean
+Project update: The server will be updated on Sunday. See the doc in the shared drive. See you soon,clean
+Server maintenance: Let's meet tomorrow at 2 PM. See the doc in the shared drive. Thanks!,clean
+Weekly report: Thanks for the presentation yesterday. Thanks!,clean
+Server maintenance: Reminder to submit timesheets by Friday. See you soon,clean
+Invoice paid: Looking forward to our 1:1 next week. Have a nice day,clean
+Onsite schedule: Reminder to submit timesheets by Friday. Thanks!,clean
+Onsite schedule: Please review the attached notes. Cheers,clean
+Lunch plans: Thanks for the presentation yesterday. Schedule shared on the calendar. Have a nice day,clean
+Invoice paid: The server will be updated on Sunday. Schedule shared on the calendar. See you soon,clean
+Birthday wishes: Reminder to submit timesheets by Friday. Have a nice day,clean
+Vacation request: Looking forward to our 1:1 next week. Cheers,clean
+Training session: Looking forward to our 1:1 next week. Meeting room A at 3 PM. Thanks!,clean
+Team meeting scheduled: Can we reschedule to Wednesday? See the doc in the shared drive. Thanks!,clean
+Project update: Great work on the release. See the doc in the shared drive. See you soon,clean
+Server maintenance: Great work on the release. See you soon,clean
+Lunch plans: Let's meet tomorrow at 2 PM. Have a nice day,clean
+Lunch plans: Looking forward to our 1:1 next week. Schedule shared on the calendar. Best regards,clean
+Invoice paid: Thanks for the presentation yesterday. Meeting room A at 3 PM. Have a nice day,clean
+"Server maintenance: Looking forward to our 1:1 next week. Regards,",clean
+Vacation request: Let's meet tomorrow at 2 PM. See the doc in the shared drive. Cheers,clean
+Birthday wishes: The server will be updated on Sunday. See the doc in the shared drive. Thanks!,clean
+"Weekly report: The server will be updated on Sunday. Schedule shared on the calendar. Regards,",clean
+Team meeting scheduled: Reminder to submit timesheets by Friday. See the doc in the shared drive. Best regards,clean
+Training session: The server will be updated on Sunday. Thanks!,clean
+Invoice paid: Please review the attached notes. Schedule shared on the calendar. Cheers,clean
+Project update: The server will be updated on Sunday. See the doc in the shared drive. Have a nice day,clean
+Training session: Thanks for the presentation yesterday. See the doc in the shared drive. Thanks!,clean
+Lunch plans: Thanks for the presentation yesterday. Meeting room A at 3 PM. Cheers,clean
+"Onsite schedule: Reminder to submit timesheets by Friday. Meeting room A at 3 PM. Regards,",clean
+Onsite schedule: Reminder to submit timesheets by Friday. Schedule shared on the calendar. Have a nice day,clean
+Team meeting scheduled: Great work on the release. See the doc in the shared drive. Have a nice day,clean
+Team meeting scheduled: Looking forward to our 1:1 next week. Schedule shared on the calendar. Best regards,clean
+Weekly report: Please review the attached notes. Schedule shared on the calendar. Have a nice day,clean
+Birthday wishes: Let's meet tomorrow at 2 PM. Have a nice day,clean
+Weekly report: Great work on the release. See you soon,clean
+"Team meeting scheduled: Great work on the release. Regards,",clean
+Training session: Let's meet tomorrow at 2 PM. Have a nice day,clean
+"Invoice paid: Please review the attached notes. Regards,",clean
+Birthday wishes: Reminder to submit timesheets by Friday. Meeting room A at 3 PM. Thanks!,clean
+Team meeting scheduled: Can we reschedule to Wednesday? See the doc in the shared drive. Best regards,clean
+"Birthday wishes: Reminder to submit timesheets by Friday. Regards,",clean
+Vacation request: Looking forward to our 1:1 next week. See the doc in the shared drive. Thanks!,clean
+Vacation request: Please review the attached notes. Meeting room A at 3 PM. See you soon,clean
+Server maintenance: Please review the attached notes. Meeting room A at 3 PM. Thanks!,clean
+Invoice paid: Looking forward to our 1:1 next week. Have a nice day,clean
+Project update: Let's meet tomorrow at 2 PM. Best regards,clean
+Training session: Great work on the release. Thanks!,clean
+Team meeting scheduled: Let's meet tomorrow at 2 PM. Schedule shared on the calendar. Cheers,clean
+"Lunch plans: Great work on the release. See the doc in the shared drive. Regards,",clean
+Training session: Let's meet tomorrow at 2 PM. Best regards,clean
+Invoice paid: Please review the attached notes. See the doc in the shared drive. Cheers,clean
+Team meeting scheduled: Can we reschedule to Wednesday? See you soon,clean
+Vacation request: Please review the attached notes. Thanks!,clean
+Lunch plans: The server will be updated on Sunday. See you soon,clean
+Onsite schedule: Reminder to submit timesheets by Friday. Cheers,clean
+"Training session: Can we reschedule to Wednesday? Regards,",clean
+"Team meeting scheduled: Let's meet tomorrow at 2 PM. Regards,",clean
+Invoice paid: Looking forward to our 1:1 next week. See the doc in the shared drive. Cheers,clean
+Project update: Thanks for the presentation yesterday. Best regards,clean
+Birthday wishes: Reminder to submit timesheets by Friday. See the doc in the shared drive. Cheers,clean
+Training session: Thanks for the presentation yesterday. Thanks!,clean
+Onsite schedule: Let's meet tomorrow at 2 PM. Best regards,clean
+Vacation request: The server will be updated on Sunday. Thanks!,clean
+Server maintenance: Can we reschedule to Wednesday? See the doc in the shared drive. See you soon,clean
+Training session: Looking forward to our 1:1 next week. See you soon,clean
+Birthday wishes: Thanks for the presentation yesterday. Thanks!,clean
+"Team meeting scheduled: Can we reschedule to Wednesday? See the doc in the shared drive. Regards,",clean
+Vacation request: The server will be updated on Sunday. Meeting room A at 3 PM. Best regards,clean
+Server maintenance: Looking forward to our 1:1 next week. Have a nice day,clean
+Invoice paid: Thanks for the presentation yesterday. Thanks!,clean
+Lunch plans: Looking forward to our 1:1 next week. Meeting room A at 3 PM. Thanks!,clean
+"Weekly report: Can we reschedule to Wednesday? Schedule shared on the calendar. Regards,",clean
+"Team meeting scheduled: Let's meet tomorrow at 2 PM. Regards,",clean
+Project update: The server will be updated on Sunday. Schedule shared on the calendar. Cheers,clean
+"Onsite schedule: The server will be updated on Sunday. Regards,",clean
+Project update: Reminder to submit timesheets by Friday. Thanks!,clean
+Project update: Great work on the release. Meeting room A at 3 PM. Have a nice day,clean
+Birthday wishes: The server will be updated on Sunday. Cheers,clean
+Birthday wishes: Looking forward to our 1:1 next week. Have a nice day,clean
+Onsite schedule: Great work on the release. Have a nice day,clean
+"Project update: Thanks for the presentation yesterday. Regards,",clean
+Invoice paid: Looking forward to our 1:1 next week. See the doc in the shared drive. Cheers,clean
+Vacation request: Let's meet tomorrow at 2 PM. See the doc in the shared drive. See you soon,clean
+Weekly report: Thanks for the presentation yesterday. Cheers,clean
+Weekly report: Thanks for the presentation yesterday. Schedule shared on the calendar. See you soon,clean
+Vacation request: Please review the attached notes. See the doc in the shared drive. Best regards,clean
+Lunch plans: Thanks for the presentation yesterday. See you soon,clean
+Onsite schedule: Looking forward to our 1:1 next week. Meeting room A at 3 PM. Best regards,clean
+Birthday wishes: Looking forward to our 1:1 next week. See the doc in the shared drive. See you soon,clean
+Server maintenance: Can we reschedule to Wednesday? See the doc in the shared drive. Cheers,clean
+"Training session: Let's meet tomorrow at 2 PM. Regards,",clean
+"Vacation request: Can we reschedule to Wednesday? Regards,",clean
+Weekly report: Great work on the release. Schedule shared on the calendar. Best regards,clean
+"Weekly report: Please review the attached notes. Schedule shared on the calendar. Regards,",clean
+"Server maintenance: Looking forward to our 1:1 next week. Schedule shared on the calendar. Regards,",clean
+Onsite schedule: Looking forward to our 1:1 next week. Best regards,clean
+Invoice paid: Great work on the release. Schedule shared on the calendar. Cheers,clean
+Weekly report: Great work on the release. Thanks!,clean
+Vacation request: Reminder to submit timesheets by Friday. Have a nice day,clean
+Lunch plans: Reminder to submit timesheets by Friday. See the doc in the shared drive. See you soon,clean
+"Lunch plans: Reminder to submit timesheets by Friday. Regards,",clean
+Lunch plans: Looking forward to our 1:1 next week. Schedule shared on the calendar. Thanks!,clean
+Vacation request: Looking forward to our 1:1 next week. Cheers,clean
+Weekly report: The server will be updated on Sunday. Meeting room A at 3 PM. Have a nice day,clean
+Onsite schedule: Reminder to submit timesheets by Friday. Schedule shared on the calendar. Thanks!,clean
+Birthday wishes: Great work on the release. See the doc in the shared drive. Best regards,clean
+Team meeting scheduled: Can we reschedule to Wednesday? Meeting room A at 3 PM. Have a nice day,clean
+"Invoice paid: The server will be updated on Sunday. Meeting room A at 3 PM. Regards,",clean
+Server maintenance: The server will be updated on Sunday. See the doc in the shared drive. See you soon,clean
+Server maintenance: Can we reschedule to Wednesday? Schedule shared on the calendar. Cheers,clean
+Vacation request: Great work on the release. Have a nice day,clean
+Server maintenance: Can we reschedule to Wednesday? See you soon,clean
+Project update: Thanks for the presentation yesterday. Meeting room A at 3 PM. Cheers,clean
+Server maintenance: Looking forward to our 1:1 next week. Cheers,clean
+Invoice paid: Great work on the release. Schedule shared on the calendar. Have a nice day,clean
+Training session: Let's meet tomorrow at 2 PM. Meeting room A at 3 PM. See you soon,clean
+Project update: Looking forward to our 1:1 next week. See the doc in the shared drive. See you soon,clean

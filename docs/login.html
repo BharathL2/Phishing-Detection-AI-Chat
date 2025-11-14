@@ -82,14 +82,19 @@
       applyTheme(current === 'light' ? 'dark' : 'light');
     });
 
-    // If already signed in, go straight to professional root (Flask UI)
+  // If already signed in, go straight to demo UI (docs/demo.html) and default API to XGBoost server
     (function(){
-      const TARGET = 'http://127.0.0.1:5050/';
+  const TARGET = 'demo.html?v='+(Date.now());
       const params = new URLSearchParams(location.search);
       const stay = params.has('stay') || params.get('force') === '1';
       try {
         const u = JSON.parse(localStorage.getItem('aichat.user')||'null');
-        if(u && u.email && !stay){ location.replace(TARGET); }
+        if(u && u.email && !stay){
+          if(!localStorage.getItem('aichat.apiBase')){
+            localStorage.setItem('aichat.apiBase', 'http://127.0.0.1:5072');
+          }
+          location.replace(TARGET);
+        }
       } catch {}
     })();
 
@@ -101,7 +106,9 @@
       if(!email){ alert('Please enter an email'); emailEl.focus(); return; }
       const token = { email, name, created: Date.now() };
       localStorage.setItem('aichat.user', JSON.stringify(token));
-      const TARGET = 'http://127.0.0.1:5050/';
+  // Default API Base to XGBoost server
+  localStorage.setItem('aichat.apiBase', 'http://127.0.0.1:5072');
+  const TARGET = 'demo.html?v='+(Date.now());
       location.replace(TARGET);
     }
 
