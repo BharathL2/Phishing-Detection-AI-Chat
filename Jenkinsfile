@@ -14,7 +14,8 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                checkout scm
+                deleteDir()
+                git branch: 'main', url: 'https://github.com/BharathL2/Phishing-Detection-AI-Chat.git'
             }
         }
 

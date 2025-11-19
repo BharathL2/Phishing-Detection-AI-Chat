@@ -1,0 +1,61 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ui-host
+  namespace: phishing-detection
+  labels:
+    app: ui-host
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ui-host
+  template:
+    metadata:
+      labels:
+        app: ui-host
+    spec:
+      containers:
+        - name: docs-server
+          image: phishing-ai-chat:latest
+          imagePullPolicy: IfNotPresent
+          command: ["python", "-m", "http.server", "8081", "--directory", "docs"]
+          ports:
+            - containerPort: 8081
+              name: http
+          readinessProbe:
+            httpGet:
+              path: /index.html
+              port: http
+            initialDelaySeconds: 10
+            periodSeconds: 15
+          livenessProbe:
+            httpGet:
+              path: /login.html
+              port: http
+            initialDelaySeconds: 30
+            periodSeconds: 30
+          resources:
+            requests:
+              cpu: "50m"
+              memory: "128Mi"
+            limits:
+              cpu: "200m"
+              memory: "256Mi"
+      restartPolicy: Always
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ui-host
+  namespace: phishing-detection
+  labels:
+    app: ui-host
+spec:
+  selector:
+    app: ui-host
+  ports:
+    - name: http
+      port: 80
+      targetPort: 8081
+  type: ClusterIP

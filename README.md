@@ -296,6 +296,58 @@ Open: http://127.0.0.1:5000
 
 Health check: http://127.0.0.1:5000/health
 
+## ⚙️ CI/CD with Jenkins
+
+This repo includes a declarative pipeline (`Jenkinsfile`) so Jenkins can automatically lint, test, build, and archive artifacts.
+
+1. Install plugins: **Pipeline**, **Git**, **JUnit**, **AnsiColor**, and **Docker Pipeline** (if building images on the agent).
+2. Create a Pipeline job (or Multibranch job) and point SCM to `https://github.com/BharathL2/Phishing-Detection-AI-Chat.git`.
+3. Jenkins will execute these stages:
+        - **Checkout** – cleans workspace and clones the repo.
+        - **Set up Python** – creates a virtual environment, upgrades `pip`, and installs `requirements.txt` plus `pytest`.
+        - **Static Analysis** – runs `python -m compileall src` to catch syntax errors early.
+        - **Unit Tests** – runs `pytest src/phishing_module` and publishes the JUnit report at `reports/junit.xml`.
+        - **Package Model Server** – builds the Docker image `phishing-ai-chat:${BUILD_NUMBER}` if Docker is available.
+        - **Archive Artifacts** – stores trained model files under `models/` and static docs under `docs/` for download.
+4. Configure credentials/tokens if the repo is private. For public repos no credentials are required.
+5. (Optional) Add a GitHub webhook so pushes trigger Jenkins automatically.
+
+## ☸️ Kubernetes deployment
+
+The `k8s/` folder ships manifests to run both the model API and the static UI inside a cluster.
+
+### 1. Build and push the container image
+
+```bash
+docker build -t <registry>/phishing-ai-chat:latest .
+docker push <registry>/phishing-ai-chat:latest
+```
+
+Update `k8s/backend.yaml` and `k8s/ui.yaml` to use your registry path (`<registry>/phishing-ai-chat:latest`).
+
+### 2. Apply manifests
+
+```bash
+kubectl apply -f k8s/namespace.yaml
+kubectl apply -f k8s/backend.yaml
+kubectl apply -f k8s/ui.yaml
+```
+
+- `xgb-backend` Deployment: runs `python src/xgb_model_server.py` on port 5072 with readiness/liveness probes hitting `/health`.
+- `ui-host` Deployment: reuses the same image but runs `python -m http.server 8081 --directory docs` to serve the static login/demo UI.
+- Both Services default to `ClusterIP`. Change `spec.type` to `NodePort` or `LoadBalancer` if you need external access.
+
+### 3. Access the services
+
+- Inside the cluster: reference services as `http://xgb-backend.phishing-detection.svc.cluster.local` and `http://ui-host.phishing-detection.svc.cluster.local`.
+- From outside: expose via an ingress controller or set `spec.type: LoadBalancer` and grab the provisioned IP.
+
+### 4. Customize
+
+- Adjust `replicas` for the backend (default `2`).
+- Tune resource `requests/limits` per cluster capacity.
+- Mount external model files via PVCs if you retrain frequently.
+
 ## ⚙️ Configuration
 
 - `PORT` (env var): HTTP port for the dynamic server (default 5071). Example: `$env:PORT=5075`.
