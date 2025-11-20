@@ -4,6 +4,7 @@ pipeline {
     environment {
         VENV_PATH = '.venv'
         UNIX_PY = 'python3'
+        WINDOWS_PY_INSTALL_URL = 'https://www.python.org/ftp/python/3.13.1/python-3.13.1-amd64.exe'
         REQUIREMENTS_FILE = 'requirements.txt'
     }
 
@@ -23,51 +24,83 @@ pipeline {
                         sh ". ${env.VENV_PATH}/bin/activate && python -m pip install --upgrade pip"
                         sh ". ${env.VENV_PATH}/bin/activate && pip install -r ${reqFile}"
                     } else {
-                        def resolveCmd = { String candidate ->
-                            if (!candidate) {
-                                return null
+                        def quoteIfNeeded = { String value ->
+                            if (value.contains(' ')) {
+                                return "\"${value}\""
                             }
-                            def trimmed = candidate.trim()
-                            if (trimmed.isEmpty()) {
-                                return null
-                            }
-                            def prepared = trimmed
-                            if (prepared.contains(' ') && !prepared.startsWith('"')) {
-                                prepared = "\"${prepared}\""
-                            }
-                            def status = bat(script: "${prepared} --version", returnStatus: true)
-                            return status == 0 ? prepared : null
+                            value
                         }
 
-                        def candidates = []
+                        def tryCandidate = { String exe, List args ->
+                            def commandParts = []
+                            commandParts << quoteIfNeeded(exe)
+                            if (args) {
+                                commandParts.addAll(args)
+                            }
+                            commandParts << '--version'
+                            def status = bat(script: commandParts.join(' '), returnStatus: true)
+                            return status == 0
+                        }
+
+                        def candidateList = []
                         if (env.WINDOWS_PY?.trim()) {
-                            candidates << env.WINDOWS_PY.trim()
+                            candidateList << [exe: env.WINDOWS_PY.trim(), args: []]
                         }
-                        candidates.addAll(['py -3', 'py', 'python', 'python3',
-                            'C:/Program Files/Python313/python.exe',
-                            'C:/Program Files/Python312/python.exe',
-                            'C:/Program Files/Python311/python.exe',
-                            'C:/Python313/python.exe',
-                            'C:/Python312/python.exe',
-                            'C:/Python311/python.exe'])
+                        candidateList.addAll([
+                            [exe: 'py', args: ['-3']],
+                            [exe: 'py', args: []],
+                            [exe: 'python', args: []],
+                            [exe: 'python3', args: []],
+                            [exe: 'C:/Program Files/Python313/python.exe', args: []],
+                            [exe: 'C:/Program Files/Python312/python.exe', args: []],
+                            [exe: 'C:/Program Files/Python311/python.exe', args: []],
+                            [exe: 'C:/Python313/python.exe', args: []],
+                            [exe: 'C:/Python312/python.exe', args: []],
+                            [exe: 'C:/Python311/python.exe', args: []]
+                        ])
 
-                        def winPython = null
-                        for (candidate in candidates) {
-                            winPython = resolveCmd(candidate)
-                            if (winPython) {
-                                echo "Using Windows Python command: ${candidate}"
+                        def detected = null
+                        for (candidate in candidateList) {
+                            if (tryCandidate(candidate.exe, candidate.args)) {
+                                echo "Using Windows Python command: ${([candidate.exe] + candidate.args).join(' ')}"
+                                detected = candidate
                                 break
                             }
                         }
 
-                        if (!winPython) {
-                            error('Unable to locate a usable Python interpreter on this Windows agent. Set WINDOWS_PY to a valid path.')
+                        def installWorkspacePython = {
+                            def installerUrl = env.WINDOWS_PY_INSTALL_URL ?: 'https://www.python.org/ftp/python/3.13.1/python-3.13.1-amd64.exe'
+                            def pythonExeRel = "python-home\\python.exe"
+                            if (!fileExists(pythonExeRel)) {
+                                def workspacePosix = env.WORKSPACE.replace('\\', '/')
+                                def installerPathPosix = "${workspacePosix}/python-installer.exe"
+                                def targetDirPosix = "${workspacePosix}/python-home"
+                                def installerPathWin = installerPathPosix.replace('/', '\\')
+                                def targetDirWin = targetDirPosix.replace('/', '\\')
+                                echo "Downloading Python installer ${installerUrl}"
+                                bat "powershell -NoProfile -Command \"\\$ErrorActionPreference='Stop'; Invoke-WebRequest -Uri '${installerUrl}' -OutFile '${installerPathPosix}'\""
+                                def targetDirArg = targetDirWin.contains(' ') ? "\"${targetDirWin}\"" : targetDirWin
+                                bat "\"${installerPathWin}\" /quiet InstallAllUsers=0 Include_launcher=0 SimpleInstall=1 Shortcuts=0 PrependPath=0 TargetDir=${targetDirArg}"
+                            }
+                            return "${env.WORKSPACE}\\python-home\\python.exe"
                         }
 
-                        env.RESOLVED_WINDOWS_PY = winPython
-                        bat "${winPython} -m venv ${env.VENV_PATH}"
-                        bat "call ${env.VENV_PATH}\\Scripts\\activate && ${winPython} -m pip install --upgrade pip"
-                        bat "call ${env.VENV_PATH}\\Scripts\\activate && ${winPython} -m pip install -r ${reqFile}"
+                        if (!detected) {
+                            def localPython = installWorkspacePython()
+                            detected = [exe: localPython, args: []]
+                            echo "Installed standalone Python at ${localPython}"
+                        }
+
+                        def pythonCommandParts = []
+                        pythonCommandParts << quoteIfNeeded(detected.exe)
+                        if (detected.args) {
+                            pythonCommandParts.addAll(detected.args)
+                        }
+
+                        def pythonCommand = pythonCommandParts.join(' ')
+                        bat "${pythonCommand} -m venv ${env.VENV_PATH}"
+                        bat "call ${env.VENV_PATH}\\Scripts\\activate && python -m pip install --upgrade pip"
+                        bat "call ${env.VENV_PATH}\\Scripts\\activate && python -m pip install -r ${reqFile}"
                     }
                 }
             }
