@@ -4,7 +4,7 @@ pipeline {
     environment {
         VENV_PATH = ".venv"
         UNIX_PY = "python3"
-        WINDOWS_PY = "py -3"
+        WINDOWS_PY = "C:\\Users\\l670b\\AppData\\Local\\Programs\\Python\\Python313\\python.exe"
     }
 
     options {
@@ -28,8 +28,12 @@ pipeline {
                         sh ". ${VENV_PATH}/bin/activate && pip install --upgrade pip"
                         sh ". ${VENV_PATH}/bin/activate && pip install -r requirements.txt pytest"
                     } else {
-                        def pyCmd = env.WINDOWS_PY ?: 'py -3'
-                        bat "${pyCmd} -m venv ${VENV_PATH}"
+                        def pyCmd = env.WINDOWS_PY?.trim()
+                        if (pyCmd) {
+                            bat "\"${pyCmd}\" -m venv ${VENV_PATH}"
+                        } else {
+                            bat "py -3 -m venv ${VENV_PATH}"
+                        }
                         bat "call ${VENV_PATH}\\Scripts\\activate && python -m pip install --upgrade pip"
                         bat "call ${VENV_PATH}\\Scripts\\activate && python -m pip install -r requirements.txt pytest"
                     }
