@@ -1,3 +1,62 @@
+import unittest
+from unittest.mock import MagicMock, patch
+
+from phishing_module.phishing_service import PhishGuardService
+
+
+class TestPhishGuardService(unittest.TestCase):
+    """Unit tests for `PhishGuardService` with MongoDB interactions mocked."""
+
+    def setUp(self):
+        patcher = patch("phishing_module.phishing_service.MongoClient")
+        self.addCleanup(patcher.stop)
+        mock_client_cls = patcher.start()
+
+        self.mock_client = MagicMock()
+        self.mock_db = MagicMock()
+        self.mock_collection = MagicMock()
+
+        self.mock_client.__getitem__.return_value = self.mock_db
+        self.mock_db.__getitem__.return_value = self.mock_collection
+        mock_client_cls.return_value = self.mock_client
+
+        self.service = PhishGuardService()
+
+    def test_detect_phishing_empty_message(self):
+        with self.assertRaises(ValueError) as ctx:
+            self.service.detect_phishing("", "user-1")
+        self.assertEqual(str(ctx.exception), PhishGuardService.empty_message)
+
+    @patch("phishing_module.phishing_service.detect_phishing_content")
+    def test_detect_phishing_inserts_document(self, mock_detector):
+        mock_detector.return_value = {
+            "label": "phishing",
+            "score": 0.9,
+            "reasons": ["Contains suspicious link"],
+        }
+
+        result = self.service.detect_phishing("Click here to reset", "alice")
+
+        self.assertEqual(result["label"], "phishing")
+        self.mock_collection.insert_one.assert_called_once()
+        saved_doc = self.mock_collection.insert_one.call_args[0][0]
+        self.assertEqual(saved_doc["user"], "alice")
+        self.assertEqual(saved_doc["label"], "phishing")
+        self.assertIn("timestamp", saved_doc)
+
+    def test_get_stats_returns_counts(self):
+        self.mock_collection.count_documents.side_effect = [100, 40, 60]
+
+        stats = self.service.get_stats()
+
+        self.assertEqual(stats["total_messages"], 100)
+        self.assertEqual(stats["total_phishing"], 40)
+        self.assertEqual(stats["total_clean"], 60)
+        self.assertEqual(stats["phishing_percentage"], 40.0)
+
+
+if __name__ == "__main__":
+    unittest.main()
 # Phish Chat Guard Service Tests""""""""""""import unittestimport unittest
 
 # Simple test suite for the PhishGuardService class
@@ -247,136 +306,6 @@ class TestPhishGuardService(unittest.TestCase):
             self.assertEqual(result["label"], "phishing")
 
             self.assertEqual(result["score"], 0.8)            return {"total_messages": 0, "total_phishing": 0, "total_clean": 0, "phishing_percentage": 0}
-
-            self.assertIn("login", result["reasons"][0])
-
-        from phishing_module.phishing_detector import detect_phishing_content
-
-    def test_detect_phishing_empty_message(self):
-
-        """Test error handling for empty message"""    def detect_phishing_content(message):
-
-        with self.assertRaises(ValueError) as context:
-
-            self.service.detect_phishing("", "testuser")        return {"label": "clean", "score": 0.0, "reasons": []}except ImportError:        """Set up test fixtures before each test method."""
-
-        
-
-        self.assertEqual(str(context.exception), "Empty message!")
-
-
-
-    def test_get_stats(self):    # Fallback for testing
-
-        """Test statistics retrieval"""
-
-        if hasattr(self.service, 'messages_collection'):class TestPhishGuardService(unittest.TestCase):
-
-            # Mock MongoDB collection methods
-
-            self.service.messages_collection.count_documents.side_effect = [100, 25, 75]    """Test suite for Phish Chat Guard Service"""    pass        with patch('phishing_module.phishing_service.MongoClient'):
-
-        
-
-        stats = self.service.get_stats()    
-
-        
-
-        self.assertIn("total_messages", stats)    def setUp(self):
-
-        self.assertIn("total_phishing", stats)
-
-        self.assertIn("total_clean", stats)        """Set up test fixtures before each test method."""
-
-        self.assertIn("phishing_percentage", stats)
-
-        with patch('pymongo.MongoClient'):            self.service = PhishGuardService()# Phish Chat Guard Test Messages
-
-    def test_get_stats_empty_database(self):
-
-        """Test statistics with empty database"""            self.service = PhishGuardService()
-
-        if hasattr(self.service, 'messages_collection'):
-
-            self.service.messages_collection.count_documents.side_effect = [0, 0, 0]            if hasattr(self.service, 'messages_collection'):class TestPhishGuardService(unittest.TestCase):
-
-        
-
-        stats = self.service.get_stats()                self.service.messages_collection = MagicMock()
-
-        
-
-        self.assertEqual(stats["total_messages"], 0)    """Test suite for Phish Chat Guard Service"""            self.service.messages_collection = MagicMock()phishing_messages = (
-
-        self.assertEqual(stats["phishing_percentage"], 0)
-
-    def test_detect_phishing_valid_message(self):
-
-
-
-class TestPhishingDetection(unittest.TestCase):        """Test phishing detection with valid message"""    
-
-    """Test suite for phishing detection functionality"""
-
-            # Mock the detection result
-
-    def test_phishing_message_detection(self):
-
-        """Test detection of obvious phishing messages"""        with patch('phishing_module.phishing_detector.detect_phishing_content',     @patch('phishing_module.phishing_service.MongoClient')    'Congratulations! You've won a $500 Amazon gift card. Claim it here.',
-
-        phishing_messages = [
-
-            "URGENT! Your bank account will be suspended. Click here to verify your password.",                   return_value={
-
-            "Congratulations! You've won $1000. Click http://192.168.1.1/claim to collect.",
-
-            "Your PayPal account requires immediate verification. Login at fake-paypal.com",                       "label": "phishing",    def setUp(self, mock_mongo):
-
-            "ACTION REQUIRED: Click here to update your billing information immediately.",
-
-        ]                       "score": 0.8,
-
-        
-
-        for message in phishing_messages:                       "reasons": ["Suspicious keywords detected: login, verify"]        """Set up test fixtures before each test method."""    def test_detect_phishing_valid_message(self):    'ACTION REQUIRED. Please verify your Bank of America account information to avoid a hold on your account. Click here to confirm.',
-
-            result = detect_phishing_content(message)
-
-            # Should return proper structure                   }):
-
-            self.assertIn("label", result)
-
-            self.assertIn("score", result)                    self.mock_collection = MagicMock()
-
-            self.assertIn("reasons", result)
-
-            self.assertIn(result["label"], ["phishing", "clean"])            result = self.service.detect_phishing("Please login to verify your account", "testuser")
-
-            self.assertIsInstance(result["score"], (int, float))
-
-            self.assertIsInstance(result["reasons"], list)                    mock_db = MagicMock()        """Test phishing detection with valid message"""    'Thank you for paying last month's bill. We're rewarding our very best customers with a gift for their loyalty. Click here!',
-
-
-
-    def test_clean_message_detection(self):            self.assertEqual(result["label"], "phishing")
-
-        """Test detection of clean messages"""
-
-        clean_messages = [            self.assertEqual(result["score"], 0.8)        mock_db.messages = self.mock_collection
-
-            "Hello, how are you today?",
-
-            "The meeting is scheduled for 3 PM tomorrow.",            self.assertIn("login", result["reasons"][0])
-
-            "Thanks for the great presentation yesterday.",
-
-            "Let's discuss the project requirements next week.",        mock_client = MagicMock()        # Mock the detection result    'Congratulations! Your credit score entitles you to a no-interest Visa credit card. Click here to claim.',
-
-        ]
-
-            def test_detect_phishing_empty_message(self):
-
-        for message in clean_messages:
 
             result = detect_phishing_content(message)        """Test error handling for empty message"""        mock_client.__getitem__.return_value = mock_db
 
