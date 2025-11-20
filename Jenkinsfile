@@ -2,7 +2,6 @@ pipeline {
     agent any
 
     environment {
-        PYTHON = "python3"
         VENV_PATH = ".venv"
     }
 
@@ -21,21 +20,43 @@ pipeline {
 
         stage('Set up Python') {
             steps {
-                sh "${PYTHON} -m venv ${VENV_PATH}"
-                sh ". ${VENV_PATH}/bin/activate && pip install --upgrade pip"
-                sh ". ${VENV_PATH}/bin/activate && pip install -r requirements.txt pytest"
+                script {
+                    if (isUnix()) {
+                        sh "python3 -m venv ${VENV_PATH}"
+                        sh ". ${VENV_PATH}/bin/activate && pip install --upgrade pip"
+                        sh ". ${VENV_PATH}/bin/activate && pip install -r requirements.txt pytest"
+                    } else {
+                        bat "python -m venv ${VENV_PATH}"
+                        bat "call ${VENV_PATH}\\Scripts\\activate && python -m pip install --upgrade pip"
+                        bat "call ${VENV_PATH}\\Scripts\\activate && python -m pip install -r requirements.txt pytest"
+                    }
+                }
             }
         }
 
         stage('Static Analysis') {
             steps {
-                sh ". ${VENV_PATH}/bin/activate && python -m compileall src"
+                script {
+                    if (isUnix()) {
+                        sh ". ${VENV_PATH}/bin/activate && python -m compileall src"
+                    } else {
+                        bat "call ${VENV_PATH}\\Scripts\\activate && python -m compileall src"
+                    }
+                }
             }
         }
 
         stage('Unit Tests') {
             steps {
-                sh ". ${VENV_PATH}/bin/activate && pytest src/phishing_module --junitxml=reports/junit.xml"
+                script {
+                    if (isUnix()) {
+                        sh "mkdir -p reports"
+                        sh ". ${VENV_PATH}/bin/activate && pytest src/phishing_module --junitxml=reports/junit.xml"
+                    } else {
+                        bat "if not exist reports mkdir reports"
+                        bat "call ${VENV_PATH}\\Scripts\\activate && pytest src\\phishing_module --junitxml=reports\\junit.xml"
+                    }
+                }
             }
             post {
                 always {
@@ -49,7 +70,13 @@ pipeline {
                 expression { fileExists('Dockerfile') }
             }
             steps {
-                sh 'docker build -t phishing-ai-chat:${BUILD_NUMBER} .'
+                script {
+                    if (isUnix()) {
+                        sh 'docker build -t phishing-ai-chat:${BUILD_NUMBER} .'
+                    } else {
+                        bat 'docker build -t phishing-ai-chat:%BUILD_NUMBER% .'
+                    }
+                }
             }
         }
 
