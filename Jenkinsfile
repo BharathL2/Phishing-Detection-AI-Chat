@@ -4,6 +4,7 @@ pipeline {
     environment {
         VENV_PATH = '.venv'
         UNIX_PY = 'python3'
+        WINDOWS_PY = 'python'
         REQUIREMENTS_FILE = 'requirements.txt'
     }
 
@@ -23,7 +24,8 @@ pipeline {
                         sh ". ${env.VENV_PATH}/bin/activate && python -m pip install --upgrade pip"
                         sh ". ${env.VENV_PATH}/bin/activate && pip install -r ${reqFile}"
                     } else {
-                        bat "py -3 -m venv ${env.VENV_PATH}"
+                        def winPython = env.WINDOWS_PY ?: 'python'
+                        bat "\"${winPython}\" -m venv ${env.VENV_PATH}"
                         bat "call ${env.VENV_PATH}\\Scripts\\activate && python -m pip install --upgrade pip"
                         bat "call ${env.VENV_PATH}\\Scripts\\activate && pip install -r ${reqFile}"
                     }
