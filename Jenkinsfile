@@ -81,7 +81,11 @@ pipeline {
                                 echo "Downloading Python installer ${installerUrl}"
                                 bat "curl.exe -L \"${installerUrl}\" -o ${quotedInstallerPath}"
                                 def targetDirArg = targetDirWin.contains(' ') ? "\"${targetDirWin}\"" : targetDirWin
-                                bat "${quotedInstallerPath} /quiet InstallAllUsers=0 Include_launcher=0 SimpleInstall=1 Shortcuts=0 PrependPath=0 TargetDir=${targetDirArg}"
+                                def installCmd = "${quotedInstallerPath} /quiet InstallAllUsers=0 Include_launcher=0 Include_pip=1 Include_test=0 Shortcuts=0 PrependPath=0 TargetDir=${targetDirArg}"
+                                def installStatus = bat(script: installCmd, returnStatus: true)
+                                if (installStatus != 0) {
+                                    error("Python installer exited with status ${installStatus}. Check Jenkins agent permissions or set WINDOWS_PY to an existing interpreter.")
+                                }
                             }
                             return "${env.WORKSPACE}\\python-home\\python.exe"
                         }
