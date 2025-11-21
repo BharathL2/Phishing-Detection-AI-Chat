@@ -77,10 +77,11 @@ pipeline {
                                 def targetDirPosix = "${workspacePosix}/python-home"
                                 def installerPathWin = installerPathPosix.replace('/', '\\')
                                 def targetDirWin = targetDirPosix.replace('/', '\\')
+                                def quotedInstallerPath = "\"${installerPathWin}\""
                                 echo "Downloading Python installer ${installerUrl}"
-                                bat "powershell -NoProfile -Command \"\\$ErrorActionPreference='Stop'; Invoke-WebRequest -Uri '${installerUrl}' -OutFile '${installerPathPosix}'\""
+                                bat "curl.exe -L \"${installerUrl}\" -o ${quotedInstallerPath}"
                                 def targetDirArg = targetDirWin.contains(' ') ? "\"${targetDirWin}\"" : targetDirWin
-                                bat "\"${installerPathWin}\" /quiet InstallAllUsers=0 Include_launcher=0 SimpleInstall=1 Shortcuts=0 PrependPath=0 TargetDir=${targetDirArg}"
+                                bat "${quotedInstallerPath} /quiet InstallAllUsers=0 Include_launcher=0 SimpleInstall=1 Shortcuts=0 PrependPath=0 TargetDir=${targetDirArg}"
                             }
                             return "${env.WORKSPACE}\\python-home\\python.exe"
                         }
